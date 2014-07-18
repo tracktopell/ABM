@@ -1,0 +1,2340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project author="alfredo" commentTableSortAscending="false" commentTableSortColumn="Date Time" description="&lt;html&gt;&#10;  &lt;head&gt;&#10;    &lt;style type=&quot;text/css&quot;&gt;&#10;      &lt;!--&#10;        body { color: #000000; font-family: Monospaced; font-size: 11px }&#10;      --&gt;&#10;    &lt;/style&gt;&#10;    &#10;  &lt;/head&gt;&#10;  &lt;body&gt;&#10;  &lt;/body&gt;&#10;&lt;/html&gt;&#10;" documentationType="html" exportedFromDifferentName="false" exporterVersion="8.2.0" name="ApartmentBalanceManager" textualAnalysisHighlightCaseSensitive="false" umlVersion="2.x">
+	<ProjectInfo>
+		<ORMInfo defaultDatabase="1" supportDatabases="0"/>
+		<LogicalView/>
+		<ProjectOptions>
+			<DiagramOptions>
+				<BooleanProperty displayName="Mostrar Cuadrícula" name="showGrid" value="false"/>
+				<ColorProperty displayName="Color de la Cuadrícula" name="gridColor" value="Cr:192,192,192,255"/>
+				<IntegerProperty displayName="Grid Height" name="gridHeight" value="10"/>
+				<IntegerProperty displayName="Grid Width" name="gridWidth" value="10"/>
+				<BooleanProperty displayName="Align To Grid" name="alignToGrid" value="true"/>
+				<BooleanProperty displayName="Graphic Anti Aliasing" name="graphicAntiAliasing" value="true"/>
+				<BooleanProperty displayName="Text Anti Aliasing" name="textAntiAliasing" value="true"/>
+				<StringProperty displayName="Model Element Name Alignment" name="modelElementNameAlignment" value="\u0004"/>
+				<ColorProperty displayName="Default Diagram Background" name="defaultDiagramBackground" value="Cr:255,255,255,255"/>
+				<BooleanProperty displayName="Enable Minimum Size" name="enableMinimumSize" value="true"/>
+				<BooleanProperty displayName="Fractional Metrics" name="fractionalMetrics" value="true"/>
+				<StringProperty displayName="Mostrar Estilo de Nombre de Paquete" name="showPackageNameStyle" value="\u0000"/>
+				<defaultHtmlDocFont family="Monospaced" size="11" style="0"/>
+				<ColorProperty displayName="Default Html Doc Font Color" name="defaultHtmlDocFontColor" value="Cr:0,0,0,255"/>
+				<BooleanProperty displayName="Support Html Tagged Value" name="supportHtmlTaggedValue" value="false"/>
+				<StringProperty displayName="Default Gen Diagram Type From Scenario" name="defaultGenDiagramTypeFromScenario" value="\u0000"/>
+				<ColorProperty displayName="Default Font Color" name="defaultFontColor" value="Cr:0,0,0,255"/>
+				<BooleanProperty displayName="Shape Auto Fit Size" name="shapeAutoFitSize" value="false"/>
+				<StringProperty displayName="Default Connector Style" name="defaultConnectorStyle" value="\u0001"/>
+				<StringProperty displayName="Default Connection Point Style" name="defaultConnectionPointStyle" value="\u0000"/>
+				<StringProperty displayName="Default Line Jumps" name="defaultLineJumps" value="\u0000"/>
+				<StringProperty displayName="Line Jump Size" name="lineJumpSize" value="\u0000"/>
+				<StringProperty displayName="Connector Label Orientation" name="connectorLabelOrientation" value="\u0000"/>
+				<BooleanProperty displayName="Paint Connector Through Label" name="paintConnectorThroughLabel" value="true"/>
+				<BooleanProperty displayName="Highlight Connectors Of Selected Or Mouse Over Shape" name="highlightConnectorsOfSelectedOrMouseOverShape" value="false"/>
+				<BooleanProperty displayName="Auto Sync Role Name" name="autoSyncRoleName" value="true"/>
+				<BooleanProperty displayName="Auto Generate Role Name" name="autoGenerateRoleName" value="false"/>
+				<BooleanProperty displayName="Support Multiple Line Attribute" name="supportMultipleLineAttribute" value="true"/>
+				<StringProperty displayName="Multiple Line Class Name" name="multipleLineClassName" value="\u0001"/>
+				<StringProperty displayName="Rename Constructor After Rename Class" name="renameConstructorAfterRenameClass" value="\u0000"/>
+				<StringProperty displayName="Sync Doc Of Interface To Sub Class" name="syncDocOfInterfaceToSubClass" value="\u0000"/>
+				<BooleanProperty displayName="Show Row Grid Line Within Comp Class Diagram" name="showRowGridLineWithinCompClassDiagram" value="false"/>
+				<StringProperty displayName="Default Parameter Direction" name="defaultParameterDirection" value="\u0002"/>
+				<StringProperty displayName="Default Class Visibility" name="defaultClassVisibility" value="\u0004"/>
+				<StringProperty displayName="Default Attribute Visibility" name="defaultAttributeVisibility" value="\u0001"/>
+				<StringProperty displayName="Default Operation Visibility" name="defaultOperationVisibility" value="\u0004"/>
+				<StringProperty displayName="Default Class Attribute Multiplicity" name="defaultClassAttributeMultiplicity" value=""/>
+				<BooleanProperty displayName="Default Class Attribute Multiplicity Ordered" name="defaultClassAttributeMultiplicityOrdered" value="false"/>
+				<BooleanProperty displayName="Default Class Attribute Multiplicity Unique" name="defaultClassAttributeMultiplicityUnique" value="true"/>
+				<StringProperty displayName="Default Show Attribute Option" name="defaultShowAttributeOption" value="\u0001"/>
+				<StringProperty displayName="Default Show Type Option" name="defaultShowTypeOption" value="\u0001"/>
+				<StringProperty displayName="Default Show Operation Option" name="defaultShowOperationOption" value="\u0001"/>
+				<StringProperty displayName="Class Visibility Style" name="classVisibilityStyle" value="\u0001"/>
+				<BooleanProperty displayName="Default Show Attribute Initial Value" name="defaultShowAttributeInitialValue" value="true"/>
+				<BooleanProperty displayName="Default Show Owner" name="defaultShowOwner" value="false"/>
+				<BooleanProperty displayName="Default Attribute Multiplicity" name="defaultAttributeMultiplicity" value="false"/>
+				<BooleanProperty displayName="Default Show Template Parameter" name="defaultShowTemplateParameter" value="true"/>
+				<BooleanProperty displayName="Show Attribute Getter Setter" name="showAttributeGetterSetter" value="false"/>
+				<BooleanProperty displayName="Default Display As Robustness Analysis Icon" name="defaultDisplayAsRobustnessAnalysisIcon" value="true"/>
+				<BooleanProperty displayName="Default Show Operation Signature" name="defaultShowOperationSignature" value="true"/>
+				<BooleanProperty displayName="Default Display As Stereotype Icon" name="defaultDisplayAsStereotypeIcon" value="false"/>
+				<BooleanProperty displayName="Default Show Class Member Stereotype" name="defaultShowClassMemberStereotype" value="true"/>
+				<BooleanProperty displayName="Default Class Interface Ball" name="defaultClassInterfaceBall" value="false"/>
+				<BooleanProperty displayName="Show Parameter Name In Operation Signature" name="showParameterNameInOperationSignature" value="true"/>
+				<BooleanProperty displayName="Default Wrap Class Member" name="defaultWrapClassMember" value="false"/>
+				<BooleanProperty displayName="Show Class Empty Compartments" name="showClassEmptyCompartments" value="false"/>
+				<StringProperty displayName="Tipo de Atributo Predefinido" name="defaultAttributeType" value=""/>
+				<BooleanProperty displayName="Auto Set Attribute Type" name="autoSetAttributeType" value="true"/>
+				<BooleanProperty displayName="Default Association Show Stereotypes" name="defaultAssociationShowStereotypes" value="true"/>
+				<BooleanProperty displayName="Default Association Show From Role Name" name="defaultAssociationShowFromRoleName" value="true"/>
+				<BooleanProperty displayName="Default Association Show To Role Name" name="defaultAssociationShowToRoleName" value="true"/>
+				<BooleanProperty displayName="Default Association Show From Role Visibility" name="defaultAssociationShowFromRoleVisibility" value="true"/>
+				<BooleanProperty displayName="Default Show Owned Association End As Attribute" name="defaultShowOwnedAssociationEndAsAttribute" value="true"/>
+				<BooleanProperty displayName="Default Association Show To Role Visibility" name="defaultAssociationShowToRoleVisibility" value="true"/>
+				<BooleanProperty displayName="Default Association Show From Multiplicity" name="defaultAssociationShowFromMultiplicity" value="true"/>
+				<BooleanProperty displayName="Default Association Show To Multiplicity" name="defaultAssociationShowToMultiplicity" value="true"/>
+				<BooleanProperty displayName="Default Show Multiplicity Constraints" name="defaultShowMultiplicityConstraints" value="false"/>
+				<BooleanProperty displayName="Default Show Ordered Multiplicity Constraint" name="defaultShowOrderedMultiplicityConstraint" value="true"/>
+				<BooleanProperty displayName="Default Show Unique Multiplicity Constraint" name="defaultShowUniqueMultiplicityConstraint" value="true"/>
+				<BooleanProperty displayName="Default Show Direction" name="defaultShowDirection" value="false"/>
+				<BooleanProperty displayName="Show Association Role Stereotypes" name="showAssociationRoleStereotypes" value="true"/>
+				<StringProperty displayName="Navegabilidad del Fin de Asociación Predefinido" name="defaultAssociationEndNavigable" value="\u0001"/>
+				<StringProperty displayName="Visibilidad de Fin de Asociación Predefinido" name="defaultAssociationEndVisibility" value="\u0000"/>
+				<BooleanProperty displayName="Suppress Implied Multiplicity For Attribute Association End" name="suppressImpliedMultiplicityForAttributeAssociationEnd" value="false"/>
+				<StringProperty displayName="Sync Association Name With Association Class" name="syncAssociationNameWithAssociationClass" value="\u0000"/>
+				<BooleanProperty displayName="Sync Association Role Name With Referenced Attribute Name" name="syncAssociationRoleNameWithReferencedAttributeName" value="true"/>
+				<StringProperty displayName="Generalization Set Notation" name="generalizationSetNotation" value="\u0001"/>
+				<BooleanProperty displayName="Show Column Type" name="showColumnType" value="true"/>
+				<BooleanProperty displayName="Foreign Key Connector End Point Associated Column" name="foreignKeyConnectorEndPointAssociatedColumn" value="false"/>
+				<BooleanProperty displayName="Align Column Properties" name="alignColumnProperties" value="true"/>
+				<BooleanProperty displayName="Show Extra Column Properties" name="showExtraColumnProperties" value="true"/>
+				<BooleanProperty displayName="Show Row Grid Line Within Comp ERD" name="showRowGridLineWithinCompERD" value="true"/>
+				<BooleanProperty displayName="Show Row Grid Line Within ORMDiagram" name="showRowGridLineWithinORMDiagram" value="true"/>
+				<BooleanProperty displayName="Show Schema Name In ERD" name="showSchemaNameInERD" value="true"/>
+				<StringProperty displayName="Entity Column Constraints Presentation" name="entityColumnConstraintsPresentation" value="\u0002"/>
+				<StringProperty displayName="Foreign Key Arrow Head Size" name="foreignKeyArrowHeadSize" value="\u0002"/>
+				<StringProperty displayName="Primary Key Name Pattern" name="primaryKeyNamePattern" value="ID"/>
+				<StringProperty displayName="Patrón de Limitación de Clave Principal" name="primaryKeyConstraintPattern" value=""/>
+				<StringProperty displayName="Foreign Key Name Pattern" name="foreignKeyNamePattern" value="{reference_table_name}{reference_column_name}"/>
+				<IntegerProperty displayName="Foreign Key Name Pattern Case Handling" name="foreignKeyNamePatternCaseHandling" value="0"/>
+				<StringProperty displayName="Patrón de Relación de Clave Externa" name="foreignKeyRelationshipPattern" value="{association_name}"/>
+				<StringProperty displayName="Erd Index Pattern" name="erdIndexPattern" value="{table_name}"/>
+				<BooleanProperty displayName="Erd Index Pattern Sync Automatically" name="erdIndexPatternSyncAutomatically" value="true"/>
+				<StringProperty displayName="Default Column Type" name="defaultColumnType" value="integer(10)"/>
+				<BooleanProperty displayName="Auto Set Column Type" name="autoSetColumnType" value="true"/>
+				<StringProperty displayName="Stop Target Lifeline On Create Destroy Message" name="stopTargetLifelineOnCreateDestroyMessage" value="\u0002"/>
+				<BooleanProperty displayName="Show Number In Collaboration Diagram" name="showNumberInCollaborationDiagram" value="true"/>
+				<BooleanProperty displayName="Show Number In Sequence Diagram" name="showNumberInSequenceDiagram" value="true"/>
+				<BooleanProperty displayName="Show Message Operation Signature For Sequence And Communication Diagram" name="showMessageOperationSignatureForSequenceAndCommunicationDiagram" value="true"/>
+				<BooleanProperty displayName="Show Message Stereotype In Sequence And Communication Diagram" name="showMessageStereotypeInSequenceAndCommunicationDiagram" value="true"/>
+				<BooleanProperty displayName="Show Activations In Sequence Diagram" name="showActivationsInSequenceDiagram" value="true"/>
+				<BooleanProperty displayName="Default Display As Robustness Analysis Icon In Sequence Diagram" name="defaultDisplayAsRobustnessAnalysisIconInSequenceDiagram" value="true"/>
+				<BooleanProperty displayName="Show Associated Diagram Name Of Interaction" name="showAssociatedDiagramNameOfInteraction" value="false"/>
+				<BooleanProperty displayName="Show Use Case Extension Point" name="showUseCaseExtensionPoint" value="true"/>
+				<BooleanProperty displayName="Show Use Case ID" name="showUseCaseID" value="false"/>
+				<StringProperty displayName="Rename Extension Point To Follow Extend Use Case" name="renameExtensionPointToFollowExtendUseCase" value="\u0000"/>
+				<IntegerProperty displayName="Show Activity State Node Caption" name="showActivityStateNodeCaption" value="65535"/>
+				<StringProperty displayName="Activity Diagram Show Partition Handle" name="activityDiagramShowPartitionHandle" value="\u0000"/>
+				<StringProperty displayName="Activity Diagram Show Action Call Behavior Option" name="activityDiagramShowActionCallBehaviorOption" value="\u0000"/>
+				<StringProperty displayName="Activity Diagram Control Flow Display Option" name="activityDiagramControlFlowDisplayOption" value="\u0000"/>
+				<StringProperty displayName="Decision Merge Node Connection Point Style" name="decisionMergeNodeConnectionPointStyle" value="\u0000"/>
+				<BooleanProperty displayName="Activity Diagram Show Object Node Type" name="activityDiagramShowObjectNodeType" value="true"/>
+				<BooleanProperty displayName="Use State Name Tab" name="useStateNameTab" value="false"/>
+				<StringProperty displayName="Show Transition Trigger" name="showTransitionTrigger" value="\u0000"/>
+				<BooleanProperty displayName="State Show Pre Post Condition And Body Of Internal Activities" name="stateShowPrePostConditionAndBodyOfInternalActivities" value="true"/>
+				<StringProperty displayName="Mostrar Opción de Componente" name="showComponentOption" value="\u0002"/>
+				<StringProperty displayName="Show Artifact Option" name="showArtifactOption" value="\u0002"/>
+				<StringProperty displayName="Bpd Connect Gateway With Flow Object In Different Pool" name="bpdConnectGatewayWithFlowObjectInDifferentPool" value="\u0000"/>
+				<BooleanProperty displayName="Bpd Auto Stretch Pools" name="bpdAutoStretchPools" value="true"/>
+				<StringProperty displayName="Default Type Of Sub Process" name="defaultTypeOfSubProcess" value="\u0000"/>
+				<StringProperty displayName="Business Process Diagram Default Language" name="businessProcessDiagramDefaultLanguage" value="English"/>
+				<StringProperty displayName="Expanded Sub Process Diagram Content" name="expandedSubProcessDiagramContent" value="\u0001"/>
+				<StringProperty displayName="Bpd Dhow Id Option" name="bpdDhowIdOption" value="\u0000"/>
+				<StringProperty displayName="Bpd Default Connection Point Style" name="bpdDefaultConnectionPointStyle" value="\u0001"/>
+				<StringProperty displayName="Bpd Default Connector Style" name="bpdDefaultConnectorStyle" value="\u0005"/>
+				<BooleanProperty displayName="Bpd Show Activities Type Icon" name="bpdShowActivitiesTypeIcon" value="true"/>
+				<BooleanProperty displayName="Draw Text Annotation Open Rectangle Follow Connector End" name="drawTextAnnotationOpenRectangleFollowConnectorEnd" value="true"/>
+				<StringProperty displayName="Add Data Stores Ext Entities To Decomposed DFD" name="addDataStoresExtEntitiesToDecomposedDFD" value="\u0002"/>
+				<BooleanProperty displayName="Create One Message Per Direction" name="createOneMessagePerDirection" value="true"/>
+				<StringProperty displayName="Opción Resaltar Análisis Textual" name="textualAnalysisHighlightOption" value="\u0000"/>
+				<StringProperty displayName="Textual Analysis Generate Requirement Text Option" name="textualAnalysisGenerateRequirementTextOption" value="\u0001"/>
+				<IntegerProperty displayName="Grid Diagram Font Size" name="gridDiagramFontSize" value="14"/>
+			</DiagramOptions>
+			<GeneralOptions>
+				<BooleanProperty displayName="Confirm Sub Level Id With Dot" name="confirmSubLevelIdWithDot" value="true"/>
+			</GeneralOptions>
+			<InstantReverseOptions>
+				<StringProperty displayName="Show Package Owner" name="showPackageOwner" value="\u0000"/>
+				<StringProperty displayName="Show Package For New Diagram" name="showPackageForNewDiagram" value="\u0001"/>
+				<StringProperty displayName="Reverse Getter Setter" name="reverseGetterSetter" value="\u0000"/>
+				<BooleanProperty displayName="Create Shape For Parent Model Of Dragged Class Package" name="createShapeForParentModelOfDraggedClassPackage" value="false"/>
+				<BooleanProperty displayName="Calculate Generalization And Realization" name="calculateGeneralizationAndRealization" value="false"/>
+				<BooleanProperty displayName="Reverse Operation Implementation" name="reverseOperationImplementation" value="false"/>
+			</InstantReverseOptions>
+			<ModelQualityOptions>
+				<BooleanProperty displayName="Enable Model Quality Checking" name="enableModelQualityChecking" value="false"/>
+			</ModelQualityOptions>
+			<OfficeExchangeOptions>
+				<BooleanProperty displayName="Insert Page Break" name="insertPageBreak" value="true"/>
+				<BooleanProperty displayName="Generate Table Of Content" name="generateTableOfContent" value="true"/>
+				<BooleanProperty displayName="Generate Blank Model" name="generateBlankModel" value="false"/>
+			</OfficeExchangeOptions>
+			<ORMOptions>
+				<StringProperty displayName="Quote SQLIdentifier" name="quoteSQLIdentifier" value="\u0000"/>
+				<StringProperty displayName="Orden de Columna en Asignación de Archivo" name="mappingFileColumnOrder" value="\u0000"/>
+				<StringProperty displayName="Solicitud de encapsular el Servlet" name="wrappingServletRequest" value="\u0001"/>
+				<StringProperty displayName="Getter Setter Visibility" name="getterSetterVisibility" value="\u0000"/>
+				<BooleanProperty displayName="Use Default Decimal" name="useDefaultDecimal" value="true"/>
+				<IntegerProperty displayName="Decimal Precision" name="decimalPrecision" value="19"/>
+				<IntegerProperty displayName="Decimal Scale" name="decimalScale" value="0"/>
+				<StringProperty displayName="Id Generator Type" name="idGeneratorType" value="native"/>
+				<BooleanProperty displayName="Generate Diagram From ORMWizards" name="generateDiagramFromORMWizards" value="true"/>
+				<BooleanProperty displayName="Export Comment To Database" name="exportCommentToDatabase" value="true"/>
+				<StringProperty displayName="Numeric To Class Type" name="numericToClassType" value="\u0000"/>
+				<BooleanProperty displayName="Upper Case SQL" name="upperCaseSQL" value="true"/>
+				<BooleanProperty displayName="Formatted SQL" name="formattedSQL" value="false"/>
+				<StringProperty displayName="Sync To Class Diagram Class Name Prefix" name="syncToClassDiagramClassNamePrefix" value=""/>
+				<StringProperty displayName="Sync To Class Diagram Class Name" name="syncToClassDiagramClassName" value="\u0000"/>
+				<StringProperty displayName="Sync To Class Diagram Class Name Suffix" name="syncToClassDiagramClassNameSuffix" value=""/>
+				<StringProperty displayName="Sync To Class Diagram Attribute Name Prefix" name="syncToClassDiagramAttributeNamePrefix" value=""/>
+				<StringProperty displayName="Sync To Class Diagram Attribute Name" name="syncToClassDiagramAttributeName" value="\u0001"/>
+				<StringProperty displayName="Sync To Class Diagram Attribute Name Suffix" name="syncToClassDiagramAttributeNameSuffix" value=""/>
+				<StringProperty displayName="Sync To ERDTable Name Prefix" name="syncToERDTableNamePrefix" value=""/>
+				<StringProperty displayName="Sync To ERDTable Name" name="syncToERDTableName" value="\u0004"/>
+				<StringProperty displayName="Sync To ERDTable Name Suffix" name="syncToERDTableNameSuffix" value=""/>
+				<StringProperty displayName="Sync To ERDColumn Name Prefix" name="syncToERDColumnNamePrefix" value=""/>
+				<StringProperty displayName="Sync To ERDColumn Name" name="syncToERDColumnName" value="\u0000"/>
+				<StringProperty displayName="Sync To ERDColumn Name Suffix" name="syncToERDColumnNameSuffix" value=""/>
+				<StringProperty displayName="Sincronizar Nombre" name="synchronizeName" value="\u0002"/>
+				<BooleanProperty displayName="Recreate Shape When Sync" name="recreateShapeWhenSync" value="false"/>
+				<StringProperty displayName="Table Per Subclass FKMapping" name="tablePerSubclassFKMapping" value="\u0000"/>
+				<BooleanProperty displayName="Synchronize Default Value To Column" name="synchronizeDefaultValueToColumn" value="false"/>
+				<BooleanProperty displayName="Generate Association With Attribute" name="generateAssociationWithAttribute" value="false"/>
+			</ORMOptions>
+			<RequirementDiagramOptions>
+				<StringProperty displayName="Mostrar Atributos" name="showAttributes" value="\u0001"/>
+				<BooleanProperty displayName="Default Wrap Member" name="defaultWrapMember" value="false"/>
+				<BooleanProperty displayName="Support HTMLAttribute" name="supportHTMLAttribute" value="false"/>
+			</RequirementDiagramOptions>
+			<StateCodeEngineOptions>
+				<BooleanProperty displayName="Auto Create Initial State In State Diagram" name="autoCreateInitialStateInStateDiagram" value="true"/>
+				<IntegerProperty displayName="Default Initial State Location X" name="defaultInitialStateLocationX" value="-1"/>
+				<IntegerProperty displayName="Default Initial State Location Y" name="defaultInitialStateLocationY" value="-1"/>
+				<StringProperty displayName="Idioma" name="language" value="\u0000"/>
+				<BooleanProperty displayName="Sync Transition Methods" name="syncTransitionMethods" value="true"/>
+				<BooleanProperty displayName="Generate Try Catch" name="generateTryCatch" value="true"/>
+				<BooleanProperty displayName="Generate Debug Message" name="generateDebugMessage" value="false"/>
+				<BooleanProperty displayName="Auto Create Transition Methods" name="autoCreateTransitionMethods" value="true"/>
+				<BooleanProperty displayName="Regenerate Transition Methods" name="regenerateTransitionMethods" value="false"/>
+				<BooleanProperty displayName="Generar Muestra" name="generateSample" value="true"/>
+			</StateCodeEngineOptions>
+			<WarningOptions>
+				<BooleanProperty displayName="Create ORMClass In Default Package" name="createORMClassInDefaultPackage" value="true"/>
+			</WarningOptions>
+			<PORepository>
+				<POUserIDFormats>
+					<POUserIDFormat>
+						<StringProperty displayName="Id" name="id" value="aQNvjWKD.AACAQwa"/>
+						<StringProperty displayName="Model Type" name="modelType" value="BPMNElement"/>
+						<StringProperty displayName="Prefijo" name="prefix" value="BP"/>
+						<StringProperty displayName="Sufijo" name="suffix" value=""/>
+						<IntegerProperty displayName="Digits" name="digits" value="2"/>
+						<BooleanProperty displayName="Guid" name="guid" value="false"/>
+						<IntegerProperty displayName="Last Numeric Value" name="lastNumericValue" value="0"/>
+					</POUserIDFormat>
+					<POUserIDFormat>
+						<StringProperty displayName="Id" name="id" value="aQNvjWKD.AACAQwb"/>
+						<StringProperty displayName="Model Type" name="modelType" value="Actor"/>
+						<StringProperty displayName="Prefijo" name="prefix" value="AC"/>
+						<StringProperty displayName="Sufijo" name="suffix" value=""/>
+						<IntegerProperty displayName="Digits" name="digits" value="2"/>
+						<BooleanProperty displayName="Guid" name="guid" value="false"/>
+						<IntegerProperty displayName="Last Numeric Value" name="lastNumericValue" value="0"/>
+					</POUserIDFormat>
+					<POUserIDFormat>
+						<StringProperty displayName="Id" name="id" value="6QNvjWKD.AACAQwc"/>
+						<StringProperty displayName="Model Type" name="modelType" value="UseCase"/>
+						<StringProperty displayName="Prefijo" name="prefix" value="UC"/>
+						<StringProperty displayName="Sufijo" name="suffix" value=""/>
+						<IntegerProperty displayName="Digits" name="digits" value="2"/>
+						<BooleanProperty displayName="Guid" name="guid" value="false"/>
+						<IntegerProperty displayName="Last Numeric Value" name="lastNumericValue" value="0"/>
+					</POUserIDFormat>
+					<POUserIDFormat>
+						<StringProperty displayName="Id" name="id" value="6QNvjWKD.AACAQwd"/>
+						<StringProperty displayName="Model Type" name="modelType" value="Requirement"/>
+						<StringProperty displayName="Prefijo" name="prefix" value="REQ"/>
+						<StringProperty displayName="Sufijo" name="suffix" value=""/>
+						<IntegerProperty displayName="Digits" name="digits" value="3"/>
+						<BooleanProperty displayName="Guid" name="guid" value="false"/>
+						<IntegerProperty displayName="Last Numeric Value" name="lastNumericValue" value="0"/>
+					</POUserIDFormat>
+					<POUserIDFormat>
+						<StringProperty displayName="Id" name="id" value="6QNvjWKD.AACAQwe"/>
+						<StringProperty displayName="Model Type" name="modelType" value="BusinessRule"/>
+						<StringProperty displayName="Prefijo" name="prefix" value="BR"/>
+						<StringProperty displayName="Sufijo" name="suffix" value=""/>
+						<IntegerProperty displayName="Digits" name="digits" value="3"/>
+						<BooleanProperty displayName="Guid" name="guid" value="false"/>
+						<IntegerProperty displayName="Last Numeric Value" name="lastNumericValue" value="0"/>
+					</POUserIDFormat>
+				</POUserIDFormats>
+			</PORepository>
+		</ProjectOptions>
+	</ProjectInfo>
+	<Models>
+		<Model composite="false" considerDefaultProperties="false" displayModelType="Tipo de Datos" id="Bf1vjWKD.AACAQot" modelType="DataType" name="boolean">
+			<ModelProperties>
+				<StringProperty displayName="Nombre" name="name" value="boolean"/>
+				<StringProperty displayName="Model Type" name="modelType" value="DataType"/>
+				<ModelsProperty displayName="Comentarios" name="comments"/>
+				<HTMLProperty displayName="Documentación" name="documentation" plainTextValue=""/>
+				<ModelsProperty displayName="Voices" name="voices"/>
+				<ModelsProperty displayName="Referencias" name="references"/>
+				<StringArrayProperty displayName="Referenced By Diagram Ids" name="referencedByDiagramIds"/>
+				<StringArrayProperty displayName="Referenced By Model Addresses" name="referencedByModelAddresses"/>
+				<StringProperty displayName="Tránsito De" name="transitFrom"/>
+				<StringProperty displayName="Tránsito A" name="transitTo"/>
+				<ModelRefProperty displayName="Pm Status" name="pmStatus"/>
+				<ModelRefProperty displayName="Pm Difficulty" name="pmDifficulty"/>
+				<ModelRefProperty displayName="Pm Priority" name="pmPriority"/>
+				<ModelRefProperty displayName="Pm Version" name="pmVersion"/>
+				<ModelRefProperty displayName="Pm Iteration" name="pmIteration"/>
+				<ModelRefProperty displayName="Pm Phase" name="pmPhase"/>
+				<ModelRefProperty displayName="Pm Discipline" name="pmDiscipline"/>
+				<StringProperty displayName="Pm Author" name="pmAuthor" value="alfredo"/>
+				<StringProperty displayName="Pm Create Date Time" name="pmCreateDateTime" value="1403145076640"/>
+				<StringProperty displayName="Pm Last Modified" name="pmLastModified" value="1403145664593"/>
+				<StringProperty displayName="Id" name="userID"/>
+				<IntegerProperty displayName="User IDLast Numeric Value" name="userIDLastNumericValue" value="0"/>
+				<ModelRefsProperty displayName="Estereotipos" name="stereotypes"/>
+				<ModelProperty displayName="Valores Etiquetados" name="taggedValues"/>
+				<IntegerProperty displayName="Quality Score" name="qualityScore" value="-1"/>
+				<StringProperty displayName="Quality Reason" name="qualityReason"/>
+			</ModelProperties>
+		</Model>
+		<Model composite="false" considerDefaultProperties="false" displayModelType="Tipo de Datos" id="hf1vjWKD.AACAQou" modelType="DataType" name="byte">
+			<ModelProperties>
+				<StringProperty displayName="Nombre" name="name" value="byte"/>
+				<StringProperty displayName="Model Type" name="modelType" value="DataType"/>
+				<ModelsProperty displayName="Comentarios" name="comments"/>
+				<HTMLProperty displayName="Documentación" name="documentation" plainTextValue=""/>
+				<ModelsProperty displayName="Voices" name="voices"/>
+				<ModelsProperty displayName="Referencias" name="references"/>
+				<StringArrayProperty displayName="Referenced By Diagram Ids" name="referencedByDiagramIds"/>
+				<StringArrayProperty displayName="Referenced By Model Addresses" name="referencedByModelAddresses"/>
+				<StringProperty displayName="Tránsito De" name="transitFrom"/>
+				<StringProperty displayName="Tránsito A" name="transitTo"/>
+				<ModelRefProperty displayName="Pm Status" name="pmStatus"/>
+				<ModelRefProperty displayName="Pm Difficulty" name="pmDifficulty"/>
+				<ModelRefProperty displayName="Pm Priority" name="pmPriority"/>
+				<ModelRefProperty displayName="Pm Version" name="pmVersion"/>
+				<ModelRefProperty displayName="Pm Iteration" name="pmIteration"/>
+				<ModelRefProperty displayName="Pm Phase" name="pmPhase"/>
+				<ModelRefProperty displayName="Pm Discipline" name="pmDiscipline"/>
+				<StringProperty displayName="Pm Author" name="pmAuthor" value="alfredo"/>
+				<StringProperty displayName="Pm Create Date Time" name="pmCreateDateTime" value="1403145076641"/>
+				<StringProperty displayName="Pm Last Modified" name="pmLastModified" value="1403145664654"/>
+				<StringProperty displayName="Id" name="userID"/>
+				<IntegerProperty displayName="User IDLast Numeric Value" name="userIDLastNumericValue" value="0"/>
+				<ModelRefsProperty displayName="Estereotipos" name="stereotypes"/>
+				<ModelProperty displayName="Valores Etiquetados" name="taggedValues"/>
+				<IntegerProperty displayName="Quality Score" name="qualityScore" value="-1"/>
+				<StringProperty displayName="Quality Reason" name="qualityReason"/>
+			</ModelProperties>
+		</Model>
+		<Model composite="false" considerDefaultProperties="false" displayModelType="Tipo de Datos" id="hf1vjWKD.AACAQov" modelType="DataType" name="char">
+			<ModelProperties>
+				<StringProperty displayName="Nombre" name="name" value="char"/>
+				<StringProperty displayName="Model Type" name="modelType" value="DataType"/>
+				<ModelsProperty displayName="Comentarios" name="comments"/>
+				<HTMLProperty displayName="Documentación" name="documentation" plainTextValue=""/>
+				<ModelsProperty displayName="Voices" name="voices"/>
+				<ModelsProperty displayName="Referencias" name="references"/>
+				<StringArrayProperty displayName="Referenced By Diagram Ids" name="referencedByDiagramIds"/>
+				<StringArrayProperty displayName="Referenced By Model Addresses" name="referencedByModelAddresses"/>
+				<StringProperty displayName="Tránsito De" name="transitFrom"/>
+				<StringProperty displayName="Tránsito A" name="transitTo"/>
+				<ModelRefProperty displayName="Pm Status" name="pmStatus"/>
+				<ModelRefProperty displayName="Pm Difficulty" name="pmDifficulty"/>
+				<ModelRefProperty displayName="Pm Priority" name="pmPriority"/>
+				<ModelRefProperty displayName="Pm Version" name="pmVersion"/>
+				<ModelRefProperty displayName="Pm Iteration" name="pmIteration"/>
+				<ModelRefProperty displayName="Pm Phase" name="pmPhase"/>
+				<ModelRefProperty displayName="Pm Discipline" name="pmDiscipline"/>
+				<StringProperty displayName="Pm Author" name="pmAuthor" value="alfredo"/>
+				<StringProperty displayName="Pm Create Date Time" name="pmCreateDateTime" value="1403145076641"/>
+				<StringProperty displayName="Pm Last Modified" name="pmLastModified" value="1403145664653"/>
+				<StringProperty displayName="Id" name="userID"/>
+				<IntegerProperty displayName="User IDLast Numeric Value" name="userIDLastNumericValue" value="0"/>
+				<ModelRefsProperty displayName="Estereotipos" name="stereotypes"/>
+				<ModelProperty displayName="Valores Etiquetados" name="taggedValues"/>
+				<IntegerProperty displayName="Quality Score" name="qualityScore" value="-1"/>
+				<StringProperty displayName="Quality Reason" name="qualityReason"/>
+			</ModelProperties>
+		</Model>
+		<Model composite="false" considerDefaultProperties="false" displayModelType="Tipo de Datos" id="Rf1vjWKD.AACAQow" modelType="DataType" name="double">
+			<ModelProperties>
+				<StringProperty displayName="Nombre" name="name" value="double"/>
+				<StringProperty displayName="Model Type" name="modelType" value="DataType"/>
+				<ModelsProperty displayName="Comentarios" name="comments"/>
+				<HTMLProperty displayName="Documentación" name="documentation" plainTextValue=""/>
+				<ModelsProperty displayName="Voices" name="voices"/>
+				<ModelsProperty displayName="Referencias" name="references"/>
+				<StringArrayProperty displayName="Referenced By Diagram Ids" name="referencedByDiagramIds"/>
+				<StringArrayProperty displayName="Referenced By Model Addresses" name="referencedByModelAddresses"/>
+				<StringProperty displayName="Tránsito De" name="transitFrom"/>
+				<StringProperty displayName="Tránsito A" name="transitTo"/>
+				<ModelRefProperty displayName="Pm Status" name="pmStatus"/>
+				<ModelRefProperty displayName="Pm Difficulty" name="pmDifficulty"/>
+				<ModelRefProperty displayName="Pm Priority" name="pmPriority"/>
+				<ModelRefProperty displayName="Pm Version" name="pmVersion"/>
+				<ModelRefProperty displayName="Pm Iteration" name="pmIteration"/>
+				<ModelRefProperty displayName="Pm Phase" name="pmPhase"/>
+				<ModelRefProperty displayName="Pm Discipline" name="pmDiscipline"/>
+				<StringProperty displayName="Pm Author" name="pmAuthor" value="alfredo"/>
+				<StringProperty displayName="Pm Create Date Time" name="pmCreateDateTime" value="1403145076642"/>
+				<StringProperty displayName="Pm Last Modified" name="pmLastModified" value="1403145664587"/>
+				<StringProperty displayName="Id" name="userID"/>
+				<IntegerProperty displayName="User IDLast Numeric Value" name="userIDLastNumericValue" value="0"/>
+				<ModelRefsProperty displayName="Estereotipos" name="stereotypes"/>
+				<ModelProperty displayName="Valores Etiquetados" name="taggedValues"/>
+				<IntegerProperty displayName="Quality Score" name="qualityScore" value="-1"/>
+				<StringProperty displayName="Quality Reason" name="qualityReason"/>
+			</ModelProperties>
+		</Model>
+		<Model composite="false" considerDefaultProperties="false" displayModelType="Tipo de Datos" id="Rf1vjWKD.AACAQox" modelType="DataType" name="float">
+			<ModelProperties>
+				<StringProperty displayName="Nombre" name="name" value="float"/>
+				<StringProperty displayName="Model Type" name="modelType" value="DataType"/>
+				<ModelsProperty displayName="Comentarios" name="comments"/>
+				<HTMLProperty displayName="Documentación" name="documentation" plainTextValue=""/>
+				<ModelsProperty displayName="Voices" name="voices"/>
+				<ModelsProperty displayName="Referencias" name="references"/>
+				<StringArrayProperty displayName="Referenced By Diagram Ids" name="referencedByDiagramIds"/>
+				<StringArrayProperty displayName="Referenced By Model Addresses" name="referencedByModelAddresses"/>
+				<StringProperty displayName="Tránsito De" name="transitFrom"/>
+				<StringProperty displayName="Tránsito A" name="transitTo"/>
+				<ModelRefProperty displayName="Pm Status" name="pmStatus"/>
+				<ModelRefProperty displayName="Pm Difficulty" name="pmDifficulty"/>
+				<ModelRefProperty displayName="Pm Priority" name="pmPriority"/>
+				<ModelRefProperty displayName="Pm Version" name="pmVersion"/>
+				<ModelRefProperty displayName="Pm Iteration" name="pmIteration"/>
+				<ModelRefProperty displayName="Pm Phase" name="pmPhase"/>
+				<ModelRefProperty displayName="Pm Discipline" name="pmDiscipline"/>
+				<StringProperty displayName="Pm Author" name="pmAuthor" value="alfredo"/>
+				<StringProperty displayName="Pm Create Date Time" name="pmCreateDateTime" value="1403145076642"/>
+				<StringProperty displayName="Pm Last Modified" name="pmLastModified" value="1403145664586"/>
+				<StringProperty displayName="Id" name="userID"/>
+				<IntegerProperty displayName="User IDLast Numeric Value" name="userIDLastNumericValue" value="0"/>
+				<ModelRefsProperty displayName="Estereotipos" name="stereotypes"/>
+				<ModelProperty displayName="Valores Etiquetados" name="taggedValues"/>
+				<IntegerProperty displayName="Quality Score" name="qualityScore" value="-1"/>
+				<StringProperty displayName="Quality Reason" name="qualityReason"/>
+			</ModelProperties>
+		</Model>
+		<Model composite="false" considerDefaultProperties="false" displayModelType="Tipo de Datos" id="xf1vjWKD.AACAQoy" modelType="DataType" name="int">
+			<ModelProperties>
+				<StringProperty displayName="Nombre" name="name" value="int"/>
+				<StringProperty displayName="Model Type" name="modelType" value="DataType"/>
+				<ModelsProperty displayName="Comentarios" name="comments"/>
+				<HTMLProperty displayName="Documentación" name="documentation" plainTextValue=""/>
+				<ModelsProperty displayName="Voices" name="voices"/>
+				<ModelsProperty displayName="Referencias" name="references"/>
+				<StringArrayProperty displayName="Referenced By Diagram Ids" name="referencedByDiagramIds"/>
+				<StringArrayProperty displayName="Referenced By Model Addresses" name="referencedByModelAddresses"/>
+				<StringProperty displayName="Tránsito De" name="transitFrom"/>
+				<StringProperty displayName="Tránsito A" name="transitTo"/>
+				<ModelRefProperty displayName="Pm Status" name="pmStatus"/>
+				<ModelRefProperty displayName="Pm Difficulty" name="pmDifficulty"/>
+				<ModelRefProperty displayName="Pm Priority" name="pmPriority"/>
+				<ModelRefProperty displayName="Pm Version" name="pmVersion"/>
+				<ModelRefProperty displayName="Pm Iteration" name="pmIteration"/>
+				<ModelRefProperty displayName="Pm Phase" name="pmPhase"/>
+				<ModelRefProperty displayName="Pm Discipline" name="pmDiscipline"/>
+				<StringProperty displayName="Pm Author" name="pmAuthor" value="alfredo"/>
+				<StringProperty displayName="Pm Create Date Time" name="pmCreateDateTime" value="1403145076643"/>
+				<StringProperty displayName="Pm Last Modified" name="pmLastModified" value="1403145664606"/>
+				<StringProperty displayName="Id" name="userID"/>
+				<IntegerProperty displayName="User IDLast Numeric Value" name="userIDLastNumericValue" value="0"/>
+				<ModelRefsProperty displayName="Estereotipos" name="stereotypes"/>
+				<ModelProperty displayName="Valores Etiquetados" name="taggedValues"/>
+				<IntegerProperty displayName="Quality Score" name="qualityScore" value="-1"/>
+				<StringProperty displayName="Quality Reason" name="qualityReason"/>
+			</ModelProperties>
+		</Model>
+		<Model composite="false" considerDefaultProperties="false" displayModelType="Tipo de Datos" id="xf1vjWKD.AACAQoz" modelType="DataType" name="long">
+			<ModelProperties>
+				<StringProperty displayName="Nombre" name="name" value="long"/>
+				<StringProperty displayName="Model Type" name="modelType" value="DataType"/>
+				<ModelsProperty displayName="Comentarios" name="comments"/>
+				<HTMLProperty displayName="Documentación" name="documentation" plainTextValue=""/>
+				<ModelsProperty displayName="Voices" name="voices"/>
+				<ModelsProperty displayName="Referencias" name="references"/>
+				<StringArrayProperty displayName="Referenced By Diagram Ids" name="referencedByDiagramIds"/>
+				<StringArrayProperty displayName="Referenced By Model Addresses" name="referencedByModelAddresses"/>
+				<StringProperty displayName="Tránsito De" name="transitFrom"/>
+				<StringProperty displayName="Tránsito A" name="transitTo"/>
+				<ModelRefProperty displayName="Pm Status" name="pmStatus"/>
+				<ModelRefProperty displayName="Pm Difficulty" name="pmDifficulty"/>
+				<ModelRefProperty displayName="Pm Priority" name="pmPriority"/>
+				<ModelRefProperty displayName="Pm Version" name="pmVersion"/>
+				<ModelRefProperty displayName="Pm Iteration" name="pmIteration"/>
+				<ModelRefProperty displayName="Pm Phase" name="pmPhase"/>
+				<ModelRefProperty displayName="Pm Discipline" name="pmDiscipline"/>
+				<StringProperty displayName="Pm Author" name="pmAuthor" value="alfredo"/>
+				<StringProperty displayName="Pm Create Date Time" name="pmCreateDateTime" value="1403145076643"/>
+				<StringProperty displayName="Pm Last Modified" name="pmLastModified" value="1403145664605"/>
+				<StringProperty displayName="Id" name="userID"/>
+				<IntegerProperty displayName="User IDLast Numeric Value" name="userIDLastNumericValue" value="0"/>
+				<ModelRefsProperty displayName="Estereotipos" name="stereotypes"/>
+				<ModelProperty displayName="Valores Etiquetados" name="taggedValues"/>
+				<IntegerProperty displayName="Quality Score" name="qualityScore" value="-1"/>
+				<StringProperty displayName="Quality Reason" name="qualityReason"/>
+			</ModelProperties>
+		</Model>
+		<Model composite="false" considerDefaultProperties="false" displayModelType="Tipo de Datos" id="Jf1vjWKD.AACAQo0" modelType="DataType" name="short">
+			<ModelProperties>
+				<StringProperty displayName="Nombre" name="name" value="short"/>
+				<StringProperty displayName="Model Type" name="modelType" value="DataType"/>
+				<ModelsProperty displayName="Comentarios" name="comments"/>
+				<HTMLProperty displayName="Documentación" name="documentation" plainTextValue=""/>
+				<ModelsProperty displayName="Voices" name="voices"/>
+				<ModelsProperty displayName="Referencias" name="references"/>
+				<StringArrayProperty displayName="Referenced By Diagram Ids" name="referencedByDiagramIds"/>
+				<StringArrayProperty displayName="Referenced By Model Addresses" name="referencedByModelAddresses"/>
+				<StringProperty displayName="Tránsito De" name="transitFrom"/>
+				<StringProperty displayName="Tránsito A" name="transitTo"/>
+				<ModelRefProperty displayName="Pm Status" name="pmStatus"/>
+				<ModelRefProperty displayName="Pm Difficulty" name="pmDifficulty"/>
+				<ModelRefProperty displayName="Pm Priority" name="pmPriority"/>
+				<ModelRefProperty displayName="Pm Version" name="pmVersion"/>
+				<ModelRefProperty displayName="Pm Iteration" name="pmIteration"/>
+				<ModelRefProperty displayName="Pm Phase" name="pmPhase"/>
+				<ModelRefProperty displayName="Pm Discipline" name="pmDiscipline"/>
+				<StringProperty displayName="Pm Author" name="pmAuthor" value="alfredo"/>
+				<StringProperty displayName="Pm Create Date Time" name="pmCreateDateTime" value="1403145076644"/>
+				<StringProperty displayName="Pm Last Modified" name="pmLastModified" value="1403145664651"/>
+				<StringProperty displayName="Id" name="userID"/>
+				<IntegerProperty displayName="User IDLast Numeric Value" name="userIDLastNumericValue" value="0"/>
+				<ModelRefsProperty displayName="Estereotipos" name="stereotypes"/>
+				<ModelProperty displayName="Valores Etiquetados" name="taggedValues"/>
+				<IntegerProperty displayName="Quality Score" name="qualityScore" value="-1"/>
+				<StringProperty displayName="Quality Reason" name="qualityReason"/>
+			</ModelProperties>
+		</Model>
+		<Model composite="false" considerDefaultProperties="false" displayModelType="Tipo de Datos" id="Jf1vjWKD.AACAQo1" modelType="DataType" name="void">
+			<ModelProperties>
+				<StringProperty displayName="Nombre" name="name" value="void"/>
+				<StringProperty displayName="Model Type" name="modelType" value="DataType"/>
+				<ModelsProperty displayName="Comentarios" name="comments"/>
+				<HTMLProperty displayName="Documentación" name="documentation" plainTextValue=""/>
+				<ModelsProperty displayName="Voices" name="voices"/>
+				<ModelsProperty displayName="Referencias" name="references"/>
+				<StringArrayProperty displayName="Referenced By Diagram Ids" name="referencedByDiagramIds"/>
+				<StringArrayProperty displayName="Referenced By Model Addresses" name="referencedByModelAddresses"/>
+				<StringProperty displayName="Tránsito De" name="transitFrom"/>
+				<StringProperty displayName="Tránsito A" name="transitTo"/>
+				<ModelRefProperty displayName="Pm Status" name="pmStatus"/>
+				<ModelRefProperty displayName="Pm Difficulty" name="pmDifficulty"/>
+				<ModelRefProperty displayName="Pm Priority" name="pmPriority"/>
+				<ModelRefProperty displayName="Pm Version" name="pmVersion"/>
+				<ModelRefProperty displayName="Pm Iteration" name="pmIteration"/>
+				<ModelRefProperty displayName="Pm Phase" name="pmPhase"/>
+				<ModelRefProperty displayName="Pm Discipline" name="pmDiscipline"/>
+				<StringProperty displayName="Pm Author" name="pmAuthor" value="alfredo"/>
+				<StringProperty displayName="Pm Create Date Time" name="pmCreateDateTime" value="1403145076644"/>
+				<StringProperty displayName="Pm Last Modified" name="pmLastModified" value="1403145664651"/>
+				<StringProperty displayName="Id" name="userID"/>
+				<IntegerProperty displayName="User IDLast Numeric Value" name="userIDLastNumericValue" value="0"/>
+				<ModelRefsProperty displayName="Estereotipos" name="stereotypes"/>
+				<ModelProperty displayName="Valores Etiquetados" name="taggedValues"/>
+				<IntegerProperty displayName="Quality Score" name="qualityScore" value="-1"/>
+				<StringProperty displayName="Quality Reason" name="qualityReason"/>
+			</ModelProperties>
+		</Model>
+		<Model composite="false" considerDefaultProperties="false" displayModelType="Tipo de Datos" id="pf1vjWKD.AACAQo2" modelType="DataType" name="string">
+			<ModelProperties>
+				<StringProperty displayName="Nombre" name="name" value="string"/>
+				<StringProperty displayName="Model Type" name="modelType" value="DataType"/>
+				<ModelsProperty displayName="Comentarios" name="comments"/>
+				<HTMLProperty displayName="Documentación" name="documentation" plainTextValue=""/>
+				<ModelsProperty displayName="Voices" name="voices"/>
+				<ModelsProperty displayName="Referencias" name="references"/>
+				<StringArrayProperty displayName="Referenced By Diagram Ids" name="referencedByDiagramIds"/>
+				<StringArrayProperty displayName="Referenced By Model Addresses" name="referencedByModelAddresses"/>
+				<StringProperty displayName="Tránsito De" name="transitFrom"/>
+				<StringProperty displayName="Tránsito A" name="transitTo"/>
+				<ModelRefProperty displayName="Pm Status" name="pmStatus"/>
+				<ModelRefProperty displayName="Pm Difficulty" name="pmDifficulty"/>
+				<ModelRefProperty displayName="Pm Priority" name="pmPriority"/>
+				<ModelRefProperty displayName="Pm Version" name="pmVersion"/>
+				<ModelRefProperty displayName="Pm Iteration" name="pmIteration"/>
+				<ModelRefProperty displayName="Pm Phase" name="pmPhase"/>
+				<ModelRefProperty displayName="Pm Discipline" name="pmDiscipline"/>
+				<StringProperty displayName="Pm Author" name="pmAuthor" value="alfredo"/>
+				<StringProperty displayName="Pm Create Date Time" name="pmCreateDateTime" value="1403145076645"/>
+				<StringProperty displayName="Pm Last Modified" name="pmLastModified" value="1403145664579"/>
+				<StringProperty displayName="Id" name="userID"/>
+				<IntegerProperty displayName="User IDLast Numeric Value" name="userIDLastNumericValue" value="0"/>
+				<ModelRefsProperty displayName="Estereotipos" name="stereotypes"/>
+				<ModelProperty displayName="Valores Etiquetados" name="taggedValues"/>
+				<IntegerProperty displayName="Quality Score" name="qualityScore" value="-1"/>
+				<StringProperty displayName="Quality Reason" name="qualityReason"/>
+			</ModelProperties>
+		</Model>
+		<Model composite="false" considerDefaultProperties="false" displayModelType="Entidad" id="4FIQTWKD.AACAQwn" modelType="DBTable" name="Usuario">
+			<ModelProperties>
+				<StringProperty displayName="Nombre" name="name" value="Usuario"/>
+				<StringProperty displayName="Model Type" name="modelType" value="DBTable"/>
+				<ModelsProperty displayName="Comentarios" name="comments"/>
+				<HTMLProperty displayName="Documentación" name="documentation" plainTextValue=""/>
+				<ModelsProperty displayName="Voices" name="voices"/>
+				<ModelsProperty displayName="Referencias" name="references"/>
+				<StringArrayProperty displayName="Referenced By Diagram Ids" name="referencedByDiagramIds"/>
+				<StringArrayProperty displayName="Referenced By Model Addresses" name="referencedByModelAddresses"/>
+				<StringProperty displayName="Tránsito De" name="transitFrom"/>
+				<StringProperty displayName="Tránsito A" name="transitTo"/>
+				<ModelRefProperty displayName="Pm Status" name="pmStatus"/>
+				<ModelRefProperty displayName="Pm Difficulty" name="pmDifficulty"/>
+				<ModelRefProperty displayName="Pm Priority" name="pmPriority"/>
+				<ModelRefProperty displayName="Pm Version" name="pmVersion"/>
+				<ModelRefProperty displayName="Pm Iteration" name="pmIteration"/>
+				<ModelRefProperty displayName="Pm Phase" name="pmPhase"/>
+				<ModelRefProperty displayName="Pm Discipline" name="pmDiscipline"/>
+				<StringProperty displayName="Pm Author" name="pmAuthor" value="alfredo"/>
+				<StringProperty displayName="Pm Create Date Time" name="pmCreateDateTime" value="1403146226183"/>
+				<StringProperty displayName="Pm Last Modified" name="pmLastModified" value="1403147338064"/>
+				<StringProperty displayName="Id" name="userID"/>
+				<IntegerProperty displayName="User IDLast Numeric Value" name="userIDLastNumericValue" value="0"/>
+				<StringProperty displayName="Tipo" name="type" value="Normal"/>
+				<StringProperty displayName="Sync Type" name="syncType" value="Not Sync"/>
+				<StringProperty displayName="Datos Modelo" name="dataModel" value="Physical"/>
+				<StringProperty displayName="Orm Sync State" name="ormSyncState" value="Not Sync"/>
+				<ModelRefProperty displayName="Discriminator" name="discriminator"/>
+				<ModelRefProperty displayName="Version Column" name="versionColumn"/>
+				<ModelRefProperty displayName="Class Model" name="classModel"/>
+				<ModelRefsProperty displayName="Estereotipos" name="stereotypes"/>
+				<ModelProperty displayName="Valores Etiquetados" name="taggedValues"/>
+				<IntegerProperty displayName="Quality Score" name="qualityScore" value="-1"/>
+				<StringProperty displayName="Quality Reason" name="qualityReason"/>
+				<ModelProperty displayName="Records" name="records"/>
+				<StringProperty displayName="Esquema" name="schema"/>
+				<StringProperty displayName="Tablespace" name="tablespace"/>
+				<StringProperty displayName="Primary Key Constraint Name Pattern" name="primaryKeyConstraintNamePattern" value=""/>
+				<StringProperty displayName="Primary Key Constraint Name" name="primaryKeyConstraintName"/>
+				<StringProperty displayName="Primary Key Tablespace" name="primaryKeyTablespace"/>
+				<StringProperty displayName="DDLClauses" name="DDLClauses"/>
+				<ModelsProperty displayName="Limitaciones" name="constraints"/>
+				<DiagramElementRefProperty displayName="Vista Maestra" name="masterView">
+					<DiagramElementRef displayShapeType="DBTable" id="4FIQTWKD.AACAQwm" model="4FIQTWKD.AACAQwn" name="Usuario" shapeType="DBTable"/>
+				</DiagramElementRefProperty>
+			</ModelProperties>
+			<ChildModels>
+				<Model composite="true" considerDefaultProperties="false" displayModelType="Columna" id="1r4QTWKD.AACAQwr" modelType="DBColumn" name="email">
+					<ModelProperties>
+						<StringProperty displayName="Nombre" name="name" value="email"/>
+						<StringProperty displayName="Model Type" name="modelType" value="DBColumn"/>
+						<ModelsProperty displayName="Comentarios" name="comments"/>
+						<HTMLProperty displayName="Documentación" name="documentation" plainTextValue=""/>
+						<ModelsProperty displayName="Voices" name="voices"/>
+						<ModelsProperty displayName="Referencias" name="references"/>
+						<StringArrayProperty displayName="Referenced By Diagram Ids" name="referencedByDiagramIds"/>
+						<StringArrayProperty displayName="Referenced By Model Addresses" name="referencedByModelAddresses"/>
+						<StringProperty displayName="Tránsito De" name="transitFrom"/>
+						<StringProperty displayName="Tránsito A" name="transitTo"/>
+						<ModelRefProperty displayName="Pm Status" name="pmStatus"/>
+						<ModelRefProperty displayName="Pm Difficulty" name="pmDifficulty"/>
+						<ModelRefProperty displayName="Pm Priority" name="pmPriority"/>
+						<ModelRefProperty displayName="Pm Version" name="pmVersion"/>
+						<ModelRefProperty displayName="Pm Iteration" name="pmIteration"/>
+						<ModelRefProperty displayName="Pm Phase" name="pmPhase"/>
+						<ModelRefProperty displayName="Pm Discipline" name="pmDiscipline"/>
+						<StringProperty displayName="Pm Author" name="pmAuthor" value="alfredo"/>
+						<StringProperty displayName="Pm Create Date Time" name="pmCreateDateTime" value="1403146239339"/>
+						<StringProperty displayName="Pm Last Modified" name="pmLastModified" value="1403146865476"/>
+						<StringProperty displayName="Id" name="userID"/>
+						<IntegerProperty displayName="User IDLast Numeric Value" name="userIDLastNumericValue" value="0"/>
+						<ModelRefsProperty displayName="Estereotipos" name="stereotypes"/>
+						<ModelProperty displayName="Valores Etiquetados" name="taggedValues"/>
+						<IntegerProperty displayName="Quality Score" name="qualityScore" value="-1"/>
+						<StringProperty displayName="Quality Reason" name="qualityReason"/>
+						<StringProperty displayName="Db Column Name" name="dbColumnName"/>
+						<StringProperty displayName="Valor Predefinido" name="defaultValue"/>
+						<StringProperty displayName="Foreign Key Name Pattern" name="foreignKeyNamePattern"/>
+						<StringProperty displayName="Tipo" internalValue="27" name="type" value="varchar"/>
+						<IntegerProperty displayName="Identity Seed" name="identitySeed" value="-1"/>
+						<IntegerProperty displayName="Identity Increment" name="identityIncrement" value="-1"/>
+						<BooleanProperty displayName="Anulable" name="nullable" value="false"/>
+						<BooleanProperty displayName="Único" name="unique" value="false"/>
+						<BooleanProperty displayName="Clave Principal" name="primaryKey" value="true"/>
+						<BooleanProperty displayName="Índice" name="index" value="false"/>
+						<StringProperty displayName="Type Name" name="typeName"/>
+						<StringProperty displayName="Check Constraint" name="checkConstraint"/>
+						<IntegerProperty displayName="Length" name="length" value="64"/>
+						<IntegerProperty displayName="Escala" name="scale" value="0"/>
+						<StringProperty displayName="DDLClauses" name="DDLClauses"/>
+						<StringProperty displayName="Id Generator" name="idGenerator" value="native"/>
+						<ModelsProperty displayName="Foreign Key Constraints" name="foreignKeyConstraints"/>
+						<ModelsProperty displayName="User Types" name="userTypes"/>
+						<StringProperty displayName="Id Generator Key" name="idGeneratorKey"/>
+						<StringProperty displayName="Sync Type" name="syncType" value="Not Sync"/>
+						<ModelRefProperty displayName="Attribute Model" name="attributeModel"/>
+						<StringProperty displayName="Generated" name="generated" value="Unspecified"/>
+						<StringProperty displayName="Sync To Attribute" name="syncToAttribute" value="Yes"/>
+					</ModelProperties>
+				</Model>
+				<Model composite="true" considerDefaultProperties="false" displayModelType="Columna" id="n68QTWKD.AACAQww" modelType="DBColumn" name="nombre">
+					<ModelProperties>
+						<StringProperty displayName="Nombre" name="name" value="nombre"/>
+						<StringProperty displayName="Model Type" name="modelType" value="DBColumn"/>
+						<ModelsProperty displayName="Comentarios" name="comments"/>
+						<HTMLProperty displayName="Documentación" name="documentation" plainTextValue=""/>
+						<ModelsProperty displayName="Voices" name="voices"/>
+						<ModelsProperty displayName="Referencias" name="references"/>
+						<StringArrayProperty displayName="Referenced By Diagram Ids" name="referencedByDiagramIds"/>
+						<StringArrayProperty displayName="Referenced By Model Addresses" name="referencedByModelAddresses"/>
+						<StringProperty displayName="Tránsito De" name="transitFrom"/>
+						<StringProperty displayName="Tránsito A" name="transitTo"/>
+						<ModelRefProperty displayName="Pm Status" name="pmStatus"/>
+						<ModelRefProperty displayName="Pm Difficulty" name="pmDifficulty"/>
+						<ModelRefProperty displayName="Pm Priority" name="pmPriority"/>
+						<ModelRefProperty displayName="Pm Version" name="pmVersion"/>
+						<ModelRefProperty displayName="Pm Iteration" name="pmIteration"/>
+						<ModelRefProperty displayName="Pm Phase" name="pmPhase"/>
+						<ModelRefProperty displayName="Pm Discipline" name="pmDiscipline"/>
+						<StringProperty displayName="Pm Author" name="pmAuthor" value="alfredo"/>
+						<StringProperty displayName="Pm Create Date Time" name="pmCreateDateTime" value="1403146270201"/>
+						<StringProperty displayName="Pm Last Modified" name="pmLastModified" value="1403146865476"/>
+						<StringProperty displayName="Id" name="userID"/>
+						<IntegerProperty displayName="User IDLast Numeric Value" name="userIDLastNumericValue" value="0"/>
+						<ModelRefsProperty displayName="Estereotipos" name="stereotypes"/>
+						<ModelProperty displayName="Valores Etiquetados" name="taggedValues"/>
+						<IntegerProperty displayName="Quality Score" name="qualityScore" value="-1"/>
+						<StringProperty displayName="Quality Reason" name="qualityReason"/>
+						<StringProperty displayName="Db Column Name" name="dbColumnName"/>
+						<StringProperty displayName="Valor Predefinido" name="defaultValue"/>
+						<StringProperty displayName="Foreign Key Name Pattern" name="foreignKeyNamePattern"/>
+						<StringProperty displayName="Tipo" internalValue="27" name="type" value="varchar"/>
+						<IntegerProperty displayName="Identity Seed" name="identitySeed" value="-1"/>
+						<IntegerProperty displayName="Identity Increment" name="identityIncrement" value="-1"/>
+						<BooleanProperty displayName="Anulable" name="nullable" value="false"/>
+						<BooleanProperty displayName="Único" name="unique" value="false"/>
+						<BooleanProperty displayName="Clave Principal" name="primaryKey" value="false"/>
+						<BooleanProperty displayName="Índice" name="index" value="false"/>
+						<StringProperty displayName="Type Name" name="typeName"/>
+						<StringProperty displayName="Check Constraint" name="checkConstraint"/>
+						<IntegerProperty displayName="Length" name="length" value="128"/>
+						<IntegerProperty displayName="Escala" name="scale" value="0"/>
+						<StringProperty displayName="DDLClauses" name="DDLClauses"/>
+						<StringProperty displayName="Id Generator" name="idGenerator"/>
+						<ModelsProperty displayName="Foreign Key Constraints" name="foreignKeyConstraints"/>
+						<ModelsProperty displayName="User Types" name="userTypes"/>
+						<StringProperty displayName="Id Generator Key" name="idGeneratorKey"/>
+						<StringProperty displayName="Sync Type" name="syncType" value="Not Sync"/>
+						<ModelRefProperty displayName="Attribute Model" name="attributeModel"/>
+						<StringProperty displayName="Generated" name="generated" value="Unspecified"/>
+						<StringProperty displayName="Sync To Attribute" name="syncToAttribute" value="Yes"/>
+					</ModelProperties>
+				</Model>
+				<Model composite="true" considerDefaultProperties="false" displayModelType="Columna" id="aOyQTWKD.AACAQwz" modelType="DBColumn" name="password">
+					<ModelProperties>
+						<StringProperty displayName="Nombre" name="name" value="password"/>
+						<StringProperty displayName="Model Type" name="modelType" value="DBColumn"/>
+						<ModelsProperty displayName="Comentarios" name="comments"/>
+						<HTMLProperty displayName="Documentación" name="documentation" plainTextValue=""/>
+						<ModelsProperty displayName="Voices" name="voices"/>
+						<ModelsProperty displayName="Referencias" name="references"/>
+						<StringArrayProperty displayName="Referenced By Diagram Ids" name="referencedByDiagramIds"/>
+						<StringArrayProperty displayName="Referenced By Model Addresses" name="referencedByModelAddresses"/>
+						<StringProperty displayName="Tránsito De" name="transitFrom"/>
+						<StringProperty displayName="Tránsito A" name="transitTo"/>
+						<ModelRefProperty displayName="Pm Status" name="pmStatus"/>
+						<ModelRefProperty displayName="Pm Difficulty" name="pmDifficulty"/>
+						<ModelRefProperty displayName="Pm Priority" name="pmPriority"/>
+						<ModelRefProperty displayName="Pm Version" name="pmVersion"/>
+						<ModelRefProperty displayName="Pm Iteration" name="pmIteration"/>
+						<ModelRefProperty displayName="Pm Phase" name="pmPhase"/>
+						<ModelRefProperty displayName="Pm Discipline" name="pmDiscipline"/>
+						<StringProperty displayName="Pm Author" name="pmAuthor" value="alfredo"/>
+						<StringProperty displayName="Pm Create Date Time" name="pmCreateDateTime" value="1403146286870"/>
+						<StringProperty displayName="Pm Last Modified" name="pmLastModified" value="1403146865476"/>
+						<StringProperty displayName="Id" name="userID"/>
+						<IntegerProperty displayName="User IDLast Numeric Value" name="userIDLastNumericValue" value="0"/>
+						<ModelRefsProperty displayName="Estereotipos" name="stereotypes"/>
+						<ModelProperty displayName="Valores Etiquetados" name="taggedValues"/>
+						<IntegerProperty displayName="Quality Score" name="qualityScore" value="-1"/>
+						<StringProperty displayName="Quality Reason" name="qualityReason"/>
+						<StringProperty displayName="Db Column Name" name="dbColumnName"/>
+						<StringProperty displayName="Valor Predefinido" name="defaultValue"/>
+						<StringProperty displayName="Foreign Key Name Pattern" name="foreignKeyNamePattern"/>
+						<StringProperty displayName="Tipo" internalValue="27" name="type" value="varchar"/>
+						<IntegerProperty displayName="Identity Seed" name="identitySeed" value="-1"/>
+						<IntegerProperty displayName="Identity Increment" name="identityIncrement" value="-1"/>
+						<BooleanProperty displayName="Anulable" name="nullable" value="false"/>
+						<BooleanProperty displayName="Único" name="unique" value="false"/>
+						<BooleanProperty displayName="Clave Principal" name="primaryKey" value="false"/>
+						<BooleanProperty displayName="Índice" name="index" value="false"/>
+						<StringProperty displayName="Type Name" name="typeName"/>
+						<StringProperty displayName="Check Constraint" name="checkConstraint"/>
+						<IntegerProperty displayName="Length" name="length" value="255"/>
+						<IntegerProperty displayName="Escala" name="scale" value="0"/>
+						<StringProperty displayName="DDLClauses" name="DDLClauses"/>
+						<StringProperty displayName="Id Generator" name="idGenerator"/>
+						<ModelsProperty displayName="Foreign Key Constraints" name="foreignKeyConstraints"/>
+						<ModelsProperty displayName="User Types" name="userTypes"/>
+						<StringProperty displayName="Id Generator Key" name="idGeneratorKey"/>
+						<StringProperty displayName="Sync Type" name="syncType" value="Not Sync"/>
+						<ModelRefProperty displayName="Attribute Model" name="attributeModel"/>
+						<StringProperty displayName="Generated" name="generated" value="Unspecified"/>
+						<StringProperty displayName="Sync To Attribute" name="syncToAttribute" value="Yes"/>
+					</ModelProperties>
+				</Model>
+				<Model composite="true" considerDefaultProperties="false" displayModelType="Columna" id="TbcITWKD.AACAQyt" modelType="DBColumn" name="departamento">
+					<ModelProperties>
+						<StringProperty displayName="Nombre" name="name" value="departamento"/>
+						<StringProperty displayName="Model Type" name="modelType" value="DBColumn"/>
+						<ModelsProperty displayName="Comentarios" name="comments"/>
+						<HTMLProperty displayName="Documentación" name="documentation" plainTextValue=""/>
+						<ModelsProperty displayName="Voices" name="voices"/>
+						<ModelsProperty displayName="Referencias" name="references"/>
+						<StringArrayProperty displayName="Referenced By Diagram Ids" name="referencedByDiagramIds"/>
+						<StringArrayProperty displayName="Referenced By Model Addresses" name="referencedByModelAddresses"/>
+						<StringProperty displayName="Tránsito De" name="transitFrom"/>
+						<StringProperty displayName="Tránsito A" name="transitTo"/>
+						<ModelRefProperty displayName="Pm Status" name="pmStatus"/>
+						<ModelRefProperty displayName="Pm Difficulty" name="pmDifficulty"/>
+						<ModelRefProperty displayName="Pm Priority" name="pmPriority"/>
+						<ModelRefProperty displayName="Pm Version" name="pmVersion"/>
+						<ModelRefProperty displayName="Pm Iteration" name="pmIteration"/>
+						<ModelRefProperty displayName="Pm Phase" name="pmPhase"/>
+						<ModelRefProperty displayName="Pm Discipline" name="pmDiscipline"/>
+						<StringProperty displayName="Pm Author" name="pmAuthor" value="alfredo"/>
+						<StringProperty displayName="Pm Create Date Time" name="pmCreateDateTime" value="1403146792370"/>
+						<StringProperty displayName="Pm Last Modified" name="pmLastModified" value="1403146865476"/>
+						<StringProperty displayName="Id" name="userID"/>
+						<IntegerProperty displayName="User IDLast Numeric Value" name="userIDLastNumericValue" value="0"/>
+						<ModelRefsProperty displayName="Estereotipos" name="stereotypes"/>
+						<ModelProperty displayName="Valores Etiquetados" name="taggedValues"/>
+						<IntegerProperty displayName="Quality Score" name="qualityScore" value="-1"/>
+						<StringProperty displayName="Quality Reason" name="qualityReason"/>
+						<StringProperty displayName="Db Column Name" name="dbColumnName"/>
+						<StringProperty displayName="Valor Predefinido" name="defaultValue"/>
+						<StringProperty displayName="Foreign Key Name Pattern" name="foreignKeyNamePattern"/>
+						<StringProperty displayName="Tipo" internalValue="27" name="type" value="varchar"/>
+						<IntegerProperty displayName="Identity Seed" name="identitySeed" value="-1"/>
+						<IntegerProperty displayName="Identity Increment" name="identityIncrement" value="-1"/>
+						<BooleanProperty displayName="Anulable" name="nullable" value="false"/>
+						<BooleanProperty displayName="Único" name="unique" value="false"/>
+						<BooleanProperty displayName="Clave Principal" name="primaryKey" value="false"/>
+						<BooleanProperty displayName="Índice" name="index" value="false"/>
+						<StringProperty displayName="Type Name" name="typeName"/>
+						<StringProperty displayName="Check Constraint" name="checkConstraint"/>
+						<IntegerProperty displayName="Length" name="length" value="8"/>
+						<IntegerProperty displayName="Escala" name="scale" value="0"/>
+						<StringProperty displayName="DDLClauses" name="DDLClauses"/>
+						<StringProperty displayName="Id Generator" name="idGenerator"/>
+						<ModelsProperty displayName="Foreign Key Constraints" name="foreignKeyConstraints"/>
+						<ModelsProperty displayName="User Types" name="userTypes"/>
+						<StringProperty displayName="Id Generator Key" name="idGeneratorKey"/>
+						<StringProperty displayName="Sync Type" name="syncType" value="Not Sync"/>
+						<ModelRefProperty displayName="Attribute Model" name="attributeModel"/>
+						<StringProperty displayName="Generated" name="generated" value="Unspecified"/>
+						<StringProperty displayName="Sync To Attribute" name="syncToAttribute" value="Yes"/>
+					</ModelProperties>
+				</Model>
+				<Model composite="true" considerDefaultProperties="false" displayModelType="Columna" id="undQTWKD.AACAQw2" modelType="DBColumn" name="habilitado">
+					<ModelProperties>
+						<StringProperty displayName="Nombre" name="name" value="habilitado"/>
+						<StringProperty displayName="Model Type" name="modelType" value="DBColumn"/>
+						<ModelsProperty displayName="Comentarios" name="comments"/>
+						<HTMLProperty displayName="Documentación" name="documentation" plainTextValue=""/>
+						<ModelsProperty displayName="Voices" name="voices"/>
+						<ModelsProperty displayName="Referencias" name="references"/>
+						<StringArrayProperty displayName="Referenced By Diagram Ids" name="referencedByDiagramIds"/>
+						<StringArrayProperty displayName="Referenced By Model Addresses" name="referencedByModelAddresses"/>
+						<StringProperty displayName="Tránsito De" name="transitFrom"/>
+						<StringProperty displayName="Tránsito A" name="transitTo"/>
+						<ModelRefProperty displayName="Pm Status" name="pmStatus"/>
+						<ModelRefProperty displayName="Pm Difficulty" name="pmDifficulty"/>
+						<ModelRefProperty displayName="Pm Priority" name="pmPriority"/>
+						<ModelRefProperty displayName="Pm Version" name="pmVersion"/>
+						<ModelRefProperty displayName="Pm Iteration" name="pmIteration"/>
+						<ModelRefProperty displayName="Pm Phase" name="pmPhase"/>
+						<ModelRefProperty displayName="Pm Discipline" name="pmDiscipline"/>
+						<StringProperty displayName="Pm Author" name="pmAuthor" value="alfredo"/>
+						<StringProperty displayName="Pm Create Date Time" name="pmCreateDateTime" value="1403146399325"/>
+						<StringProperty displayName="Pm Last Modified" name="pmLastModified" value="1403146865476"/>
+						<StringProperty displayName="Id" name="userID"/>
+						<IntegerProperty displayName="User IDLast Numeric Value" name="userIDLastNumericValue" value="0"/>
+						<ModelRefsProperty displayName="Estereotipos" name="stereotypes"/>
+						<ModelProperty displayName="Valores Etiquetados" name="taggedValues"/>
+						<IntegerProperty displayName="Quality Score" name="qualityScore" value="-1"/>
+						<StringProperty displayName="Quality Reason" name="qualityReason"/>
+						<StringProperty displayName="Db Column Name" name="dbColumnName"/>
+						<StringProperty displayName="Valor Predefinido" name="defaultValue"/>
+						<StringProperty displayName="Foreign Key Name Pattern" name="foreignKeyNamePattern"/>
+						<StringProperty displayName="Tipo" internalValue="9" name="type" value="integer"/>
+						<IntegerProperty displayName="Identity Seed" name="identitySeed" value="-1"/>
+						<IntegerProperty displayName="Identity Increment" name="identityIncrement" value="-1"/>
+						<BooleanProperty displayName="Anulable" name="nullable" value="false"/>
+						<BooleanProperty displayName="Único" name="unique" value="false"/>
+						<BooleanProperty displayName="Clave Principal" name="primaryKey" value="false"/>
+						<BooleanProperty displayName="Índice" name="index" value="false"/>
+						<StringProperty displayName="Type Name" name="typeName"/>
+						<StringProperty displayName="Check Constraint" name="checkConstraint"/>
+						<IntegerProperty displayName="Length" name="length" value="1"/>
+						<IntegerProperty displayName="Escala" name="scale" value="0"/>
+						<StringProperty displayName="DDLClauses" name="DDLClauses"/>
+						<StringProperty displayName="Id Generator" name="idGenerator"/>
+						<ModelsProperty displayName="Foreign Key Constraints" name="foreignKeyConstraints"/>
+						<ModelsProperty displayName="User Types" name="userTypes"/>
+						<StringProperty displayName="Id Generator Key" name="idGeneratorKey"/>
+						<StringProperty displayName="Sync Type" name="syncType" value="Not Sync"/>
+						<ModelRefProperty displayName="Attribute Model" name="attributeModel"/>
+						<StringProperty displayName="Generated" name="generated" value="Unspecified"/>
+						<StringProperty displayName="Sync To Attribute" name="syncToAttribute" value="Yes"/>
+					</ModelProperties>
+				</Model>
+				<Model composite="true" considerDefaultProperties="false" displayModelType="Columna" id="Xl6ITWKD.AACAQyy" modelType="DBColumn" name="balance">
+					<ModelProperties>
+						<StringProperty displayName="Nombre" name="name" value="balance"/>
+						<StringProperty displayName="Model Type" name="modelType" value="DBColumn"/>
+						<ModelsProperty displayName="Comentarios" name="comments"/>
+						<HTMLProperty displayName="Documentación" name="documentation" plainTextValue=""/>
+						<ModelsProperty displayName="Voices" name="voices"/>
+						<ModelsProperty displayName="Referencias" name="references"/>
+						<StringArrayProperty displayName="Referenced By Diagram Ids" name="referencedByDiagramIds"/>
+						<StringArrayProperty displayName="Referenced By Model Addresses" name="referencedByModelAddresses"/>
+						<StringProperty displayName="Tránsito De" name="transitFrom"/>
+						<StringProperty displayName="Tránsito A" name="transitTo"/>
+						<ModelRefProperty displayName="Pm Status" name="pmStatus"/>
+						<ModelRefProperty displayName="Pm Difficulty" name="pmDifficulty"/>
+						<ModelRefProperty displayName="Pm Priority" name="pmPriority"/>
+						<ModelRefProperty displayName="Pm Version" name="pmVersion"/>
+						<ModelRefProperty displayName="Pm Iteration" name="pmIteration"/>
+						<ModelRefProperty displayName="Pm Phase" name="pmPhase"/>
+						<ModelRefProperty displayName="Pm Discipline" name="pmDiscipline"/>
+						<StringProperty displayName="Pm Author" name="pmAuthor" value="alfredo"/>
+						<StringProperty displayName="Pm Create Date Time" name="pmCreateDateTime" value="1403146828410"/>
+						<StringProperty displayName="Pm Last Modified" name="pmLastModified" value="1403147338067"/>
+						<StringProperty displayName="Id" name="userID"/>
+						<IntegerProperty displayName="User IDLast Numeric Value" name="userIDLastNumericValue" value="0"/>
+						<ModelRefsProperty displayName="Estereotipos" name="stereotypes"/>
+						<ModelProperty displayName="Valores Etiquetados" name="taggedValues"/>
+						<IntegerProperty displayName="Quality Score" name="qualityScore" value="-1"/>
+						<StringProperty displayName="Quality Reason" name="qualityReason"/>
+						<StringProperty displayName="Db Column Name" name="dbColumnName"/>
+						<StringProperty displayName="Valor Predefinido" name="defaultValue"/>
+						<StringProperty displayName="Foreign Key Name Pattern" name="foreignKeyNamePattern"/>
+						<StringProperty displayName="Tipo" internalValue="6" name="type" value="double"/>
+						<IntegerProperty displayName="Identity Seed" name="identitySeed" value="-1"/>
+						<IntegerProperty displayName="Identity Increment" name="identityIncrement" value="-1"/>
+						<BooleanProperty displayName="Anulable" name="nullable" value="false"/>
+						<BooleanProperty displayName="Único" name="unique" value="false"/>
+						<BooleanProperty displayName="Clave Principal" name="primaryKey" value="false"/>
+						<BooleanProperty displayName="Índice" name="index" value="false"/>
+						<StringProperty displayName="Type Name" name="typeName"/>
+						<StringProperty displayName="Check Constraint" name="checkConstraint"/>
+						<IntegerProperty displayName="Length" name="length" value="10"/>
+						<IntegerProperty displayName="Escala" name="scale" value="0"/>
+						<StringProperty displayName="DDLClauses" name="DDLClauses"/>
+						<StringProperty displayName="Id Generator" name="idGenerator"/>
+						<ModelsProperty displayName="Foreign Key Constraints" name="foreignKeyConstraints"/>
+						<ModelsProperty displayName="User Types" name="userTypes"/>
+						<StringProperty displayName="Id Generator Key" name="idGeneratorKey"/>
+						<StringProperty displayName="Sync Type" name="syncType" value="Not Sync"/>
+						<ModelRefProperty displayName="Attribute Model" name="attributeModel"/>
+						<StringProperty displayName="Generated" name="generated" value="Unspecified"/>
+						<StringProperty displayName="Sync To Attribute" name="syncToAttribute" value="Yes"/>
+					</ModelProperties>
+				</Model>
+			</ChildModels>
+			<FromSimpleRelationships>
+				<RelationshipRef from="4FIQTWKD.AACAQwn" id="erAITWKD.AACAQyZ" to="5zPQTWKD.AACAQxD"/>
+				<RelationshipRef from="4FIQTWKD.AACAQwn" id="W6ooTWKD.AACAQzW" to="U6ooTWKD.AACAQzR"/>
+			</FromSimpleRelationships>
+		</Model>
+		<Model composite="false" considerDefaultProperties="false" displayModelType="Entidad" id="5zPQTWKD.AACAQxD" modelType="DBTable" name="Registro">
+			<ModelProperties>
+				<StringProperty displayName="Nombre" name="name" value="Registro"/>
+				<StringProperty displayName="Model Type" name="modelType" value="DBTable"/>
+				<ModelsProperty displayName="Comentarios" name="comments"/>
+				<HTMLProperty displayName="Documentación" name="documentation" plainTextValue=""/>
+				<ModelsProperty displayName="Voices" name="voices"/>
+				<ModelsProperty displayName="Referencias" name="references"/>
+				<StringArrayProperty displayName="Referenced By Diagram Ids" name="referencedByDiagramIds"/>
+				<StringArrayProperty displayName="Referenced By Model Addresses" name="referencedByModelAddresses"/>
+				<StringProperty displayName="Tránsito De" name="transitFrom"/>
+				<StringProperty displayName="Tránsito A" name="transitTo"/>
+				<ModelRefProperty displayName="Pm Status" name="pmStatus"/>
+				<ModelRefProperty displayName="Pm Difficulty" name="pmDifficulty"/>
+				<ModelRefProperty displayName="Pm Priority" name="pmPriority"/>
+				<ModelRefProperty displayName="Pm Version" name="pmVersion"/>
+				<ModelRefProperty displayName="Pm Iteration" name="pmIteration"/>
+				<ModelRefProperty displayName="Pm Phase" name="pmPhase"/>
+				<ModelRefProperty displayName="Pm Discipline" name="pmDiscipline"/>
+				<StringProperty displayName="Pm Author" name="pmAuthor" value="alfredo"/>
+				<StringProperty displayName="Pm Create Date Time" name="pmCreateDateTime" value="1403146456295"/>
+				<StringProperty displayName="Pm Last Modified" name="pmLastModified" value="1403146865476"/>
+				<StringProperty displayName="Id" name="userID"/>
+				<IntegerProperty displayName="User IDLast Numeric Value" name="userIDLastNumericValue" value="0"/>
+				<StringProperty displayName="Tipo" name="type" value="Normal"/>
+				<StringProperty displayName="Sync Type" name="syncType" value="Not Sync"/>
+				<StringProperty displayName="Datos Modelo" name="dataModel" value="Physical"/>
+				<StringProperty displayName="Orm Sync State" name="ormSyncState" value="Not Sync"/>
+				<ModelRefProperty displayName="Discriminator" name="discriminator"/>
+				<ModelRefProperty displayName="Version Column" name="versionColumn"/>
+				<ModelRefProperty displayName="Class Model" name="classModel"/>
+				<ModelRefsProperty displayName="Estereotipos" name="stereotypes"/>
+				<ModelProperty displayName="Valores Etiquetados" name="taggedValues"/>
+				<IntegerProperty displayName="Quality Score" name="qualityScore" value="-1"/>
+				<StringProperty displayName="Quality Reason" name="qualityReason"/>
+				<ModelProperty displayName="Records" name="records"/>
+				<StringProperty displayName="Esquema" name="schema"/>
+				<StringProperty displayName="Tablespace" name="tablespace"/>
+				<StringProperty displayName="Primary Key Constraint Name Pattern" name="primaryKeyConstraintNamePattern" value=""/>
+				<StringProperty displayName="Primary Key Constraint Name" name="primaryKeyConstraintName"/>
+				<StringProperty displayName="Primary Key Tablespace" name="primaryKeyTablespace"/>
+				<StringProperty displayName="DDLClauses" name="DDLClauses"/>
+				<ModelsProperty displayName="Limitaciones" name="constraints"/>
+				<DiagramElementRefProperty displayName="Vista Maestra" name="masterView">
+					<DiagramElementRef displayShapeType="DBTable" id="5zPQTWKD.AACAQxC" model="5zPQTWKD.AACAQxD" name="Registro" shapeType="DBTable"/>
+				</DiagramElementRefProperty>
+			</ModelProperties>
+			<ChildModels>
+				<Model composite="true" considerDefaultProperties="false" displayModelType="Columna" id="SogwTWKD.AACAQxH" modelType="DBColumn" name="id">
+					<ModelProperties>
+						<StringProperty displayName="Nombre" name="name" value="id"/>
+						<StringProperty displayName="Model Type" name="modelType" value="DBColumn"/>
+						<ModelsProperty displayName="Comentarios" name="comments"/>
+						<HTMLProperty displayName="Documentación" name="documentation" plainTextValue=""/>
+						<ModelsProperty displayName="Voices" name="voices"/>
+						<ModelsProperty displayName="Referencias" name="references"/>
+						<StringArrayProperty displayName="Referenced By Diagram Ids" name="referencedByDiagramIds"/>
+						<StringArrayProperty displayName="Referenced By Model Addresses" name="referencedByModelAddresses"/>
+						<StringProperty displayName="Tránsito De" name="transitFrom"/>
+						<StringProperty displayName="Tránsito A" name="transitTo"/>
+						<ModelRefProperty displayName="Pm Status" name="pmStatus"/>
+						<ModelRefProperty displayName="Pm Difficulty" name="pmDifficulty"/>
+						<ModelRefProperty displayName="Pm Priority" name="pmPriority"/>
+						<ModelRefProperty displayName="Pm Version" name="pmVersion"/>
+						<ModelRefProperty displayName="Pm Iteration" name="pmIteration"/>
+						<ModelRefProperty displayName="Pm Phase" name="pmPhase"/>
+						<ModelRefProperty displayName="Pm Discipline" name="pmDiscipline"/>
+						<StringProperty displayName="Pm Author" name="pmAuthor" value="alfredo"/>
+						<StringProperty displayName="Pm Create Date Time" name="pmCreateDateTime" value="1403146473810"/>
+						<StringProperty displayName="Pm Last Modified" name="pmLastModified" value="1403146865476"/>
+						<StringProperty displayName="Id" name="userID"/>
+						<IntegerProperty displayName="User IDLast Numeric Value" name="userIDLastNumericValue" value="0"/>
+						<ModelRefsProperty displayName="Estereotipos" name="stereotypes"/>
+						<ModelProperty displayName="Valores Etiquetados" name="taggedValues"/>
+						<IntegerProperty displayName="Quality Score" name="qualityScore" value="-1"/>
+						<StringProperty displayName="Quality Reason" name="qualityReason"/>
+						<StringProperty displayName="Db Column Name" name="dbColumnName"/>
+						<StringProperty displayName="Valor Predefinido" name="defaultValue"/>
+						<StringProperty displayName="Foreign Key Name Pattern" name="foreignKeyNamePattern"/>
+						<StringProperty displayName="Tipo" internalValue="9" name="type" value="integer"/>
+						<IntegerProperty displayName="Identity Seed" name="identitySeed" value="-1"/>
+						<IntegerProperty displayName="Identity Increment" name="identityIncrement" value="-1"/>
+						<BooleanProperty displayName="Anulable" name="nullable" value="false"/>
+						<BooleanProperty displayName="Único" name="unique" value="false"/>
+						<BooleanProperty displayName="Clave Principal" name="primaryKey" value="true"/>
+						<BooleanProperty displayName="Índice" name="index" value="false"/>
+						<StringProperty displayName="Type Name" name="typeName"/>
+						<StringProperty displayName="Check Constraint" name="checkConstraint"/>
+						<IntegerProperty displayName="Length" name="length" value="10"/>
+						<IntegerProperty displayName="Escala" name="scale" value="0"/>
+						<StringProperty displayName="DDLClauses" name="DDLClauses"/>
+						<StringProperty displayName="Id Generator" name="idGenerator" value="native"/>
+						<ModelsProperty displayName="Foreign Key Constraints" name="foreignKeyConstraints"/>
+						<ModelsProperty displayName="User Types" name="userTypes"/>
+						<StringProperty displayName="Id Generator Key" name="idGeneratorKey"/>
+						<StringProperty displayName="Sync Type" name="syncType" value="Not Sync"/>
+						<ModelRefProperty displayName="Attribute Model" name="attributeModel"/>
+						<StringProperty displayName="Generated" name="generated" value="Unspecified"/>
+						<StringProperty displayName="Sync To Attribute" name="syncToAttribute" value="Yes"/>
+					</ModelProperties>
+				</Model>
+				<Model composite="true" considerDefaultProperties="false" displayModelType="Columna" id="QGIwTWKD.AACAQxK" modelType="DBColumn" name="concepto">
+					<ModelProperties>
+						<StringProperty displayName="Nombre" name="name" value="concepto"/>
+						<StringProperty displayName="Model Type" name="modelType" value="DBColumn"/>
+						<ModelsProperty displayName="Comentarios" name="comments"/>
+						<HTMLProperty displayName="Documentación" name="documentation" plainTextValue=""/>
+						<ModelsProperty displayName="Voices" name="voices"/>
+						<ModelsProperty displayName="Referencias" name="references"/>
+						<StringArrayProperty displayName="Referenced By Diagram Ids" name="referencedByDiagramIds"/>
+						<StringArrayProperty displayName="Referenced By Model Addresses" name="referencedByModelAddresses"/>
+						<StringProperty displayName="Tránsito De" name="transitFrom"/>
+						<StringProperty displayName="Tránsito A" name="transitTo"/>
+						<ModelRefProperty displayName="Pm Status" name="pmStatus"/>
+						<ModelRefProperty displayName="Pm Difficulty" name="pmDifficulty"/>
+						<ModelRefProperty displayName="Pm Priority" name="pmPriority"/>
+						<ModelRefProperty displayName="Pm Version" name="pmVersion"/>
+						<ModelRefProperty displayName="Pm Iteration" name="pmIteration"/>
+						<ModelRefProperty displayName="Pm Phase" name="pmPhase"/>
+						<ModelRefProperty displayName="Pm Discipline" name="pmDiscipline"/>
+						<StringProperty displayName="Pm Author" name="pmAuthor" value="alfredo"/>
+						<StringProperty displayName="Pm Create Date Time" name="pmCreateDateTime" value="1403146487298"/>
+						<StringProperty displayName="Pm Last Modified" name="pmLastModified" value="1403146865476"/>
+						<StringProperty displayName="Id" name="userID"/>
+						<IntegerProperty displayName="User IDLast Numeric Value" name="userIDLastNumericValue" value="0"/>
+						<ModelRefsProperty displayName="Estereotipos" name="stereotypes"/>
+						<ModelProperty displayName="Valores Etiquetados" name="taggedValues"/>
+						<IntegerProperty displayName="Quality Score" name="qualityScore" value="-1"/>
+						<StringProperty displayName="Quality Reason" name="qualityReason"/>
+						<StringProperty displayName="Db Column Name" name="dbColumnName"/>
+						<StringProperty displayName="Valor Predefinido" name="defaultValue"/>
+						<StringProperty displayName="Foreign Key Name Pattern" name="foreignKeyNamePattern"/>
+						<StringProperty displayName="Tipo" internalValue="27" name="type" value="varchar"/>
+						<IntegerProperty displayName="Identity Seed" name="identitySeed" value="-1"/>
+						<IntegerProperty displayName="Identity Increment" name="identityIncrement" value="-1"/>
+						<BooleanProperty displayName="Anulable" name="nullable" value="false"/>
+						<BooleanProperty displayName="Único" name="unique" value="false"/>
+						<BooleanProperty displayName="Clave Principal" name="primaryKey" value="false"/>
+						<BooleanProperty displayName="Índice" name="index" value="false"/>
+						<StringProperty displayName="Type Name" name="typeName"/>
+						<StringProperty displayName="Check Constraint" name="checkConstraint"/>
+						<IntegerProperty displayName="Length" name="length" value="255"/>
+						<IntegerProperty displayName="Escala" name="scale" value="0"/>
+						<StringProperty displayName="DDLClauses" name="DDLClauses"/>
+						<StringProperty displayName="Id Generator" name="idGenerator"/>
+						<ModelsProperty displayName="Foreign Key Constraints" name="foreignKeyConstraints"/>
+						<ModelsProperty displayName="User Types" name="userTypes"/>
+						<StringProperty displayName="Id Generator Key" name="idGeneratorKey"/>
+						<StringProperty displayName="Sync Type" name="syncType" value="Not Sync"/>
+						<ModelRefProperty displayName="Attribute Model" name="attributeModel"/>
+						<StringProperty displayName="Generated" name="generated" value="Unspecified"/>
+						<StringProperty displayName="Sync To Attribute" name="syncToAttribute" value="Yes"/>
+					</ModelProperties>
+				</Model>
+				<Model composite="true" considerDefaultProperties="false" displayModelType="Columna" id="rm0wTWKD.AACAQxN" modelType="DBColumn" name="importe">
+					<ModelProperties>
+						<StringProperty displayName="Nombre" name="name" value="importe"/>
+						<StringProperty displayName="Model Type" name="modelType" value="DBColumn"/>
+						<ModelsProperty displayName="Comentarios" name="comments"/>
+						<HTMLProperty displayName="Documentación" name="documentation" plainTextValue=""/>
+						<ModelsProperty displayName="Voices" name="voices"/>
+						<ModelsProperty displayName="Referencias" name="references"/>
+						<StringArrayProperty displayName="Referenced By Diagram Ids" name="referencedByDiagramIds"/>
+						<StringArrayProperty displayName="Referenced By Model Addresses" name="referencedByModelAddresses"/>
+						<StringProperty displayName="Tránsito De" name="transitFrom"/>
+						<StringProperty displayName="Tránsito A" name="transitTo"/>
+						<ModelRefProperty displayName="Pm Status" name="pmStatus"/>
+						<ModelRefProperty displayName="Pm Difficulty" name="pmDifficulty"/>
+						<ModelRefProperty displayName="Pm Priority" name="pmPriority"/>
+						<ModelRefProperty displayName="Pm Version" name="pmVersion"/>
+						<ModelRefProperty displayName="Pm Iteration" name="pmIteration"/>
+						<ModelRefProperty displayName="Pm Phase" name="pmPhase"/>
+						<ModelRefProperty displayName="Pm Discipline" name="pmDiscipline"/>
+						<StringProperty displayName="Pm Author" name="pmAuthor" value="alfredo"/>
+						<StringProperty displayName="Pm Create Date Time" name="pmCreateDateTime" value="1403146516085"/>
+						<StringProperty displayName="Pm Last Modified" name="pmLastModified" value="1403146865476"/>
+						<StringProperty displayName="Id" name="userID"/>
+						<IntegerProperty displayName="User IDLast Numeric Value" name="userIDLastNumericValue" value="0"/>
+						<ModelRefsProperty displayName="Estereotipos" name="stereotypes"/>
+						<ModelProperty displayName="Valores Etiquetados" name="taggedValues"/>
+						<IntegerProperty displayName="Quality Score" name="qualityScore" value="-1"/>
+						<StringProperty displayName="Quality Reason" name="qualityReason"/>
+						<StringProperty displayName="Db Column Name" name="dbColumnName"/>
+						<StringProperty displayName="Valor Predefinido" name="defaultValue"/>
+						<StringProperty displayName="Foreign Key Name Pattern" name="foreignKeyNamePattern"/>
+						<StringProperty displayName="Tipo" internalValue="6" name="type" value="double"/>
+						<IntegerProperty displayName="Identity Seed" name="identitySeed" value="-1"/>
+						<IntegerProperty displayName="Identity Increment" name="identityIncrement" value="-1"/>
+						<BooleanProperty displayName="Anulable" name="nullable" value="false"/>
+						<BooleanProperty displayName="Único" name="unique" value="false"/>
+						<BooleanProperty displayName="Clave Principal" name="primaryKey" value="false"/>
+						<BooleanProperty displayName="Índice" name="index" value="false"/>
+						<StringProperty displayName="Type Name" name="typeName"/>
+						<StringProperty displayName="Check Constraint" name="checkConstraint"/>
+						<IntegerProperty displayName="Length" name="length" value="10"/>
+						<IntegerProperty displayName="Escala" name="scale" value="0"/>
+						<StringProperty displayName="DDLClauses" name="DDLClauses"/>
+						<StringProperty displayName="Id Generator" name="idGenerator"/>
+						<ModelsProperty displayName="Foreign Key Constraints" name="foreignKeyConstraints"/>
+						<ModelsProperty displayName="User Types" name="userTypes"/>
+						<StringProperty displayName="Id Generator Key" name="idGeneratorKey"/>
+						<StringProperty displayName="Sync Type" name="syncType" value="Not Sync"/>
+						<ModelRefProperty displayName="Attribute Model" name="attributeModel"/>
+						<StringProperty displayName="Generated" name="generated" value="Unspecified"/>
+						<StringProperty displayName="Sync To Attribute" name="syncToAttribute" value="Yes"/>
+					</ModelProperties>
+				</Model>
+				<Model composite="true" considerDefaultProperties="false" displayModelType="Columna" id="nl8wTWKD.AACAQxQ" modelType="DBColumn" name="fecha">
+					<ModelProperties>
+						<StringProperty displayName="Nombre" name="name" value="fecha"/>
+						<StringProperty displayName="Model Type" name="modelType" value="DBColumn"/>
+						<ModelsProperty displayName="Comentarios" name="comments"/>
+						<HTMLProperty displayName="Documentación" name="documentation" plainTextValue=""/>
+						<ModelsProperty displayName="Voices" name="voices"/>
+						<ModelsProperty displayName="Referencias" name="references"/>
+						<StringArrayProperty displayName="Referenced By Diagram Ids" name="referencedByDiagramIds"/>
+						<StringArrayProperty displayName="Referenced By Model Addresses" name="referencedByModelAddresses"/>
+						<StringProperty displayName="Tránsito De" name="transitFrom"/>
+						<StringProperty displayName="Tránsito A" name="transitTo"/>
+						<ModelRefProperty displayName="Pm Status" name="pmStatus"/>
+						<ModelRefProperty displayName="Pm Difficulty" name="pmDifficulty"/>
+						<ModelRefProperty displayName="Pm Priority" name="pmPriority"/>
+						<ModelRefProperty displayName="Pm Version" name="pmVersion"/>
+						<ModelRefProperty displayName="Pm Iteration" name="pmIteration"/>
+						<ModelRefProperty displayName="Pm Phase" name="pmPhase"/>
+						<ModelRefProperty displayName="Pm Discipline" name="pmDiscipline"/>
+						<StringProperty displayName="Pm Author" name="pmAuthor" value="alfredo"/>
+						<StringProperty displayName="Pm Create Date Time" name="pmCreateDateTime" value="1403146533497"/>
+						<StringProperty displayName="Pm Last Modified" name="pmLastModified" value="1403146865476"/>
+						<StringProperty displayName="Id" name="userID"/>
+						<IntegerProperty displayName="User IDLast Numeric Value" name="userIDLastNumericValue" value="0"/>
+						<ModelRefsProperty displayName="Estereotipos" name="stereotypes"/>
+						<ModelProperty displayName="Valores Etiquetados" name="taggedValues"/>
+						<IntegerProperty displayName="Quality Score" name="qualityScore" value="-1"/>
+						<StringProperty displayName="Quality Reason" name="qualityReason"/>
+						<StringProperty displayName="Db Column Name" name="dbColumnName"/>
+						<StringProperty displayName="Valor Predefinido" name="defaultValue"/>
+						<StringProperty displayName="Foreign Key Name Pattern" name="foreignKeyNamePattern"/>
+						<StringProperty displayName="Tipo" internalValue="22" name="type" value="timestamp"/>
+						<IntegerProperty displayName="Identity Seed" name="identitySeed" value="-1"/>
+						<IntegerProperty displayName="Identity Increment" name="identityIncrement" value="-1"/>
+						<BooleanProperty displayName="Anulable" name="nullable" value="false"/>
+						<BooleanProperty displayName="Único" name="unique" value="false"/>
+						<BooleanProperty displayName="Clave Principal" name="primaryKey" value="false"/>
+						<BooleanProperty displayName="Índice" name="index" value="false"/>
+						<StringProperty displayName="Type Name" name="typeName"/>
+						<StringProperty displayName="Check Constraint" name="checkConstraint"/>
+						<IntegerProperty displayName="Length" name="length" value="0"/>
+						<IntegerProperty displayName="Escala" name="scale" value="0"/>
+						<StringProperty displayName="DDLClauses" name="DDLClauses"/>
+						<StringProperty displayName="Id Generator" name="idGenerator"/>
+						<ModelsProperty displayName="Foreign Key Constraints" name="foreignKeyConstraints"/>
+						<ModelsProperty displayName="User Types" name="userTypes"/>
+						<StringProperty displayName="Id Generator Key" name="idGeneratorKey"/>
+						<StringProperty displayName="Sync Type" name="syncType" value="Not Sync"/>
+						<ModelRefProperty displayName="Attribute Model" name="attributeModel"/>
+						<StringProperty displayName="Generated" name="generated" value="Unspecified"/>
+						<StringProperty displayName="Sync To Attribute" name="syncToAttribute" value="Yes"/>
+					</ModelProperties>
+				</Model>
+				<Model composite="true" considerDefaultProperties="false" displayModelType="Columna" id="KLgITWKD.AACAQyd" modelType="DBColumn" name="Usuario_email">
+					<ModelProperties>
+						<StringProperty displayName="Nombre" name="name" value="Usuario_email"/>
+						<StringProperty displayName="Model Type" name="modelType" value="DBColumn"/>
+						<ModelsProperty displayName="Comentarios" name="comments"/>
+						<HTMLProperty displayName="Documentación" name="documentation" plainTextValue=""/>
+						<ModelsProperty displayName="Voices" name="voices"/>
+						<ModelsProperty displayName="Referencias" name="references"/>
+						<StringArrayProperty displayName="Referenced By Diagram Ids" name="referencedByDiagramIds"/>
+						<StringArrayProperty displayName="Referenced By Model Addresses" name="referencedByModelAddresses"/>
+						<StringProperty displayName="Tránsito De" name="transitFrom"/>
+						<StringProperty displayName="Tránsito A" name="transitTo"/>
+						<ModelRefProperty displayName="Pm Status" name="pmStatus"/>
+						<ModelRefProperty displayName="Pm Difficulty" name="pmDifficulty"/>
+						<ModelRefProperty displayName="Pm Priority" name="pmPriority"/>
+						<ModelRefProperty displayName="Pm Version" name="pmVersion"/>
+						<ModelRefProperty displayName="Pm Iteration" name="pmIteration"/>
+						<ModelRefProperty displayName="Pm Phase" name="pmPhase"/>
+						<ModelRefProperty displayName="Pm Discipline" name="pmDiscipline"/>
+						<StringProperty displayName="Pm Author" name="pmAuthor" value="alfredo"/>
+						<StringProperty displayName="Pm Create Date Time" name="pmCreateDateTime" value="1403146738964"/>
+						<StringProperty displayName="Pm Last Modified" name="pmLastModified" value="1403146865476"/>
+						<StringProperty displayName="Id" name="userID"/>
+						<IntegerProperty displayName="User IDLast Numeric Value" name="userIDLastNumericValue" value="0"/>
+						<ModelRefsProperty displayName="Estereotipos" name="stereotypes"/>
+						<ModelProperty displayName="Valores Etiquetados" name="taggedValues"/>
+						<IntegerProperty displayName="Quality Score" name="qualityScore" value="-1"/>
+						<StringProperty displayName="Quality Reason" name="qualityReason"/>
+						<StringProperty displayName="Db Column Name" name="dbColumnName"/>
+						<StringProperty displayName="Valor Predefinido" name="defaultValue"/>
+						<StringProperty displayName="Foreign Key Name Pattern" name="foreignKeyNamePattern" value="{reference_table_name}{reference_column_name}"/>
+						<StringProperty displayName="Tipo" internalValue="27" name="type" value="varchar"/>
+						<IntegerProperty displayName="Identity Seed" name="identitySeed" value="-1"/>
+						<IntegerProperty displayName="Identity Increment" name="identityIncrement" value="-1"/>
+						<BooleanProperty displayName="Anulable" name="nullable" value="false"/>
+						<BooleanProperty displayName="Único" name="unique" value="false"/>
+						<BooleanProperty displayName="Clave Principal" name="primaryKey" value="false"/>
+						<BooleanProperty displayName="Índice" name="index" value="false"/>
+						<StringProperty displayName="Type Name" name="typeName"/>
+						<StringProperty displayName="Check Constraint" name="checkConstraint"/>
+						<IntegerProperty displayName="Length" name="length" value="64"/>
+						<IntegerProperty displayName="Escala" name="scale" value="0"/>
+						<StringProperty displayName="DDLClauses" name="DDLClauses"/>
+						<StringProperty displayName="Id Generator" name="idGenerator" value="native"/>
+						<ModelsProperty displayName="Foreign Key Constraints" name="foreignKeyConstraints">
+							<Model composite="true" considerDefaultProperties="false" displayModelType="DBForeignKeyConstraint" id="qLgITWKD.AACAQye" modelType="DBForeignKeyConstraint" name="">
+								<ModelProperties>
+									<StringProperty displayName="Nombre" name="name" value=""/>
+									<StringProperty displayName="Model Type" name="modelType" value="DBForeignKeyConstraint"/>
+									<ModelsProperty displayName="Comentarios" name="comments"/>
+									<HTMLProperty displayName="Documentación" name="documentation" plainTextValue=""/>
+									<ModelsProperty displayName="Voices" name="voices"/>
+									<ModelsProperty displayName="Referencias" name="references"/>
+									<StringArrayProperty displayName="Referenced By Diagram Ids" name="referencedByDiagramIds"/>
+									<StringArrayProperty displayName="Referenced By Model Addresses" name="referencedByModelAddresses"/>
+									<StringProperty displayName="Tránsito De" name="transitFrom"/>
+									<StringProperty displayName="Tránsito A" name="transitTo"/>
+									<ModelRefProperty displayName="Pm Status" name="pmStatus"/>
+									<ModelRefProperty displayName="Pm Difficulty" name="pmDifficulty"/>
+									<ModelRefProperty displayName="Pm Priority" name="pmPriority"/>
+									<ModelRefProperty displayName="Pm Version" name="pmVersion"/>
+									<ModelRefProperty displayName="Pm Iteration" name="pmIteration"/>
+									<ModelRefProperty displayName="Pm Phase" name="pmPhase"/>
+									<ModelRefProperty displayName="Pm Discipline" name="pmDiscipline"/>
+									<StringProperty displayName="Pm Author" name="pmAuthor" value="alfredo"/>
+									<StringProperty displayName="Pm Create Date Time" name="pmCreateDateTime" value="1403146738965"/>
+									<StringProperty displayName="Pm Last Modified" name="pmLastModified"/>
+									<StringProperty displayName="Id" name="userID"/>
+									<IntegerProperty displayName="User IDLast Numeric Value" name="userIDLastNumericValue" value="0"/>
+									<IntegerProperty displayName="Quality Score" name="qualityScore" value="-1"/>
+									<StringProperty displayName="Quality Reason" name="qualityReason"/>
+									<ModelRefProperty displayName="Foreign Key" name="foreignKey">
+										<ModelRef id="erAITWKD.AACAQyZ"/>
+									</ModelRefProperty>
+									<ModelRefProperty displayName="Ref Column" name="refColumn">
+										<ModelRef id="1r4QTWKD.AACAQwr"/>
+									</ModelRefProperty>
+								</ModelProperties>
+							</Model>
+						</ModelsProperty>
+						<ModelsProperty displayName="User Types" name="userTypes"/>
+						<StringProperty displayName="Id Generator Key" name="idGeneratorKey"/>
+						<StringProperty displayName="Sync Type" name="syncType" value="Not Sync"/>
+						<ModelRefProperty displayName="Attribute Model" name="attributeModel"/>
+						<StringProperty displayName="Generated" name="generated" value="Unspecified"/>
+						<StringProperty displayName="Sync To Attribute" name="syncToAttribute" value="Yes"/>
+					</ModelProperties>
+				</Model>
+			</ChildModels>
+			<ToSimpleRelationships>
+				<RelationshipRef from="4FIQTWKD.AACAQwn" id="erAITWKD.AACAQyZ" to="5zPQTWKD.AACAQxD"/>
+			</ToSimpleRelationships>
+		</Model>
+		<Model composite="false" considerDefaultProperties="false" displayModelType="ModelRelationshipContainer" id="0NBITWKD.AACAQy3" modelType="ModelRelationshipContainer" name="relationships">
+			<ModelProperties>
+				<StringProperty displayName="Nombre" name="name" value="relationships"/>
+				<StringProperty displayName="Model Type" name="modelType" value="ModelRelationshipContainer"/>
+				<ModelsProperty displayName="Comentarios" name="comments"/>
+				<HTMLProperty displayName="Documentación" name="documentation" plainTextValue=""/>
+				<ModelsProperty displayName="Voices" name="voices"/>
+				<ModelsProperty displayName="Referencias" name="references"/>
+				<StringArrayProperty displayName="Referenced By Diagram Ids" name="referencedByDiagramIds"/>
+				<StringArrayProperty displayName="Referenced By Model Addresses" name="referencedByModelAddresses"/>
+				<StringProperty displayName="Tránsito De" name="transitFrom"/>
+				<StringProperty displayName="Tránsito A" name="transitTo"/>
+				<ModelRefProperty displayName="Pm Status" name="pmStatus"/>
+				<ModelRefProperty displayName="Pm Difficulty" name="pmDifficulty"/>
+				<ModelRefProperty displayName="Pm Priority" name="pmPriority"/>
+				<ModelRefProperty displayName="Pm Version" name="pmVersion"/>
+				<ModelRefProperty displayName="Pm Iteration" name="pmIteration"/>
+				<ModelRefProperty displayName="Pm Phase" name="pmPhase"/>
+				<ModelRefProperty displayName="Pm Discipline" name="pmDiscipline"/>
+				<StringProperty displayName="Pm Author" name="pmAuthor" value="alfredo"/>
+				<StringProperty displayName="Pm Create Date Time" name="pmCreateDateTime" value="1403146865419"/>
+				<StringProperty displayName="Pm Last Modified" name="pmLastModified" value="1403146865477"/>
+				<StringProperty displayName="Id" name="userID"/>
+				<IntegerProperty displayName="User IDLast Numeric Value" name="userIDLastNumericValue" value="0"/>
+				<IntegerProperty displayName="Quality Score" name="qualityScore" value="-1"/>
+				<StringProperty displayName="Quality Reason" name="qualityReason"/>
+			</ModelProperties>
+			<ChildModels>
+				<Model composite="false" considerDefaultProperties="false" displayModelType="ModelRelationshipContainer" id="NNBITWKD.AACAQy4" modelType="ModelRelationshipContainer" name="DBForeignKey">
+					<ModelProperties>
+						<StringProperty displayName="Nombre" name="name" value="DBForeignKey"/>
+						<StringProperty displayName="Model Type" name="modelType" value="ModelRelationshipContainer"/>
+						<ModelsProperty displayName="Comentarios" name="comments"/>
+						<HTMLProperty displayName="Documentación" name="documentation" plainTextValue=""/>
+						<ModelsProperty displayName="Voices" name="voices"/>
+						<ModelsProperty displayName="Referencias" name="references"/>
+						<StringArrayProperty displayName="Referenced By Diagram Ids" name="referencedByDiagramIds"/>
+						<StringArrayProperty displayName="Referenced By Model Addresses" name="referencedByModelAddresses"/>
+						<StringProperty displayName="Tránsito De" name="transitFrom"/>
+						<StringProperty displayName="Tránsito A" name="transitTo"/>
+						<ModelRefProperty displayName="Pm Status" name="pmStatus"/>
+						<ModelRefProperty displayName="Pm Difficulty" name="pmDifficulty"/>
+						<ModelRefProperty displayName="Pm Priority" name="pmPriority"/>
+						<ModelRefProperty displayName="Pm Version" name="pmVersion"/>
+						<ModelRefProperty displayName="Pm Iteration" name="pmIteration"/>
+						<ModelRefProperty displayName="Pm Phase" name="pmPhase"/>
+						<ModelRefProperty displayName="Pm Discipline" name="pmDiscipline"/>
+						<StringProperty displayName="Pm Author" name="pmAuthor" value="alfredo"/>
+						<StringProperty displayName="Pm Create Date Time" name="pmCreateDateTime" value="1403146865452"/>
+						<StringProperty displayName="Pm Last Modified" name="pmLastModified" value="1403147338070"/>
+						<StringProperty displayName="Id" name="userID"/>
+						<IntegerProperty displayName="User IDLast Numeric Value" name="userIDLastNumericValue" value="0"/>
+						<IntegerProperty displayName="Quality Score" name="qualityScore" value="-1"/>
+						<StringProperty displayName="Quality Reason" name="qualityReason"/>
+					</ModelProperties>
+					<ChildModels>
+						<Model composite="false" considerDefaultProperties="false" displayModelType="Relación" id="erAITWKD.AACAQyZ" modelType="DBForeignKey" name="">
+							<ModelProperties>
+								<StringProperty displayName="Nombre" name="name" value=""/>
+								<StringProperty displayName="Model Type" name="modelType" value="DBForeignKey"/>
+								<ModelRefProperty displayName="Desde" name="from">
+									<ModelRef id="4FIQTWKD.AACAQwn"/>
+								</ModelRefProperty>
+								<ModelRefProperty displayName="A" name="to">
+									<ModelRef id="5zPQTWKD.AACAQxD"/>
+								</ModelRefProperty>
+								<ModelsProperty displayName="Comentarios" name="comments"/>
+								<HTMLProperty displayName="Documentación" name="documentation" plainTextValue=""/>
+								<ModelsProperty displayName="Voices" name="voices"/>
+								<ModelsProperty displayName="Referencias" name="references"/>
+								<StringArrayProperty displayName="Referenced By Diagram Ids" name="referencedByDiagramIds"/>
+								<StringArrayProperty displayName="Referenced By Model Addresses" name="referencedByModelAddresses"/>
+								<StringProperty displayName="Tránsito De" name="transitFrom"/>
+								<StringProperty displayName="Tránsito A" name="transitTo"/>
+								<ModelRefProperty displayName="Pm Status" name="pmStatus"/>
+								<ModelRefProperty displayName="Pm Difficulty" name="pmDifficulty"/>
+								<ModelRefProperty displayName="Pm Priority" name="pmPriority"/>
+								<ModelRefProperty displayName="Pm Version" name="pmVersion"/>
+								<ModelRefProperty displayName="Pm Iteration" name="pmIteration"/>
+								<ModelRefProperty displayName="Pm Phase" name="pmPhase"/>
+								<ModelRefProperty displayName="Pm Discipline" name="pmDiscipline"/>
+								<StringProperty displayName="Pm Author" name="pmAuthor" value="alfredo"/>
+								<StringProperty displayName="Pm Create Date Time" name="pmCreateDateTime" value="1403146734942"/>
+								<StringProperty displayName="Pm Last Modified" name="pmLastModified" value="1403146865475"/>
+								<StringProperty displayName="Id" name="userID"/>
+								<IntegerProperty displayName="User IDLast Numeric Value" name="userIDLastNumericValue" value="0"/>
+								<ModelRefsProperty displayName="Estereotipos" name="stereotypes"/>
+								<ModelProperty displayName="Valores Etiquetados" name="taggedValues"/>
+								<IntegerProperty displayName="Quality Score" name="qualityScore" value="-1"/>
+								<StringProperty displayName="Quality Reason" name="qualityReason"/>
+								<BooleanProperty displayName="Identifying" name="identifying" value="false"/>
+								<BooleanProperty displayName="Subtype" name="subtype" value="false"/>
+								<StringProperty displayName="On Delete" name="onDelete"/>
+								<StringProperty displayName="On Update" name="onUpdate"/>
+								<StringProperty displayName="From Phrase" name="fromPhrase"/>
+								<StringProperty displayName="To Phrase" name="toPhrase"/>
+								<StringProperty displayName="Sync Type" name="syncType" value="Not Sync"/>
+								<StringProperty displayName="To Multiplicity" name="toMultiplicity" value="1"/>
+								<StringProperty displayName="From Multiplicity" name="fromMultiplicity" value="1"/>
+								<ModelRefProperty displayName="Relationship End Model" name="relationshipEndModel"/>
+								<ModelRefProperty displayName="Index Column" name="indexColumn"/>
+								<IntegerProperty displayName="Sync To Association" name="syncToAssociation" value="0"/>
+								<StringProperty displayName="Datos Modelo" name="dataModel" value="Physical"/>
+								<StringProperty displayName="Patrón de Relación de Clave Externa" name="foreignKeyRelationshipPattern" value="{association_name}"/>
+								<DiagramElementRefProperty displayName="Vista Maestra" name="masterView">
+									<DiagramElementRef displayShapeType="DBForeign Key" id=".rAITWKD.AACAQya" model="erAITWKD.AACAQyZ" name="" shapeType="DBForeignKey"/>
+								</DiagramElementRefProperty>
+							</ModelProperties>
+						</Model>
+						<Model composite="false" considerDefaultProperties="false" displayModelType="Relación" id="I6ooTWKD.AACAQzM" modelType="DBForeignKey" name="">
+							<ModelProperties>
+								<StringProperty displayName="Nombre" name="name" value=""/>
+								<StringProperty displayName="Model Type" name="modelType" value="DBForeignKey"/>
+								<ModelRefProperty displayName="Desde" name="from">
+									<ModelRef id="3DnITWKD.AACAQy_"/>
+								</ModelRefProperty>
+								<ModelRefProperty displayName="A" name="to">
+									<ModelRef id="U6ooTWKD.AACAQzR"/>
+								</ModelRefProperty>
+								<ModelsProperty displayName="Comentarios" name="comments"/>
+								<HTMLProperty displayName="Documentación" name="documentation" plainTextValue=""/>
+								<ModelsProperty displayName="Voices" name="voices"/>
+								<ModelsProperty displayName="Referencias" name="references"/>
+								<StringArrayProperty displayName="Referenced By Diagram Ids" name="referencedByDiagramIds"/>
+								<StringArrayProperty displayName="Referenced By Model Addresses" name="referencedByModelAddresses"/>
+								<StringProperty displayName="Tránsito De" name="transitFrom"/>
+								<StringProperty displayName="Tránsito A" name="transitTo"/>
+								<ModelRefProperty displayName="Pm Status" name="pmStatus"/>
+								<ModelRefProperty displayName="Pm Difficulty" name="pmDifficulty"/>
+								<ModelRefProperty displayName="Pm Priority" name="pmPriority"/>
+								<ModelRefProperty displayName="Pm Version" name="pmVersion"/>
+								<ModelRefProperty displayName="Pm Iteration" name="pmIteration"/>
+								<ModelRefProperty displayName="Pm Phase" name="pmPhase"/>
+								<ModelRefProperty displayName="Pm Discipline" name="pmDiscipline"/>
+								<StringProperty displayName="Pm Author" name="pmAuthor" value="alfredo"/>
+								<StringProperty displayName="Pm Create Date Time" name="pmCreateDateTime" value="1403147015620"/>
+								<StringProperty displayName="Pm Last Modified" name="pmLastModified" value="1403147338071"/>
+								<StringProperty displayName="Id" name="userID"/>
+								<IntegerProperty displayName="User IDLast Numeric Value" name="userIDLastNumericValue" value="0"/>
+								<ModelRefsProperty displayName="Estereotipos" name="stereotypes"/>
+								<ModelProperty displayName="Valores Etiquetados" name="taggedValues"/>
+								<IntegerProperty displayName="Quality Score" name="qualityScore" value="-1"/>
+								<StringProperty displayName="Quality Reason" name="qualityReason"/>
+								<BooleanProperty displayName="Identifying" name="identifying" value="true"/>
+								<BooleanProperty displayName="Subtype" name="subtype" value="false"/>
+								<StringProperty displayName="On Delete" name="onDelete" value=""/>
+								<StringProperty displayName="On Update" name="onUpdate" value=""/>
+								<StringProperty displayName="From Phrase" name="fromPhrase"/>
+								<StringProperty displayName="To Phrase" name="toPhrase"/>
+								<StringProperty displayName="Sync Type" name="syncType" value="Not Sync"/>
+								<StringProperty displayName="To Multiplicity" name="toMultiplicity" value="0..*"/>
+								<StringProperty displayName="From Multiplicity" name="fromMultiplicity" value="1"/>
+								<ModelRefProperty displayName="Relationship End Model" name="relationshipEndModel"/>
+								<ModelRefProperty displayName="Index Column" name="indexColumn"/>
+								<IntegerProperty displayName="Sync To Association" name="syncToAssociation" value="0"/>
+								<StringProperty displayName="Datos Modelo" name="dataModel" value="Physical"/>
+								<StringProperty displayName="Patrón de Relación de Clave Externa" name="foreignKeyRelationshipPattern" value="{association_name}"/>
+								<DiagramElementRefProperty displayName="Vista Maestra" name="masterView">
+									<DiagramElementRef displayShapeType="DBForeign Key" id="o6ooTWKD.AACAQzN" model="I6ooTWKD.AACAQzM" name="" shapeType="DBForeignKey"/>
+								</DiagramElementRefProperty>
+							</ModelProperties>
+						</Model>
+						<Model composite="false" considerDefaultProperties="false" displayModelType="Relación" id="W6ooTWKD.AACAQzW" modelType="DBForeignKey" name="">
+							<ModelProperties>
+								<StringProperty displayName="Nombre" name="name" value=""/>
+								<StringProperty displayName="Model Type" name="modelType" value="DBForeignKey"/>
+								<ModelRefProperty displayName="Desde" name="from">
+									<ModelRef id="4FIQTWKD.AACAQwn"/>
+								</ModelRefProperty>
+								<ModelRefProperty displayName="A" name="to">
+									<ModelRef id="U6ooTWKD.AACAQzR"/>
+								</ModelRefProperty>
+								<ModelsProperty displayName="Comentarios" name="comments"/>
+								<HTMLProperty displayName="Documentación" name="documentation" plainTextValue=""/>
+								<ModelsProperty displayName="Voices" name="voices"/>
+								<ModelsProperty displayName="Referencias" name="references"/>
+								<StringArrayProperty displayName="Referenced By Diagram Ids" name="referencedByDiagramIds"/>
+								<StringArrayProperty displayName="Referenced By Model Addresses" name="referencedByModelAddresses"/>
+								<StringProperty displayName="Tránsito De" name="transitFrom"/>
+								<StringProperty displayName="Tránsito A" name="transitTo"/>
+								<ModelRefProperty displayName="Pm Status" name="pmStatus"/>
+								<ModelRefProperty displayName="Pm Difficulty" name="pmDifficulty"/>
+								<ModelRefProperty displayName="Pm Priority" name="pmPriority"/>
+								<ModelRefProperty displayName="Pm Version" name="pmVersion"/>
+								<ModelRefProperty displayName="Pm Iteration" name="pmIteration"/>
+								<ModelRefProperty displayName="Pm Phase" name="pmPhase"/>
+								<ModelRefProperty displayName="Pm Discipline" name="pmDiscipline"/>
+								<StringProperty displayName="Pm Author" name="pmAuthor" value="alfredo"/>
+								<StringProperty displayName="Pm Create Date Time" name="pmCreateDateTime" value="1403147015642"/>
+								<StringProperty displayName="Pm Last Modified" name="pmLastModified" value="1403147338064"/>
+								<StringProperty displayName="Id" name="userID"/>
+								<IntegerProperty displayName="User IDLast Numeric Value" name="userIDLastNumericValue" value="0"/>
+								<ModelRefsProperty displayName="Estereotipos" name="stereotypes"/>
+								<ModelProperty displayName="Valores Etiquetados" name="taggedValues"/>
+								<IntegerProperty displayName="Quality Score" name="qualityScore" value="-1"/>
+								<StringProperty displayName="Quality Reason" name="qualityReason"/>
+								<BooleanProperty displayName="Identifying" name="identifying" value="true"/>
+								<BooleanProperty displayName="Subtype" name="subtype" value="false"/>
+								<StringProperty displayName="On Delete" name="onDelete" value=""/>
+								<StringProperty displayName="On Update" name="onUpdate" value=""/>
+								<StringProperty displayName="From Phrase" name="fromPhrase"/>
+								<StringProperty displayName="To Phrase" name="toPhrase"/>
+								<StringProperty displayName="Sync Type" name="syncType" value="Not Sync"/>
+								<StringProperty displayName="To Multiplicity" name="toMultiplicity" value="0..*"/>
+								<StringProperty displayName="From Multiplicity" name="fromMultiplicity" value="1"/>
+								<ModelRefProperty displayName="Relationship End Model" name="relationshipEndModel"/>
+								<ModelRefProperty displayName="Index Column" name="indexColumn"/>
+								<IntegerProperty displayName="Sync To Association" name="syncToAssociation" value="0"/>
+								<StringProperty displayName="Datos Modelo" name="dataModel" value="Physical"/>
+								<StringProperty displayName="Patrón de Relación de Clave Externa" name="foreignKeyRelationshipPattern" value="{association_name}"/>
+								<DiagramElementRefProperty displayName="Vista Maestra" name="masterView">
+									<DiagramElementRef displayShapeType="DBForeign Key" id="26ooTWKD.AACAQzX" model="W6ooTWKD.AACAQzW" name="" shapeType="DBForeignKey"/>
+								</DiagramElementRefProperty>
+							</ModelProperties>
+						</Model>
+					</ChildModels>
+				</Model>
+			</ChildModels>
+		</Model>
+		<Model composite="false" considerDefaultProperties="false" displayModelType="Entidad" id="3DnITWKD.AACAQy_" modelType="DBTable" name="Rol">
+			<ModelProperties>
+				<StringProperty displayName="Nombre" name="name" value="Rol"/>
+				<StringProperty displayName="Model Type" name="modelType" value="DBTable"/>
+				<ModelsProperty displayName="Comentarios" name="comments"/>
+				<HTMLProperty displayName="Documentación" name="documentation" plainTextValue=""/>
+				<ModelsProperty displayName="Voices" name="voices"/>
+				<ModelsProperty displayName="Referencias" name="references"/>
+				<StringArrayProperty displayName="Referenced By Diagram Ids" name="referencedByDiagramIds"/>
+				<StringArrayProperty displayName="Referenced By Model Addresses" name="referencedByModelAddresses"/>
+				<StringProperty displayName="Tránsito De" name="transitFrom"/>
+				<StringProperty displayName="Tránsito A" name="transitTo"/>
+				<ModelRefProperty displayName="Pm Status" name="pmStatus"/>
+				<ModelRefProperty displayName="Pm Difficulty" name="pmDifficulty"/>
+				<ModelRefProperty displayName="Pm Priority" name="pmPriority"/>
+				<ModelRefProperty displayName="Pm Version" name="pmVersion"/>
+				<ModelRefProperty displayName="Pm Iteration" name="pmIteration"/>
+				<ModelRefProperty displayName="Pm Phase" name="pmPhase"/>
+				<ModelRefProperty displayName="Pm Discipline" name="pmDiscipline"/>
+				<StringProperty displayName="Pm Author" name="pmAuthor" value="alfredo"/>
+				<StringProperty displayName="Pm Create Date Time" name="pmCreateDateTime" value="1403146968123"/>
+				<StringProperty displayName="Pm Last Modified" name="pmLastModified" value="1403148478493"/>
+				<StringProperty displayName="Id" name="userID"/>
+				<IntegerProperty displayName="User IDLast Numeric Value" name="userIDLastNumericValue" value="0"/>
+				<StringProperty displayName="Tipo" name="type" value="Normal"/>
+				<StringProperty displayName="Sync Type" name="syncType" value="Not Sync"/>
+				<StringProperty displayName="Datos Modelo" name="dataModel" value="Physical"/>
+				<StringProperty displayName="Orm Sync State" name="ormSyncState" value="Not Sync"/>
+				<ModelRefProperty displayName="Discriminator" name="discriminator"/>
+				<ModelRefProperty displayName="Version Column" name="versionColumn"/>
+				<ModelRefProperty displayName="Class Model" name="classModel"/>
+				<ModelRefsProperty displayName="Estereotipos" name="stereotypes"/>
+				<ModelProperty displayName="Valores Etiquetados" name="taggedValues"/>
+				<IntegerProperty displayName="Quality Score" name="qualityScore" value="-1"/>
+				<StringProperty displayName="Quality Reason" name="qualityReason"/>
+				<ModelProperty displayName="Records" name="records"/>
+				<StringProperty displayName="Esquema" name="schema"/>
+				<StringProperty displayName="Tablespace" name="tablespace"/>
+				<StringProperty displayName="Primary Key Constraint Name Pattern" name="primaryKeyConstraintNamePattern" value=""/>
+				<StringProperty displayName="Primary Key Constraint Name" name="primaryKeyConstraintName"/>
+				<StringProperty displayName="Primary Key Tablespace" name="primaryKeyTablespace"/>
+				<StringProperty displayName="DDLClauses" name="DDLClauses"/>
+				<ModelsProperty displayName="Limitaciones" name="constraints"/>
+				<DiagramElementRefProperty displayName="Vista Maestra" name="masterView">
+					<DiagramElementRef displayShapeType="DBTable" id="3DnITWKD.AACAQy." model="3DnITWKD.AACAQy_" name="Rol" shapeType="DBTable"/>
+				</DiagramElementRefProperty>
+			</ModelProperties>
+			<ChildModels>
+				<Model composite="true" considerDefaultProperties="false" displayModelType="Columna" id="XCPITWKD.AACAQzD" modelType="DBColumn" name="nombre">
+					<ModelProperties>
+						<StringProperty displayName="Nombre" name="name" value="nombre"/>
+						<StringProperty displayName="Model Type" name="modelType" value="DBColumn"/>
+						<ModelsProperty displayName="Comentarios" name="comments"/>
+						<HTMLProperty displayName="Documentación" name="documentation" plainTextValue=""/>
+						<ModelsProperty displayName="Voices" name="voices"/>
+						<ModelsProperty displayName="Referencias" name="references"/>
+						<StringArrayProperty displayName="Referenced By Diagram Ids" name="referencedByDiagramIds"/>
+						<StringArrayProperty displayName="Referenced By Model Addresses" name="referencedByModelAddresses"/>
+						<StringProperty displayName="Tránsito De" name="transitFrom"/>
+						<StringProperty displayName="Tránsito A" name="transitTo"/>
+						<ModelRefProperty displayName="Pm Status" name="pmStatus"/>
+						<ModelRefProperty displayName="Pm Difficulty" name="pmDifficulty"/>
+						<ModelRefProperty displayName="Pm Priority" name="pmPriority"/>
+						<ModelRefProperty displayName="Pm Version" name="pmVersion"/>
+						<ModelRefProperty displayName="Pm Iteration" name="pmIteration"/>
+						<ModelRefProperty displayName="Pm Phase" name="pmPhase"/>
+						<ModelRefProperty displayName="Pm Discipline" name="pmDiscipline"/>
+						<StringProperty displayName="Pm Author" name="pmAuthor" value="alfredo"/>
+						<StringProperty displayName="Pm Create Date Time" name="pmCreateDateTime" value="1403146978362"/>
+						<StringProperty displayName="Pm Last Modified" name="pmLastModified" value="1403147338072"/>
+						<StringProperty displayName="Id" name="userID"/>
+						<IntegerProperty displayName="User IDLast Numeric Value" name="userIDLastNumericValue" value="0"/>
+						<ModelRefsProperty displayName="Estereotipos" name="stereotypes"/>
+						<ModelProperty displayName="Valores Etiquetados" name="taggedValues"/>
+						<IntegerProperty displayName="Quality Score" name="qualityScore" value="-1"/>
+						<StringProperty displayName="Quality Reason" name="qualityReason"/>
+						<StringProperty displayName="Db Column Name" name="dbColumnName"/>
+						<StringProperty displayName="Valor Predefinido" name="defaultValue"/>
+						<StringProperty displayName="Foreign Key Name Pattern" name="foreignKeyNamePattern"/>
+						<StringProperty displayName="Tipo" internalValue="9" name="type" value="integer"/>
+						<IntegerProperty displayName="Identity Seed" name="identitySeed" value="-1"/>
+						<IntegerProperty displayName="Identity Increment" name="identityIncrement" value="-1"/>
+						<BooleanProperty displayName="Anulable" name="nullable" value="false"/>
+						<BooleanProperty displayName="Único" name="unique" value="false"/>
+						<BooleanProperty displayName="Clave Principal" name="primaryKey" value="true"/>
+						<BooleanProperty displayName="Índice" name="index" value="false"/>
+						<StringProperty displayName="Type Name" name="typeName"/>
+						<StringProperty displayName="Check Constraint" name="checkConstraint"/>
+						<IntegerProperty displayName="Length" name="length" value="10"/>
+						<IntegerProperty displayName="Escala" name="scale" value="0"/>
+						<StringProperty displayName="DDLClauses" name="DDLClauses"/>
+						<StringProperty displayName="Id Generator" name="idGenerator" value="native"/>
+						<ModelsProperty displayName="Foreign Key Constraints" name="foreignKeyConstraints"/>
+						<ModelsProperty displayName="User Types" name="userTypes"/>
+						<StringProperty displayName="Id Generator Key" name="idGeneratorKey"/>
+						<StringProperty displayName="Sync Type" name="syncType" value="Not Sync"/>
+						<ModelRefProperty displayName="Attribute Model" name="attributeModel"/>
+						<StringProperty displayName="Generated" name="generated" value="Unspecified"/>
+						<StringProperty displayName="Sync To Attribute" name="syncToAttribute" value="Yes"/>
+					</ModelProperties>
+				</Model>
+				<Model composite="true" considerDefaultProperties="false" displayModelType="Columna" id="_IpUTWKD.AACAQ0H" modelType="DBColumn" name="descripcion">
+					<ModelProperties>
+						<StringProperty displayName="Nombre" name="name" value="descripcion"/>
+						<StringProperty displayName="Model Type" name="modelType" value="DBColumn"/>
+						<ModelsProperty displayName="Comentarios" name="comments"/>
+						<HTMLProperty displayName="Documentación" name="documentation" plainTextValue=""/>
+						<ModelsProperty displayName="Voices" name="voices"/>
+						<ModelsProperty displayName="Referencias" name="references"/>
+						<StringArrayProperty displayName="Referenced By Diagram Ids" name="referencedByDiagramIds"/>
+						<StringArrayProperty displayName="Referenced By Model Addresses" name="referencedByModelAddresses"/>
+						<StringProperty displayName="Tránsito De" name="transitFrom"/>
+						<StringProperty displayName="Tránsito A" name="transitTo"/>
+						<ModelRefProperty displayName="Pm Status" name="pmStatus"/>
+						<ModelRefProperty displayName="Pm Difficulty" name="pmDifficulty"/>
+						<ModelRefProperty displayName="Pm Priority" name="pmPriority"/>
+						<ModelRefProperty displayName="Pm Version" name="pmVersion"/>
+						<ModelRefProperty displayName="Pm Iteration" name="pmIteration"/>
+						<ModelRefProperty displayName="Pm Phase" name="pmPhase"/>
+						<ModelRefProperty displayName="Pm Discipline" name="pmDiscipline"/>
+						<StringProperty displayName="Pm Author" name="pmAuthor" value="alfredo"/>
+						<StringProperty displayName="Pm Create Date Time" name="pmCreateDateTime" value="1403148456255"/>
+						<StringProperty displayName="Pm Last Modified" name="pmLastModified" value="1403148478493"/>
+						<StringProperty displayName="Id" name="userID"/>
+						<IntegerProperty displayName="User IDLast Numeric Value" name="userIDLastNumericValue" value="0"/>
+						<ModelRefsProperty displayName="Estereotipos" name="stereotypes"/>
+						<ModelProperty displayName="Valores Etiquetados" name="taggedValues"/>
+						<IntegerProperty displayName="Quality Score" name="qualityScore" value="-1"/>
+						<StringProperty displayName="Quality Reason" name="qualityReason"/>
+						<StringProperty displayName="Db Column Name" name="dbColumnName"/>
+						<StringProperty displayName="Valor Predefinido" name="defaultValue"/>
+						<StringProperty displayName="Foreign Key Name Pattern" name="foreignKeyNamePattern"/>
+						<StringProperty displayName="Tipo" internalValue="27" name="type" value="varchar"/>
+						<IntegerProperty displayName="Identity Seed" name="identitySeed" value="-1"/>
+						<IntegerProperty displayName="Identity Increment" name="identityIncrement" value="-1"/>
+						<BooleanProperty displayName="Anulable" name="nullable" value="false"/>
+						<BooleanProperty displayName="Único" name="unique" value="false"/>
+						<BooleanProperty displayName="Clave Principal" name="primaryKey" value="false"/>
+						<BooleanProperty displayName="Índice" name="index" value="false"/>
+						<StringProperty displayName="Type Name" name="typeName"/>
+						<StringProperty displayName="Check Constraint" name="checkConstraint"/>
+						<IntegerProperty displayName="Length" name="length" value="64"/>
+						<IntegerProperty displayName="Escala" name="scale" value="0"/>
+						<StringProperty displayName="DDLClauses" name="DDLClauses"/>
+						<StringProperty displayName="Id Generator" name="idGenerator"/>
+						<ModelsProperty displayName="Foreign Key Constraints" name="foreignKeyConstraints"/>
+						<ModelsProperty displayName="User Types" name="userTypes"/>
+						<StringProperty displayName="Id Generator Key" name="idGeneratorKey"/>
+						<StringProperty displayName="Sync Type" name="syncType" value="Not Sync"/>
+						<ModelRefProperty displayName="Attribute Model" name="attributeModel"/>
+						<StringProperty displayName="Generated" name="generated" value="Unspecified"/>
+						<StringProperty displayName="Sync To Attribute" name="syncToAttribute" value="Yes"/>
+					</ModelProperties>
+				</Model>
+			</ChildModels>
+			<FromSimpleRelationships>
+				<RelationshipRef from="3DnITWKD.AACAQy_" id="I6ooTWKD.AACAQzM" to="U6ooTWKD.AACAQzR"/>
+			</FromSimpleRelationships>
+		</Model>
+		<Model composite="false" considerDefaultProperties="false" displayModelType="Entidad" id="U6ooTWKD.AACAQzR" modelType="DBTable" name="Rol_Usuario">
+			<ModelProperties>
+				<StringProperty displayName="Nombre" name="name" value="Rol_Usuario"/>
+				<StringProperty displayName="Model Type" name="modelType" value="DBTable"/>
+				<ModelsProperty displayName="Comentarios" name="comments"/>
+				<HTMLProperty displayName="Documentación" name="documentation" plainTextValue=""/>
+				<ModelsProperty displayName="Voices" name="voices"/>
+				<ModelsProperty displayName="Referencias" name="references"/>
+				<StringArrayProperty displayName="Referenced By Diagram Ids" name="referencedByDiagramIds"/>
+				<StringArrayProperty displayName="Referenced By Model Addresses" name="referencedByModelAddresses"/>
+				<StringProperty displayName="Tránsito De" name="transitFrom"/>
+				<StringProperty displayName="Tránsito A" name="transitTo"/>
+				<ModelRefProperty displayName="Pm Status" name="pmStatus"/>
+				<ModelRefProperty displayName="Pm Difficulty" name="pmDifficulty"/>
+				<ModelRefProperty displayName="Pm Priority" name="pmPriority"/>
+				<ModelRefProperty displayName="Pm Version" name="pmVersion"/>
+				<ModelRefProperty displayName="Pm Iteration" name="pmIteration"/>
+				<ModelRefProperty displayName="Pm Phase" name="pmPhase"/>
+				<ModelRefProperty displayName="Pm Discipline" name="pmDiscipline"/>
+				<StringProperty displayName="Pm Author" name="pmAuthor" value="alfredo"/>
+				<StringProperty displayName="Pm Create Date Time" name="pmCreateDateTime" value="1403147015626"/>
+				<StringProperty displayName="Pm Last Modified" name="pmLastModified" value="1403147338071"/>
+				<StringProperty displayName="Id" name="userID"/>
+				<IntegerProperty displayName="User IDLast Numeric Value" name="userIDLastNumericValue" value="0"/>
+				<StringProperty displayName="Tipo" name="type" value="Normal"/>
+				<StringProperty displayName="Sync Type" name="syncType" value="Sync"/>
+				<StringProperty displayName="Datos Modelo" name="dataModel" value="Physical"/>
+				<StringProperty displayName="Orm Sync State" name="ormSyncState" value="Not Sync"/>
+				<ModelRefProperty displayName="Discriminator" name="discriminator"/>
+				<ModelRefProperty displayName="Version Column" name="versionColumn"/>
+				<ModelRefProperty displayName="Class Model" name="classModel"/>
+				<ModelRefsProperty displayName="Estereotipos" name="stereotypes"/>
+				<ModelProperty displayName="Valores Etiquetados" name="taggedValues"/>
+				<IntegerProperty displayName="Quality Score" name="qualityScore" value="-1"/>
+				<StringProperty displayName="Quality Reason" name="qualityReason"/>
+				<ModelProperty displayName="Records" name="records"/>
+				<StringProperty displayName="Esquema" name="schema"/>
+				<StringProperty displayName="Tablespace" name="tablespace"/>
+				<StringProperty displayName="Primary Key Constraint Name Pattern" name="primaryKeyConstraintNamePattern" value=""/>
+				<StringProperty displayName="Primary Key Constraint Name" name="primaryKeyConstraintName"/>
+				<StringProperty displayName="Primary Key Tablespace" name="primaryKeyTablespace"/>
+				<StringProperty displayName="DDLClauses" name="DDLClauses"/>
+				<ModelsProperty displayName="Limitaciones" name="constraints"/>
+				<DiagramElementRefProperty displayName="Vista Maestra" name="masterView">
+					<DiagramElementRef displayShapeType="DBTable" id="U6ooTWKD.AACAQzQ" model="U6ooTWKD.AACAQzR" name="Rol_Usuario" shapeType="DBTable"/>
+				</DiagramElementRefProperty>
+			</ModelProperties>
+			<ChildModels>
+				<Model composite="true" considerDefaultProperties="false" displayModelType="Columna" id="C6ooTWKD.AACAQzT" modelType="DBColumn" name="Rol_nombre">
+					<ModelProperties>
+						<StringProperty displayName="Nombre" name="name" value="Rol_nombre"/>
+						<StringProperty displayName="Model Type" name="modelType" value="DBColumn"/>
+						<ModelsProperty displayName="Comentarios" name="comments"/>
+						<HTMLProperty displayName="Documentación" name="documentation" plainTextValue=""/>
+						<ModelsProperty displayName="Voices" name="voices"/>
+						<ModelsProperty displayName="Referencias" name="references"/>
+						<StringArrayProperty displayName="Referenced By Diagram Ids" name="referencedByDiagramIds"/>
+						<StringArrayProperty displayName="Referenced By Model Addresses" name="referencedByModelAddresses"/>
+						<StringProperty displayName="Tránsito De" name="transitFrom"/>
+						<StringProperty displayName="Tránsito A" name="transitTo"/>
+						<ModelRefProperty displayName="Pm Status" name="pmStatus"/>
+						<ModelRefProperty displayName="Pm Difficulty" name="pmDifficulty"/>
+						<ModelRefProperty displayName="Pm Priority" name="pmPriority"/>
+						<ModelRefProperty displayName="Pm Version" name="pmVersion"/>
+						<ModelRefProperty displayName="Pm Iteration" name="pmIteration"/>
+						<ModelRefProperty displayName="Pm Phase" name="pmPhase"/>
+						<ModelRefProperty displayName="Pm Discipline" name="pmDiscipline"/>
+						<StringProperty displayName="Pm Author" name="pmAuthor" value="alfredo"/>
+						<StringProperty displayName="Pm Create Date Time" name="pmCreateDateTime" value="1403147015632"/>
+						<StringProperty displayName="Pm Last Modified" name="pmLastModified" value="1403147338071"/>
+						<StringProperty displayName="Id" name="userID"/>
+						<IntegerProperty displayName="User IDLast Numeric Value" name="userIDLastNumericValue" value="0"/>
+						<ModelRefsProperty displayName="Estereotipos" name="stereotypes"/>
+						<ModelProperty displayName="Valores Etiquetados" name="taggedValues"/>
+						<IntegerProperty displayName="Quality Score" name="qualityScore" value="-1"/>
+						<StringProperty displayName="Quality Reason" name="qualityReason"/>
+						<StringProperty displayName="Db Column Name" name="dbColumnName"/>
+						<StringProperty displayName="Valor Predefinido" name="defaultValue"/>
+						<StringProperty displayName="Foreign Key Name Pattern" name="foreignKeyNamePattern" value="{reference_table_name}{reference_column_name}"/>
+						<StringProperty displayName="Tipo" internalValue="9" name="type" value="integer"/>
+						<IntegerProperty displayName="Identity Seed" name="identitySeed" value="-1"/>
+						<IntegerProperty displayName="Identity Increment" name="identityIncrement" value="-1"/>
+						<BooleanProperty displayName="Anulable" name="nullable" value="false"/>
+						<BooleanProperty displayName="Único" name="unique" value="false"/>
+						<BooleanProperty displayName="Clave Principal" name="primaryKey" value="true"/>
+						<BooleanProperty displayName="Índice" name="index" value="false"/>
+						<StringProperty displayName="Type Name" name="typeName"/>
+						<StringProperty displayName="Check Constraint" name="checkConstraint"/>
+						<IntegerProperty displayName="Length" name="length" value="10"/>
+						<IntegerProperty displayName="Escala" name="scale" value="0"/>
+						<StringProperty displayName="DDLClauses" name="DDLClauses"/>
+						<StringProperty displayName="Id Generator" name="idGenerator" value="native"/>
+						<ModelsProperty displayName="Foreign Key Constraints" name="foreignKeyConstraints">
+							<Model composite="true" considerDefaultProperties="false" displayModelType="DBForeignKeyConstraint" id="C6ooTWKD.AACAQzU" modelType="DBForeignKeyConstraint" name="">
+								<ModelProperties>
+									<StringProperty displayName="Nombre" name="name" value=""/>
+									<StringProperty displayName="Model Type" name="modelType" value="DBForeignKeyConstraint"/>
+									<ModelsProperty displayName="Comentarios" name="comments"/>
+									<HTMLProperty displayName="Documentación" name="documentation" plainTextValue=""/>
+									<ModelsProperty displayName="Voices" name="voices"/>
+									<ModelsProperty displayName="Referencias" name="references"/>
+									<StringArrayProperty displayName="Referenced By Diagram Ids" name="referencedByDiagramIds"/>
+									<StringArrayProperty displayName="Referenced By Model Addresses" name="referencedByModelAddresses"/>
+									<StringProperty displayName="Tránsito De" name="transitFrom"/>
+									<StringProperty displayName="Tránsito A" name="transitTo"/>
+									<ModelRefProperty displayName="Pm Status" name="pmStatus"/>
+									<ModelRefProperty displayName="Pm Difficulty" name="pmDifficulty"/>
+									<ModelRefProperty displayName="Pm Priority" name="pmPriority"/>
+									<ModelRefProperty displayName="Pm Version" name="pmVersion"/>
+									<ModelRefProperty displayName="Pm Iteration" name="pmIteration"/>
+									<ModelRefProperty displayName="Pm Phase" name="pmPhase"/>
+									<ModelRefProperty displayName="Pm Discipline" name="pmDiscipline"/>
+									<StringProperty displayName="Pm Author" name="pmAuthor" value="alfredo"/>
+									<StringProperty displayName="Pm Create Date Time" name="pmCreateDateTime" value="1403147015632"/>
+									<StringProperty displayName="Pm Last Modified" name="pmLastModified"/>
+									<StringProperty displayName="Id" name="userID"/>
+									<IntegerProperty displayName="User IDLast Numeric Value" name="userIDLastNumericValue" value="0"/>
+									<IntegerProperty displayName="Quality Score" name="qualityScore" value="-1"/>
+									<StringProperty displayName="Quality Reason" name="qualityReason"/>
+									<ModelRefProperty displayName="Foreign Key" name="foreignKey">
+										<ModelRef id="I6ooTWKD.AACAQzM"/>
+									</ModelRefProperty>
+									<ModelRefProperty displayName="Ref Column" name="refColumn">
+										<ModelRef id="XCPITWKD.AACAQzD"/>
+									</ModelRefProperty>
+								</ModelProperties>
+							</Model>
+						</ModelsProperty>
+						<ModelsProperty displayName="User Types" name="userTypes"/>
+						<StringProperty displayName="Id Generator Key" name="idGeneratorKey"/>
+						<StringProperty displayName="Sync Type" name="syncType" value="Not Sync"/>
+						<ModelRefProperty displayName="Attribute Model" name="attributeModel"/>
+						<StringProperty displayName="Generated" name="generated" value="Unspecified"/>
+						<StringProperty displayName="Sync To Attribute" name="syncToAttribute" value="Yes"/>
+					</ModelProperties>
+				</Model>
+				<Model composite="true" considerDefaultProperties="false" displayModelType="Columna" id="e6ooTWKD.AACAQzZ" modelType="DBColumn" name="Usuario_email">
+					<ModelProperties>
+						<StringProperty displayName="Nombre" name="name" value="Usuario_email"/>
+						<StringProperty displayName="Model Type" name="modelType" value="DBColumn"/>
+						<ModelsProperty displayName="Comentarios" name="comments"/>
+						<HTMLProperty displayName="Documentación" name="documentation" plainTextValue=""/>
+						<ModelsProperty displayName="Voices" name="voices"/>
+						<ModelsProperty displayName="Referencias" name="references"/>
+						<StringArrayProperty displayName="Referenced By Diagram Ids" name="referencedByDiagramIds"/>
+						<StringArrayProperty displayName="Referenced By Model Addresses" name="referencedByModelAddresses"/>
+						<StringProperty displayName="Tránsito De" name="transitFrom"/>
+						<StringProperty displayName="Tránsito A" name="transitTo"/>
+						<ModelRefProperty displayName="Pm Status" name="pmStatus"/>
+						<ModelRefProperty displayName="Pm Difficulty" name="pmDifficulty"/>
+						<ModelRefProperty displayName="Pm Priority" name="pmPriority"/>
+						<ModelRefProperty displayName="Pm Version" name="pmVersion"/>
+						<ModelRefProperty displayName="Pm Iteration" name="pmIteration"/>
+						<ModelRefProperty displayName="Pm Phase" name="pmPhase"/>
+						<ModelRefProperty displayName="Pm Discipline" name="pmDiscipline"/>
+						<StringProperty displayName="Pm Author" name="pmAuthor" value="alfredo"/>
+						<StringProperty displayName="Pm Create Date Time" name="pmCreateDateTime" value="1403147015646"/>
+						<StringProperty displayName="Pm Last Modified" name="pmLastModified" value="1403147338071"/>
+						<StringProperty displayName="Id" name="userID"/>
+						<IntegerProperty displayName="User IDLast Numeric Value" name="userIDLastNumericValue" value="0"/>
+						<ModelRefsProperty displayName="Estereotipos" name="stereotypes"/>
+						<ModelProperty displayName="Valores Etiquetados" name="taggedValues"/>
+						<IntegerProperty displayName="Quality Score" name="qualityScore" value="-1"/>
+						<StringProperty displayName="Quality Reason" name="qualityReason"/>
+						<StringProperty displayName="Db Column Name" name="dbColumnName"/>
+						<StringProperty displayName="Valor Predefinido" name="defaultValue"/>
+						<StringProperty displayName="Foreign Key Name Pattern" name="foreignKeyNamePattern" value="{reference_table_name}{reference_column_name}"/>
+						<StringProperty displayName="Tipo" internalValue="27" name="type" value="varchar"/>
+						<IntegerProperty displayName="Identity Seed" name="identitySeed" value="-1"/>
+						<IntegerProperty displayName="Identity Increment" name="identityIncrement" value="-1"/>
+						<BooleanProperty displayName="Anulable" name="nullable" value="false"/>
+						<BooleanProperty displayName="Único" name="unique" value="false"/>
+						<BooleanProperty displayName="Clave Principal" name="primaryKey" value="true"/>
+						<BooleanProperty displayName="Índice" name="index" value="false"/>
+						<StringProperty displayName="Type Name" name="typeName"/>
+						<StringProperty displayName="Check Constraint" name="checkConstraint"/>
+						<IntegerProperty displayName="Length" name="length" value="64"/>
+						<IntegerProperty displayName="Escala" name="scale" value="0"/>
+						<StringProperty displayName="DDLClauses" name="DDLClauses"/>
+						<StringProperty displayName="Id Generator" name="idGenerator" value="native"/>
+						<ModelsProperty displayName="Foreign Key Constraints" name="foreignKeyConstraints">
+							<Model composite="true" considerDefaultProperties="false" displayModelType="DBForeignKeyConstraint" id=".6ooTWKD.AACAQza" modelType="DBForeignKeyConstraint" name="">
+								<ModelProperties>
+									<StringProperty displayName="Nombre" name="name" value=""/>
+									<StringProperty displayName="Model Type" name="modelType" value="DBForeignKeyConstraint"/>
+									<ModelsProperty displayName="Comentarios" name="comments"/>
+									<HTMLProperty displayName="Documentación" name="documentation" plainTextValue=""/>
+									<ModelsProperty displayName="Voices" name="voices"/>
+									<ModelsProperty displayName="Referencias" name="references"/>
+									<StringArrayProperty displayName="Referenced By Diagram Ids" name="referencedByDiagramIds"/>
+									<StringArrayProperty displayName="Referenced By Model Addresses" name="referencedByModelAddresses"/>
+									<StringProperty displayName="Tránsito De" name="transitFrom"/>
+									<StringProperty displayName="Tránsito A" name="transitTo"/>
+									<ModelRefProperty displayName="Pm Status" name="pmStatus"/>
+									<ModelRefProperty displayName="Pm Difficulty" name="pmDifficulty"/>
+									<ModelRefProperty displayName="Pm Priority" name="pmPriority"/>
+									<ModelRefProperty displayName="Pm Version" name="pmVersion"/>
+									<ModelRefProperty displayName="Pm Iteration" name="pmIteration"/>
+									<ModelRefProperty displayName="Pm Phase" name="pmPhase"/>
+									<ModelRefProperty displayName="Pm Discipline" name="pmDiscipline"/>
+									<StringProperty displayName="Pm Author" name="pmAuthor" value="alfredo"/>
+									<StringProperty displayName="Pm Create Date Time" name="pmCreateDateTime" value="1403147015647"/>
+									<StringProperty displayName="Pm Last Modified" name="pmLastModified"/>
+									<StringProperty displayName="Id" name="userID"/>
+									<IntegerProperty displayName="User IDLast Numeric Value" name="userIDLastNumericValue" value="0"/>
+									<IntegerProperty displayName="Quality Score" name="qualityScore" value="-1"/>
+									<StringProperty displayName="Quality Reason" name="qualityReason"/>
+									<ModelRefProperty displayName="Foreign Key" name="foreignKey">
+										<ModelRef id="W6ooTWKD.AACAQzW"/>
+									</ModelRefProperty>
+									<ModelRefProperty displayName="Ref Column" name="refColumn">
+										<ModelRef id="1r4QTWKD.AACAQwr"/>
+									</ModelRefProperty>
+								</ModelProperties>
+							</Model>
+						</ModelsProperty>
+						<ModelsProperty displayName="User Types" name="userTypes"/>
+						<StringProperty displayName="Id Generator Key" name="idGeneratorKey"/>
+						<StringProperty displayName="Sync Type" name="syncType" value="Not Sync"/>
+						<ModelRefProperty displayName="Attribute Model" name="attributeModel"/>
+						<StringProperty displayName="Generated" name="generated" value="Unspecified"/>
+						<StringProperty displayName="Sync To Attribute" name="syncToAttribute" value="Yes"/>
+					</ModelProperties>
+				</Model>
+			</ChildModels>
+			<ToSimpleRelationships>
+				<RelationshipRef from="3DnITWKD.AACAQy_" id="I6ooTWKD.AACAQzM" to="U6ooTWKD.AACAQzR"/>
+				<RelationshipRef from="4FIQTWKD.AACAQwn" id="W6ooTWKD.AACAQzW" to="U6ooTWKD.AACAQzR"/>
+			</ToSimpleRelationships>
+		</Model>
+	</Models>
+	<Diagrams>
+		<Diagram connectorStyle="Oblique" diagramType="ERDiagram" displayDiagramType="Diagrama Entidad - Relación" documentation="" id="ndtgTWKD.AACAQwf" imageFileName="ER.png" imageHeight="376" imageScale="1.0" imageWidth="626" name="ER" rtfDocumentation="" trimmedHeight="98" trimmedWidth="98">
+			<DiagramProperties>
+				<BooleanProperty displayName="Show Allocated From" name="showAllocatedFrom" value="true"/>
+				<BooleanProperty displayName="Show Allocated To" name="showAllocatedTo" value="true"/>
+				<StringProperty displayName="Reference Container Id" name="referenceContainerId"/>
+				<StringProperty displayName="Pm Status Id" name="pmStatusId"/>
+				<StringProperty displayName="Pm Difficulty Id" name="pmDifficultyId"/>
+				<StringProperty displayName="Pm Discipline Id" name="pmDisciplineId"/>
+				<StringProperty displayName="Pm Priority Id" name="pmPriorityId"/>
+				<StringProperty displayName="Pm Version Id" name="pmVersionId"/>
+				<StringProperty displayName="Pm Iteration Id" name="pmIterationId"/>
+				<StringProperty displayName="Pm Phase Id" name="pmPhaseId"/>
+				<StringProperty displayName="Pm Author" name="pmAuthor" value="alfredo"/>
+				<StringProperty displayName="Pm Create Date Time" name="pmCreateDateTime" value="1403146132409"/>
+				<StringProperty displayName="Pm Last Modified" name="pmLastModified" value="1403148482885"/>
+				<IntegerProperty displayName="Mostrar Estilo de Nombre de Paquete" name="showPackageNameStyle" value="0"/>
+				<IntegerProperty displayName="Show Connector Name" name="showConnectorName" value="0"/>
+				<IntegerProperty displayName="Paint Connector Through Label" name="paintConnectorThroughLabel" value="0"/>
+				<StringProperty displayName="Tránsito De" name="transitFrom"/>
+				<StringProperty displayName="Tránsito A" name="transitTo"/>
+				<IntegerProperty displayName="Show Activity State Node Caption" name="showActivityStateNodeCaption" value="65535"/>
+				<StringProperty displayName="Documentación" name="documentation"/>
+				<BooleanProperty displayName="Editable" name="editable" value="true"/>
+				<StringProperty displayName="Request Layout Type" name="requestLayoutType"/>
+				<BooleanProperty displayName="Follow Diagram Parent Element" name="followDiagramParentElement" value="true"/>
+				<BooleanProperty displayName="Ajuste Automático de Tamaño de Formas" name="autoFitShapesSize" value="false"/>
+				<BooleanProperty displayName="Mostrar Valores Etiquetados" name="showTaggedValues" value="false"/>
+				<BooleanProperty displayName="Hide Empty Tagged Values" name="hideEmptyTaggedValues" value="false"/>
+				<BooleanProperty displayName="Mostrar Estereotipos" name="showStereotypes" value="true"/>
+				<BooleanProperty displayName="Show Constraints" name="showConstraints" value="false"/>
+				<BooleanProperty displayName="Align To Grid" name="alignToGrid" value="true"/>
+				<IntegerProperty displayName="Grid Width" name="gridWidth" value="10"/>
+				<IntegerProperty displayName="Grid Height" name="gridHeight" value="10"/>
+				<ColorProperty displayName="Color de la Cuadrícula" name="gridColor" value="Cr:192,192,192,255"/>
+				<ColorProperty displayName="Diagram Background" name="diagramBackground" value="Cr:255,255,255,255"/>
+				<IntegerProperty displayName="Estilo de Conector" name="connectorStyle" value="1"/>
+				<IntegerProperty displayName="Connector Line Jumps" name="connectorLineJumps" value="0"/>
+				<IntegerProperty displayName="Connector Line Jumps Size" name="connectorLineJumpsSize" value="0"/>
+				<IntegerProperty displayName="Estilo de Punto de Conexión" name="connectionPointStyle" value="0"/>
+				<IntegerProperty displayName="Connector Label Orientation" name="connectorLabelOrientation" value="0"/>
+				<IntegerProperty displayName="Model Element Name Alignment" name="modelElementNameAlignment" value="4"/>
+				<DoubleProperty displayName="Zoom Ratio" name="zoomRatio" value="1.0"/>
+				<IntegerProperty displayName="X" name="x" value="0"/>
+				<IntegerProperty displayName="Y" name="y" value="0"/>
+				<IntegerProperty displayName="Ancho" name="width" value="1340"/>
+				<IntegerProperty displayName="Altura" name="height" value="594"/>
+				<IntegerProperty displayName="Quality Score" name="qualityScore" value="-1"/>
+				<ModelRefProperty displayName="Parent Model" name="parentModel"/>
+				<BooleanProperty displayName="Global Palette Option" name="_globalPaletteOption" value="true"/>
+				<BooleanProperty displayName="Always Show Reference And Subdiagram Resource" name="_alwaysShowReferenceAndSubdiagramResource" value="false"/>
+				<BooleanProperty displayName="Initialize Diagram For Create" name="initializeDiagramForCreate" value="true"/>
+				<BooleanProperty displayName="Request Validate Snap To Grid" name="requestValidateSnapToGrid" value="false"/>
+				<StringArrayProperty displayName="Hidden Diagram Element Ids" name="hiddenDiagramElementIds"/>
+				<StringArrayProperty displayName="Voice Ids" name="voiceIds"/>
+				<StringArrayProperty displayName="Referenced By Diagram Ids" name="referencedByDiagramIds"/>
+				<StringArrayProperty displayName="Referenced By Model Addresses" name="referencedByModelAddresses"/>
+				<BooleanProperty displayName="Mostrar Paquete Predefinido" name="showDefaultPackage" value="false"/>
+				<StringProperty displayName="Default Schema" name="defaultSchema"/>
+				<BooleanProperty displayName="Show DBTable Columns" name="_showDBTableColumns" value="true"/>
+				<BooleanProperty displayName="Show Column Stereotypes" name="_showColumnStereotypes" value="true"/>
+				<BooleanProperty displayName="Show Procedure Stereotypes" name="_showProcedureStereotypes" value="true"/>
+				<BooleanProperty displayName="Show Trigger Stereotypes" name="_showTriggerStereotypes" value="true"/>
+				<BooleanProperty displayName="Show DBView Columns" name="_showDBViewColumns" value="true"/>
+				<BooleanProperty displayName="Show Stored Procedure Result Set Columns" name="_showStoredProcedureResultSetColumns" value="true"/>
+				<BooleanProperty displayName="Show Triggers" name="_showTriggers" value="true"/>
+				<BooleanProperty displayName="Show Stored Procedures" name="_showStoredProcedures" value="true"/>
+				<StringProperty displayName="Datos Modelo" name="dataModel" value="Physical"/>
+				<IntegerProperty displayName="Foreign Key Arrow Head Size" name="ForeignKeyArrowHeadSize" value="3"/>
+				<BooleanProperty displayName="Show Schema Name" name="showSchemaName" value="true"/>
+				<BooleanProperty displayName="Show Column Types" name="_showColumnTypes" value="true"/>
+				<BooleanProperty displayName="Mostrar Columna Tipo de Usuario" name="_showColumnUserType" value="false"/>
+				<IntegerProperty displayName="Column Constraints Display Option" name="_columnConstraintsDisplayOption" value="2"/>
+				<BooleanProperty displayName="Show Extra Column Properties" name="_showExtraColumnProperties" value="true"/>
+				<BooleanProperty displayName="Point Foreign Key End To Column" name="_pointForeignKeyEndToColumn" value="false"/>
+				<BooleanProperty displayName="Align Column Properties" name="_alignColumnProperties" value="true"/>
+			</DiagramProperties>
+			<Shapes>
+				<Shape height="130" id="4FIQTWKD.AACAQwm" model="4FIQTWKD.AACAQwn" name="Usuario" shapeType="DBTable" width="220" x="2" y="2" zorder="6">
+					<DiagramElementProperties>
+						<IntegerProperty displayName="ZOrder" name="zOrder" value="6"/>
+						<ModelRefProperty displayName="Meta Model Element" name="metaModelElement">
+							<ModelRef id="4FIQTWKD.AACAQwn"/>
+						</ModelRefProperty>
+						<ModelRefProperty displayName="Style" name="style"/>
+						<IntegerProperty displayName="X" name="x" value="100"/>
+						<IntegerProperty displayName="Y" name="y" value="100"/>
+						<IntegerProperty displayName="Ancho" name="width" value="220"/>
+						<IntegerProperty displayName="Altura" name="height" value="130"/>
+						<ColorProperty displayName="Fondo" name="background" value="Cr:122,207,245,255"/>
+						<ColorProperty displayName="Foreground" name="foreground" value="Cr:0,0,0,255"/>
+						<StringProperty displayName="Creator Diagram Type" name="creatorDiagramType" value="ERDiagram"/>
+						<BooleanProperty displayName="Seleccionable" name="selectable" value="true"/>
+						<BooleanProperty displayName="Request Reset Caption" name="requestResetCaption" value="false"/>
+						<BooleanProperty displayName="Request Reset Caption Size" name="requestResetCaptionSize" value="false"/>
+						<StringArrayProperty displayName="Referenced By Diagram Ids" name="referencedByDiagramIds"/>
+						<StringArrayProperty displayName="Referenced By Model Addresses" name="referencedByModelAddresses"/>
+						<IntegerProperty displayName="Presentation Option" name="presentationOption" value="0"/>
+						<IntegerProperty displayName="Primitive Shape Type" name="primitiveShapeType" value="0"/>
+						<StringProperty displayName="Custom Text" name="customText"/>
+						<IntegerProperty displayName="Show Allocated From" name="showAllocatedFrom" value="0"/>
+						<IntegerProperty displayName="Show Allocated To" name="showAllocatedTo" value="0"/>
+						<StringProperty displayName="Display Image Path" name="displayImagePath"/>
+						<StringProperty displayName="Display Stereotype Icon Stereotype Id" name="displayStereotypeIconStereotypeId"/>
+						<StringArrayProperty displayName="Hidden Stereotype Ids" name="hiddenStereotypeIds"/>
+						<BooleanProperty displayName="Override Appearance With Stereotype Icon" name="overrideAppearanceWithStereotypeIcon" value="true"/>
+						<IntegerProperty displayName="Request Set Size Option" name="requestSetSizeOption" value="0"/>
+						<IntegerProperty displayName="Parent Connector Header Length" name="parentConnectorHeaderLength" value="40"/>
+						<IntegerProperty displayName="Parent Connector Line Length" name="parentConnectorLineLength" value="10"/>
+						<BooleanProperty displayName="Connect To Point" name="connectToPoint" value="true"/>
+						<DoubleProperty displayName="Parent Connector DTheta" name="parentConnectorDTheta" value="0.0"/>
+						<IntegerProperty displayName="Connection Point Type" name="connectionPointType" value="2"/>
+						<IntegerProperty displayName="Model Element Name Alignment" name="modelElementNameAlignment" value="9"/>
+						<BooleanProperty displayName="Request Default Size" name="requestDefaultSize" value="false"/>
+						<BooleanProperty displayName="Request Fit Size" name="requestFitSize" value="false"/>
+						<BooleanProperty displayName="Request Fit Size From Center" name="requestFitSizeFromCenter" value="false"/>
+						<IntegerProperty displayName="Col Sort Type" name="colSortType" value="0"/>
+						<IntegerProperty displayName="Show Column Stereotypes" name="showColumnStereotypes" value="0"/>
+						<StringArrayProperty displayName="Hidden Column Ids" name="hiddenColumnIds"/>
+						<IntegerProperty displayName="Show Columns Mode" name="showColumnsMode" value="0"/>
+					</DiagramElementProperties>
+					<ElementFont color="Cr:0,0,0,255" name="Dialog" size="11" style="0"/>
+					<Line cap="0" color="Cr:0,0,0,255" transparency="0" weight="1.0">
+						<Stroke/>
+					</Line>
+					<Caption height="14" internalHeight="-2147483648" internalWidth="-2147483648" side="FreeMove" visible="true" width="220" x="-98" y="-98"/>
+					<FillColor color="Cr:245,182,122,255" style="1" transparency="0" type="1"/>
+				</Shape>
+				<Shape height="140" id="5zPQTWKD.AACAQxC" model="5zPQTWKD.AACAQxD" name="Registro" shapeType="DBTable" width="280" x="342" y="2" zorder="4">
+					<DiagramElementProperties>
+						<IntegerProperty displayName="ZOrder" name="zOrder" value="4"/>
+						<ModelRefProperty displayName="Meta Model Element" name="metaModelElement">
+							<ModelRef id="5zPQTWKD.AACAQxD"/>
+						</ModelRefProperty>
+						<ModelRefProperty displayName="Style" name="style"/>
+						<IntegerProperty displayName="X" name="x" value="440"/>
+						<IntegerProperty displayName="Y" name="y" value="100"/>
+						<IntegerProperty displayName="Ancho" name="width" value="280"/>
+						<IntegerProperty displayName="Altura" name="height" value="140"/>
+						<ColorProperty displayName="Fondo" name="background" value="Cr:122,207,245,255"/>
+						<ColorProperty displayName="Foreground" name="foreground" value="Cr:0,0,0,255"/>
+						<StringProperty displayName="Creator Diagram Type" name="creatorDiagramType" value="ERDiagram"/>
+						<BooleanProperty displayName="Seleccionable" name="selectable" value="true"/>
+						<BooleanProperty displayName="Request Reset Caption" name="requestResetCaption" value="false"/>
+						<BooleanProperty displayName="Request Reset Caption Size" name="requestResetCaptionSize" value="false"/>
+						<StringArrayProperty displayName="Referenced By Diagram Ids" name="referencedByDiagramIds"/>
+						<StringArrayProperty displayName="Referenced By Model Addresses" name="referencedByModelAddresses"/>
+						<IntegerProperty displayName="Presentation Option" name="presentationOption" value="0"/>
+						<IntegerProperty displayName="Primitive Shape Type" name="primitiveShapeType" value="0"/>
+						<StringProperty displayName="Custom Text" name="customText"/>
+						<IntegerProperty displayName="Show Allocated From" name="showAllocatedFrom" value="0"/>
+						<IntegerProperty displayName="Show Allocated To" name="showAllocatedTo" value="0"/>
+						<StringProperty displayName="Display Image Path" name="displayImagePath"/>
+						<StringProperty displayName="Display Stereotype Icon Stereotype Id" name="displayStereotypeIconStereotypeId"/>
+						<StringArrayProperty displayName="Hidden Stereotype Ids" name="hiddenStereotypeIds"/>
+						<BooleanProperty displayName="Override Appearance With Stereotype Icon" name="overrideAppearanceWithStereotypeIcon" value="true"/>
+						<IntegerProperty displayName="Request Set Size Option" name="requestSetSizeOption" value="0"/>
+						<IntegerProperty displayName="Parent Connector Header Length" name="parentConnectorHeaderLength" value="40"/>
+						<IntegerProperty displayName="Parent Connector Line Length" name="parentConnectorLineLength" value="10"/>
+						<BooleanProperty displayName="Connect To Point" name="connectToPoint" value="true"/>
+						<DoubleProperty displayName="Parent Connector DTheta" name="parentConnectorDTheta" value="0.0"/>
+						<IntegerProperty displayName="Connection Point Type" name="connectionPointType" value="2"/>
+						<IntegerProperty displayName="Model Element Name Alignment" name="modelElementNameAlignment" value="9"/>
+						<BooleanProperty displayName="Request Default Size" name="requestDefaultSize" value="false"/>
+						<BooleanProperty displayName="Request Fit Size" name="requestFitSize" value="false"/>
+						<BooleanProperty displayName="Request Fit Size From Center" name="requestFitSizeFromCenter" value="false"/>
+						<IntegerProperty displayName="Col Sort Type" name="colSortType" value="0"/>
+						<IntegerProperty displayName="Show Column Stereotypes" name="showColumnStereotypes" value="0"/>
+						<StringArrayProperty displayName="Hidden Column Ids" name="hiddenColumnIds"/>
+						<IntegerProperty displayName="Show Columns Mode" name="showColumnsMode" value="0"/>
+					</DiagramElementProperties>
+					<ElementFont color="Cr:0,0,0,255" name="Dialog" size="11" style="0"/>
+					<Line cap="0" color="Cr:0,0,0,255" transparency="0" weight="1.0">
+						<Stroke/>
+					</Line>
+					<Caption height="14" internalHeight="-2147483648" internalWidth="-2147483648" side="FreeMove" visible="true" width="280" x="-98" y="-98"/>
+					<FillColor color="Cr:245,182,122,255" style="1" transparency="0" type="1"/>
+				</Shape>
+				<Shape height="90" id="3DnITWKD.AACAQy." model="3DnITWKD.AACAQy_" name="Rol" shapeType="DBTable" width="220" x="2" y="282" zorder="2">
+					<DiagramElementProperties>
+						<IntegerProperty displayName="ZOrder" name="zOrder" value="2"/>
+						<ModelRefProperty displayName="Meta Model Element" name="metaModelElement">
+							<ModelRef id="3DnITWKD.AACAQy_"/>
+						</ModelRefProperty>
+						<ModelRefProperty displayName="Style" name="style"/>
+						<IntegerProperty displayName="X" name="x" value="100"/>
+						<IntegerProperty displayName="Y" name="y" value="380"/>
+						<IntegerProperty displayName="Ancho" name="width" value="220"/>
+						<IntegerProperty displayName="Altura" name="height" value="90"/>
+						<ColorProperty displayName="Fondo" name="background" value="Cr:122,207,245,255"/>
+						<ColorProperty displayName="Foreground" name="foreground" value="Cr:0,0,0,255"/>
+						<StringProperty displayName="Creator Diagram Type" name="creatorDiagramType" value="ERDiagram"/>
+						<BooleanProperty displayName="Seleccionable" name="selectable" value="true"/>
+						<BooleanProperty displayName="Request Reset Caption" name="requestResetCaption" value="false"/>
+						<BooleanProperty displayName="Request Reset Caption Size" name="requestResetCaptionSize" value="false"/>
+						<StringArrayProperty displayName="Referenced By Diagram Ids" name="referencedByDiagramIds"/>
+						<StringArrayProperty displayName="Referenced By Model Addresses" name="referencedByModelAddresses"/>
+						<IntegerProperty displayName="Presentation Option" name="presentationOption" value="0"/>
+						<IntegerProperty displayName="Primitive Shape Type" name="primitiveShapeType" value="0"/>
+						<StringProperty displayName="Custom Text" name="customText"/>
+						<IntegerProperty displayName="Show Allocated From" name="showAllocatedFrom" value="0"/>
+						<IntegerProperty displayName="Show Allocated To" name="showAllocatedTo" value="0"/>
+						<StringProperty displayName="Display Image Path" name="displayImagePath"/>
+						<StringProperty displayName="Display Stereotype Icon Stereotype Id" name="displayStereotypeIconStereotypeId"/>
+						<StringArrayProperty displayName="Hidden Stereotype Ids" name="hiddenStereotypeIds"/>
+						<BooleanProperty displayName="Override Appearance With Stereotype Icon" name="overrideAppearanceWithStereotypeIcon" value="true"/>
+						<IntegerProperty displayName="Request Set Size Option" name="requestSetSizeOption" value="0"/>
+						<IntegerProperty displayName="Parent Connector Header Length" name="parentConnectorHeaderLength" value="40"/>
+						<IntegerProperty displayName="Parent Connector Line Length" name="parentConnectorLineLength" value="10"/>
+						<BooleanProperty displayName="Connect To Point" name="connectToPoint" value="true"/>
+						<DoubleProperty displayName="Parent Connector DTheta" name="parentConnectorDTheta" value="0.0"/>
+						<IntegerProperty displayName="Connection Point Type" name="connectionPointType" value="2"/>
+						<IntegerProperty displayName="Model Element Name Alignment" name="modelElementNameAlignment" value="9"/>
+						<BooleanProperty displayName="Request Default Size" name="requestDefaultSize" value="false"/>
+						<BooleanProperty displayName="Request Fit Size" name="requestFitSize" value="false"/>
+						<BooleanProperty displayName="Request Fit Size From Center" name="requestFitSizeFromCenter" value="false"/>
+						<IntegerProperty displayName="Col Sort Type" name="colSortType" value="0"/>
+						<IntegerProperty displayName="Show Column Stereotypes" name="showColumnStereotypes" value="0"/>
+						<StringArrayProperty displayName="Hidden Column Ids" name="hiddenColumnIds"/>
+						<IntegerProperty displayName="Show Columns Mode" name="showColumnsMode" value="0"/>
+					</DiagramElementProperties>
+					<ElementFont color="Cr:0,0,0,255" name="Dialog" size="11" style="0"/>
+					<Line cap="0" color="Cr:0,0,0,255" transparency="0" weight="1.0">
+						<Stroke/>
+					</Line>
+					<Caption height="14" internalHeight="-2147483648" internalWidth="-2147483648" side="FreeMove" visible="true" width="216" x="-98" y="-98"/>
+					<FillColor color="Cr:245,182,122,255" style="1" transparency="0" type="1"/>
+				</Shape>
+				<Shape height="70" id="U6ooTWKD.AACAQzQ" model="U6ooTWKD.AACAQzR" name="Rol_Usuario" shapeType="DBTable" width="220" x="2" y="172" zorder="0">
+					<DiagramElementProperties>
+						<IntegerProperty displayName="ZOrder" name="zOrder" value="0"/>
+						<ModelRefProperty displayName="Meta Model Element" name="metaModelElement">
+							<ModelRef id="U6ooTWKD.AACAQzR"/>
+						</ModelRefProperty>
+						<ModelRefProperty displayName="Style" name="style"/>
+						<IntegerProperty displayName="X" name="x" value="100"/>
+						<IntegerProperty displayName="Y" name="y" value="270"/>
+						<IntegerProperty displayName="Ancho" name="width" value="220"/>
+						<IntegerProperty displayName="Altura" name="height" value="70"/>
+						<ColorProperty displayName="Fondo" name="background" value="Cr:122,207,245,255"/>
+						<ColorProperty displayName="Foreground" name="foreground" value="Cr:0,0,0,255"/>
+						<StringProperty displayName="Creator Diagram Type" name="creatorDiagramType" value="ERDiagram"/>
+						<BooleanProperty displayName="Seleccionable" name="selectable" value="true"/>
+						<BooleanProperty displayName="Request Reset Caption" name="requestResetCaption" value="false"/>
+						<BooleanProperty displayName="Request Reset Caption Size" name="requestResetCaptionSize" value="false"/>
+						<StringArrayProperty displayName="Referenced By Diagram Ids" name="referencedByDiagramIds"/>
+						<StringArrayProperty displayName="Referenced By Model Addresses" name="referencedByModelAddresses"/>
+						<IntegerProperty displayName="Presentation Option" name="presentationOption" value="0"/>
+						<IntegerProperty displayName="Primitive Shape Type" name="primitiveShapeType" value="0"/>
+						<StringProperty displayName="Custom Text" name="customText"/>
+						<IntegerProperty displayName="Show Allocated From" name="showAllocatedFrom" value="0"/>
+						<IntegerProperty displayName="Show Allocated To" name="showAllocatedTo" value="0"/>
+						<StringProperty displayName="Display Image Path" name="displayImagePath"/>
+						<StringProperty displayName="Display Stereotype Icon Stereotype Id" name="displayStereotypeIconStereotypeId"/>
+						<StringArrayProperty displayName="Hidden Stereotype Ids" name="hiddenStereotypeIds"/>
+						<BooleanProperty displayName="Override Appearance With Stereotype Icon" name="overrideAppearanceWithStereotypeIcon" value="true"/>
+						<IntegerProperty displayName="Request Set Size Option" name="requestSetSizeOption" value="0"/>
+						<IntegerProperty displayName="Parent Connector Header Length" name="parentConnectorHeaderLength" value="40"/>
+						<IntegerProperty displayName="Parent Connector Line Length" name="parentConnectorLineLength" value="10"/>
+						<BooleanProperty displayName="Connect To Point" name="connectToPoint" value="true"/>
+						<DoubleProperty displayName="Parent Connector DTheta" name="parentConnectorDTheta" value="0.0"/>
+						<IntegerProperty displayName="Connection Point Type" name="connectionPointType" value="2"/>
+						<IntegerProperty displayName="Model Element Name Alignment" name="modelElementNameAlignment" value="9"/>
+						<BooleanProperty displayName="Request Default Size" name="requestDefaultSize" value="false"/>
+						<BooleanProperty displayName="Request Fit Size" name="requestFitSize" value="false"/>
+						<BooleanProperty displayName="Request Fit Size From Center" name="requestFitSizeFromCenter" value="false"/>
+						<IntegerProperty displayName="Col Sort Type" name="colSortType" value="0"/>
+						<IntegerProperty displayName="Show Column Stereotypes" name="showColumnStereotypes" value="0"/>
+						<StringArrayProperty displayName="Hidden Column Ids" name="hiddenColumnIds"/>
+						<IntegerProperty displayName="Show Columns Mode" name="showColumnsMode" value="0"/>
+					</DiagramElementProperties>
+					<ElementFont color="Cr:0,0,0,255" name="Dialog" size="11" style="0"/>
+					<Line cap="0" color="Cr:0,0,0,255" transparency="0" weight="1.0">
+						<Stroke/>
+					</Line>
+					<Caption height="14" internalHeight="-2147483648" internalWidth="-2147483648" side="FreeMove" visible="true" width="218" x="-98" y="-98"/>
+					<FillColor color="Cr:245,182,122,255" style="1" transparency="0" type="1"/>
+				</Shape>
+			</Shapes>
+			<Connectors>
+				<Connector connectorStyle="Follow Diagram" from="4FIQTWKD.AACAQwm" height="100" id=".rAITWKD.AACAQya" model="erAITWKD.AACAQyZ" name="" shapeType="DBForeignKey" to="5zPQTWKD.AACAQxC" width="219" x="172" y="-18" zorder="-1">
+					<DiagramElementProperties>
+						<IntegerProperty displayName="ZOrder" name="zOrder" value="-1"/>
+						<ModelRefProperty displayName="Meta Model Element" name="metaModelElement">
+							<ModelRef id="erAITWKD.AACAQyZ"/>
+						</ModelRefProperty>
+						<ModelRefProperty displayName="Style" name="style"/>
+						<IntegerProperty displayName="X" name="x" value="270"/>
+						<IntegerProperty displayName="Y" name="y" value="80"/>
+						<IntegerProperty displayName="Ancho" name="width" value="219"/>
+						<IntegerProperty displayName="Altura" name="height" value="100"/>
+						<ColorProperty displayName="Fondo" name="background" value="Cr:122,207,245,255"/>
+						<ColorProperty displayName="Foreground" name="foreground" value="Cr:0,0,0,255"/>
+						<StringProperty displayName="Creator Diagram Type" name="creatorDiagramType" value="ERDiagram"/>
+						<BooleanProperty displayName="Seleccionable" name="selectable" value="true"/>
+						<BooleanProperty displayName="Request Reset Caption" name="requestResetCaption" value="false"/>
+						<BooleanProperty displayName="Request Reset Caption Size" name="requestResetCaptionSize" value="false"/>
+						<StringArrayProperty displayName="Referenced By Diagram Ids" name="referencedByDiagramIds"/>
+						<StringArrayProperty displayName="Referenced By Model Addresses" name="referencedByModelAddresses"/>
+						<IntegerProperty displayName="Estilo de Conector" name="connectorStyle" value="3"/>
+						<IntegerProperty displayName="Connector Line Jumps" name="connectorLineJumps" value="4"/>
+						<IntegerProperty displayName="Connector Label Orientation" name="connectorLabelOrientation" value="4"/>
+						<IntegerProperty displayName="From Shape XDiff" name="fromShapeXDiff" value="0"/>
+						<IntegerProperty displayName="From Shape YDiff" name="fromShapeYDiff" value="0"/>
+						<IntegerProperty displayName="To Shape XDiff" name="toShapeXDiff" value="0"/>
+						<IntegerProperty displayName="To Shape YDiff" name="toShapeYDiff" value="0"/>
+						<IntegerProperty displayName="From Connect Type" name="fromConnectType" value="0"/>
+						<IntegerProperty displayName="To Connect Type" name="toConnectType" value="0"/>
+						<BooleanProperty displayName="Use From Shape Center" name="useFromShapeCenter" value="true"/>
+						<BooleanProperty displayName="Use To Shape Center" name="useToShapeCenter" value="true"/>
+						<IntegerProperty displayName="From Pin Type" name="fromPinType" value="1"/>
+						<IntegerProperty displayName="To Pin Type" name="toPinType" value="1"/>
+						<PointProperty displayName="From Pin Ratio" name="fromPinRatio" value=""/>
+						<PointProperty displayName="To Pin Ratio" name="toPinRatio" value=""/>
+						<BooleanProperty displayName="Request Rebuild" name="requestRebuild" value="false"/>
+						<IntegerProperty displayName="Show Connector Name" name="showConnectorName" value="2"/>
+						<IntegerProperty displayName="Paint Through Label" name="paintThroughLabel" value="2"/>
+						<BooleanProperty displayName="Has From Label" name="hasFromLabel" value="false"/>
+						<BooleanProperty displayName="Has To Label" name="hasToLabel" value="false"/>
+						<RectangleProperty displayName="From Label Rect" name="fromLabelRect" value=""/>
+						<RectangleProperty displayName="To Label Rect" name="toLabelRect" value=""/>
+						<BooleanProperty displayName="Request Reset Labels" name="requestResetLabels" value="false"/>
+					</DiagramElementProperties>
+					<ElementFont color="Cr:0,0,0,255" name="Dialog" size="11" style="0"/>
+					<Line cap="0" color="Cr:0,0,0,255" transparency="0" weight="1.0">
+						<Stroke/>
+					</Line>
+					<Caption height="0" internalHeight="-2147483648" internalWidth="-2147483648" side="None" visible="true" width="20" x="272" y="32"/>
+					<Points>
+						<Point x="222" y="32"/>
+						<Point x="341" y="32"/>
+					</Points>
+				</Connector>
+				<Connector connectorStyle="Follow Diagram" from="3DnITWKD.AACAQy." height="139" id="o6ooTWKD.AACAQzN" model="I6ooTWKD.AACAQzM" name="" shapeType="DBForeignKey" to="U6ooTWKD.AACAQzQ" width="100" x="52" y="192" zorder="-1">
+					<DiagramElementProperties>
+						<IntegerProperty displayName="ZOrder" name="zOrder" value="-1"/>
+						<ModelRefProperty displayName="Meta Model Element" name="metaModelElement">
+							<ModelRef id="I6ooTWKD.AACAQzM"/>
+						</ModelRefProperty>
+						<ModelRefProperty displayName="Style" name="style"/>
+						<IntegerProperty displayName="X" name="x" value="150"/>
+						<IntegerProperty displayName="Y" name="y" value="290"/>
+						<IntegerProperty displayName="Ancho" name="width" value="100"/>
+						<IntegerProperty displayName="Altura" name="height" value="139"/>
+						<ColorProperty displayName="Fondo" name="background" value="Cr:122,207,245,255"/>
+						<ColorProperty displayName="Foreground" name="foreground" value="Cr:0,0,0,255"/>
+						<StringProperty displayName="Creator Diagram Type" name="creatorDiagramType" value="ERDiagram"/>
+						<BooleanProperty displayName="Seleccionable" name="selectable" value="true"/>
+						<BooleanProperty displayName="Request Reset Caption" name="requestResetCaption" value="false"/>
+						<BooleanProperty displayName="Request Reset Caption Size" name="requestResetCaptionSize" value="false"/>
+						<StringArrayProperty displayName="Referenced By Diagram Ids" name="referencedByDiagramIds"/>
+						<StringArrayProperty displayName="Referenced By Model Addresses" name="referencedByModelAddresses"/>
+						<IntegerProperty displayName="Estilo de Conector" name="connectorStyle" value="3"/>
+						<IntegerProperty displayName="Connector Line Jumps" name="connectorLineJumps" value="4"/>
+						<IntegerProperty displayName="Connector Label Orientation" name="connectorLabelOrientation" value="4"/>
+						<IntegerProperty displayName="From Shape XDiff" name="fromShapeXDiff" value="0"/>
+						<IntegerProperty displayName="From Shape YDiff" name="fromShapeYDiff" value="0"/>
+						<IntegerProperty displayName="To Shape XDiff" name="toShapeXDiff" value="0"/>
+						<IntegerProperty displayName="To Shape YDiff" name="toShapeYDiff" value="0"/>
+						<IntegerProperty displayName="From Connect Type" name="fromConnectType" value="0"/>
+						<IntegerProperty displayName="To Connect Type" name="toConnectType" value="0"/>
+						<BooleanProperty displayName="Use From Shape Center" name="useFromShapeCenter" value="true"/>
+						<BooleanProperty displayName="Use To Shape Center" name="useToShapeCenter" value="true"/>
+						<IntegerProperty displayName="From Pin Type" name="fromPinType" value="1"/>
+						<IntegerProperty displayName="To Pin Type" name="toPinType" value="1"/>
+						<PointProperty displayName="From Pin Ratio" name="fromPinRatio" value=""/>
+						<PointProperty displayName="To Pin Ratio" name="toPinRatio" value=""/>
+						<BooleanProperty displayName="Request Rebuild" name="requestRebuild" value="false"/>
+						<IntegerProperty displayName="Show Connector Name" name="showConnectorName" value="2"/>
+						<IntegerProperty displayName="Paint Through Label" name="paintThroughLabel" value="2"/>
+						<BooleanProperty displayName="Has From Label" name="hasFromLabel" value="false"/>
+						<BooleanProperty displayName="Has To Label" name="hasToLabel" value="false"/>
+						<RectangleProperty displayName="From Label Rect" name="fromLabelRect" value=""/>
+						<RectangleProperty displayName="To Label Rect" name="toLabelRect" value=""/>
+						<BooleanProperty displayName="Request Reset Labels" name="requestResetLabels" value="false"/>
+					</DiagramElementProperties>
+					<ElementFont color="Cr:0,0,0,255" name="Dialog" size="11" style="0"/>
+					<Line cap="0" color="Cr:0,0,0,255" transparency="0" weight="1.0">
+						<Stroke/>
+					</Line>
+					<Caption height="0" internalHeight="-2147483648" internalWidth="-2147483648" side="None" visible="true" width="20" x="102" y="252"/>
+					<Points>
+						<Point x="102" y="281"/>
+						<Point x="102" y="242"/>
+					</Points>
+				</Connector>
+				<Connector connectorStyle="Follow Diagram" from="4FIQTWKD.AACAQwm" height="139" id="26ooTWKD.AACAQzX" model="W6ooTWKD.AACAQzW" name="" shapeType="DBForeignKey" to="U6ooTWKD.AACAQzQ" width="100" x="52" y="82" zorder="-1">
+					<DiagramElementProperties>
+						<IntegerProperty displayName="ZOrder" name="zOrder" value="-1"/>
+						<ModelRefProperty displayName="Meta Model Element" name="metaModelElement">
+							<ModelRef id="W6ooTWKD.AACAQzW"/>
+						</ModelRefProperty>
+						<ModelRefProperty displayName="Style" name="style"/>
+						<IntegerProperty displayName="X" name="x" value="150"/>
+						<IntegerProperty displayName="Y" name="y" value="180"/>
+						<IntegerProperty displayName="Ancho" name="width" value="100"/>
+						<IntegerProperty displayName="Altura" name="height" value="139"/>
+						<ColorProperty displayName="Fondo" name="background" value="Cr:122,207,245,255"/>
+						<ColorProperty displayName="Foreground" name="foreground" value="Cr:0,0,0,255"/>
+						<StringProperty displayName="Creator Diagram Type" name="creatorDiagramType" value="ERDiagram"/>
+						<BooleanProperty displayName="Seleccionable" name="selectable" value="true"/>
+						<BooleanProperty displayName="Request Reset Caption" name="requestResetCaption" value="false"/>
+						<BooleanProperty displayName="Request Reset Caption Size" name="requestResetCaptionSize" value="false"/>
+						<StringArrayProperty displayName="Referenced By Diagram Ids" name="referencedByDiagramIds"/>
+						<StringArrayProperty displayName="Referenced By Model Addresses" name="referencedByModelAddresses"/>
+						<IntegerProperty displayName="Estilo de Conector" name="connectorStyle" value="3"/>
+						<IntegerProperty displayName="Connector Line Jumps" name="connectorLineJumps" value="4"/>
+						<IntegerProperty displayName="Connector Label Orientation" name="connectorLabelOrientation" value="4"/>
+						<IntegerProperty displayName="From Shape XDiff" name="fromShapeXDiff" value="0"/>
+						<IntegerProperty displayName="From Shape YDiff" name="fromShapeYDiff" value="0"/>
+						<IntegerProperty displayName="To Shape XDiff" name="toShapeXDiff" value="0"/>
+						<IntegerProperty displayName="To Shape YDiff" name="toShapeYDiff" value="0"/>
+						<IntegerProperty displayName="From Connect Type" name="fromConnectType" value="0"/>
+						<IntegerProperty displayName="To Connect Type" name="toConnectType" value="0"/>
+						<BooleanProperty displayName="Use From Shape Center" name="useFromShapeCenter" value="true"/>
+						<BooleanProperty displayName="Use To Shape Center" name="useToShapeCenter" value="true"/>
+						<IntegerProperty displayName="From Pin Type" name="fromPinType" value="1"/>
+						<IntegerProperty displayName="To Pin Type" name="toPinType" value="1"/>
+						<PointProperty displayName="From Pin Ratio" name="fromPinRatio" value=""/>
+						<PointProperty displayName="To Pin Ratio" name="toPinRatio" value=""/>
+						<BooleanProperty displayName="Request Rebuild" name="requestRebuild" value="false"/>
+						<IntegerProperty displayName="Show Connector Name" name="showConnectorName" value="2"/>
+						<IntegerProperty displayName="Paint Through Label" name="paintThroughLabel" value="2"/>
+						<BooleanProperty displayName="Has From Label" name="hasFromLabel" value="false"/>
+						<BooleanProperty displayName="Has To Label" name="hasToLabel" value="false"/>
+						<RectangleProperty displayName="From Label Rect" name="fromLabelRect" value=""/>
+						<RectangleProperty displayName="To Label Rect" name="toLabelRect" value=""/>
+						<BooleanProperty displayName="Request Reset Labels" name="requestResetLabels" value="false"/>
+					</DiagramElementProperties>
+					<ElementFont color="Cr:0,0,0,255" name="Dialog" size="11" style="0"/>
+					<Line cap="0" color="Cr:0,0,0,255" transparency="0" weight="1.0">
+						<Stroke/>
+					</Line>
+					<Caption height="0" internalHeight="-2147483648" internalWidth="-2147483648" side="None" visible="true" width="20" x="112" y="172"/>
+					<Points>
+						<Point x="102" y="132"/>
+						<Point x="102" y="171"/>
+					</Points>
+				</Connector>
+			</Connectors>
+		</Diagram>
+	</Diagrams>
+</Project>
