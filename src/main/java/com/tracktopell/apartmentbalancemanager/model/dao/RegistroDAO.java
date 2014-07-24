@@ -149,16 +149,30 @@ public class RegistroDAO {
 		PreparedStatement st = null;
 		try {
             conn= getConnection();
-			st = conn.prepareStatement("INSERT INTO REGISTRO(EMAIL,CONCEPTO_ID,IMPORTE,FECHA) VALUES (?,?,?,?)");
+            
+            PreparedStatement st1 = conn.prepareStatement("SELECT ID,DESCRIPCION,FACTOR_CARGO_ABONO FROM CONCEPTO WHERE ID=?");
+            
+            st1.setInt(1, entity.getConceptoId());
+            ResultSet rs1 = st1.executeQuery();
+            int factorCargoAbono = 0;
+            if(rs1.next()){
+                factorCargoAbono = rs1.getInt("FACTOR_CARGO_ABONO");
+            }
+            rs1.close();
+            st1.close();
+            
+			st = conn.prepareStatement("INSERT INTO REGISTRO(EMAIL,CONCEPTO_ID,IMPORTE,FECHA) VALUES (?,?,?,?)",Statement.RETURN_GENERATED_KEYS);
 			
 			st.setString   (1, entity.getEmail());
 			st.setInt      (2, entity.getConceptoId());
-			st.setDouble   (3, entity.getImporte());
+			st.setDouble   (3, entity.getImporte() * factorCargoAbono);
+            
 			st.setTimestamp(4, new Timestamp(entity.getFecha().getTime()));
 			
 			int affected = st.executeUpdate();
 			System.out.println("->set: affected="+affected);
-			ResultSet rs = st.getGeneratedKeys();
+			
+            ResultSet rs = st.getGeneratedKeys();
 			
 			if(rs.next()){	
 				entity.setId(rs.getInt(1));
@@ -167,9 +181,9 @@ public class RegistroDAO {
 			
 			st.close();
 			
-			st = conn.prepareStatement("UPDATE INTO USUARIO SET SALDO = SALDO+? WHERE EMAIL=?");
+			st = conn.prepareStatement("UPDATE USUARIO SET SALDO = SALDO+? WHERE EMAIL=?",Statement.RETURN_GENERATED_KEYS);
 			
-			st.setDouble   (1, entity.getImporte());
+			st.setDouble   (1, entity.getImporte() * factorCargoAbono);
 			st.setString   (2, entity.getEmail());
 			
 			affected = st.executeUpdate();

@@ -17,7 +17,13 @@
         <!-- modernizr enables HTML5 elements and feature detects -->
         <script type="text/javascript" src="<%=request.getContextPath()%>/js/modernizr-1.5.min.js"></script>
     </head>
-
+    <%
+        Usuario usuarioEnSesion = (Usuario) session.getAttribute("usuarioEnSesion");
+        if (usuarioEnSesion == null) {
+            usuarioEnSesion = UsuarioDAOFactory.getUsuarioDAO().get(request.getUserPrincipal().getName());
+            session.setAttribute("usuarioEnSesion", usuarioEnSesion);
+        }
+    %>
     <body>
         <div id="main">
             <header>
@@ -30,6 +36,16 @@
                 </div>
                 <nav>
                     <ul class="sf-menu" id="nav">                        
+                        
+                        <%
+                        if (request.isUserInRole("ADMINISTRADOR")) {                                
+                        %>
+                        <li class="selected"><a href="<%=request.getContextPath()%>/pages/home.jsp" >Inicio</a></li>
+                        <li class="selected"><a href="<%=request.getContextPath()%>/admin/agregarConcepto.jsp" >+Concepto</a></li>
+                        <li class="selected"><a href="<%=request.getContextPath()%>/admin/agregarUsuario.jsp" >+Usuario</a></li>
+                        <%
+                        }
+                        %>
                         <li class="selected"><a href="<%=request.getContextPath()%>/salir.jsp">Salir</a></li>
                     </ul>
                 </nav>
@@ -40,25 +56,18 @@
                 <div class="contentInHome">
                     <form action="<%=request.getContextPath()%>/pages/registros.jsp">
 
+                        <h1>BIENVENIDO <%=usuarioEnSesion.getNombre().toUpperCase()%></h1>		
                         <%
                             DecimalFormat df = new DecimalFormat("$ ###,###,##0.00");
 
-                            Usuario usuarioEnSesion = (Usuario) session.getAttribute("usuarioEnSesion");
-                            if (usuarioEnSesion == null) {
-                                usuarioEnSesion = UsuarioDAOFactory.getUsuarioDAO().get(request.getUserPrincipal().getName());
-                                session.setAttribute("usuarioEnSesion", usuarioEnSesion);
-                            }
+                            if (usuarioEnSesion.getHabilitado () 
+                                != 0) {
 
-                            if (usuarioEnSesion.getHabilitado() != 0) {
-                        %>			
-                        <h1>BIENVENIDO <%=usuarioEnSesion.getNombre().toUpperCase()%></h1>		
-                        <%
-                            if (request.isUserInRole("ADMINISTRADOR")) {
-                                List<Usuario> usuarioList = UsuarioDAOFactory.getUsuarioDAO().getAllUsuario();
+                                if (request.isUserInRole("ADMINISTRADOR")) {
+                                    List<Usuario> usuarioList = UsuarioDAOFactory.getUsuarioDAO().getAllUsuario();
                         %>
 
                         <h2>INQUILINOS:</h2>
-                        <h3><a href="<%=request.getContextPath()%>/admin/agregarUsuario.jsp">+ Agregar Usuario</a></h3>
 
                         <table align="center" width="800px" border="1">	
                             <tr>
@@ -87,10 +96,14 @@
                         </table>
 
                         <%
-                            } else if (request.isUserInRole("INQUILINO")) {
-                                response.sendRedirect("registros.jsp");
+                                } else if (request.isUserInRole("INQUILINO")) {
+                                    response.sendRedirect("registros.jsp");
+                                }
                             }
-                        } else {
+
+                            
+                            
+                            else {
                         %>
                         <h2>USUARIO NO VERIFICADO</h2>
                         <%
@@ -101,7 +114,9 @@
                 </div>
             </div>
             <footer>
+                <!--
                 <p>Copyright &copy; <a href="http://www.sistemasnonex.com/oferta-productos">Sistemas NONEX</a> | <a href="http://www.sistemasnonex.com/">Tienda Nonex</a> | <a href="http://www.seguridad-nonex.com/">Seguridad y control de acceso</a></p>
+                -->
             </footer>
         </div>
         <p>&nbsp;</p>

@@ -19,6 +19,7 @@ public class SendGMailSMTPMail {
         m_to = "",
         m_subject = "Confirmacion de cuenta",
         m_text = "Esta es la liga de confirmacion:";
+    
     public static void sendVerificationEmail(final String sendTo,final String context) {
         new Thread(){
 
@@ -57,13 +58,15 @@ public class SendGMailSMTPMail {
             String smE  = sm1 + sm64;
             
             final String linkConfirmation = m_text + context + smE;
-            System.out.println("->LinkConfirmation:["+linkConfirmation+"]");
+            System.out.println("->LinkConfirmation:["+linkConfirmation+"] to" + sendTo);
             msg.setText(linkConfirmation);
             msg.setSubject(m_subject);
             msg.setFrom(new InternetAddress(username));
             msg.addRecipient(Message.RecipientType.TO, new InternetAddress(sendTo));
             Transport.send(msg);
+            System.out.println("==>> EMAIL SENT !");
         } catch (Exception mex) {
+            System.out.println("==>> EMAIL FAIL :(");
             mex.printStackTrace();
         }
     }

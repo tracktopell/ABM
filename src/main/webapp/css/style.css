@@ -534,6 +534,11 @@ ul#nav li a:hover, ul#nav li a:focus, ul#nav li.selected a, ul#nav li.selected a
   text-shadow: 1px 1px #323232;
 }
 
+ul#nav li a:hover, ul#nav li a:focus, ul#nav li.unselected a, ul#nav li.unselected a:hover, ul#nav li.unselected a:focus { 
+  color: #0F0F0F;
+  text-shadow: 1px 1px #323232;
+}
+
 ul#nav ul li a { 
   color: #FFF;
 }

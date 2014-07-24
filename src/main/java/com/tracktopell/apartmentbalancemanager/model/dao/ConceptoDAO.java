@@ -55,7 +55,7 @@ public class ConceptoDAO {
 		try {
             conn= getConnection();
 			st = conn.createStatement();
-			ResultSet rs = st.executeQuery("SELECT ID,DESCRIPCION,FACTOR_CARGO_ABONO FROM CONCEPTO ORDER BY FACTOR_CARGO_ABONO ASC,DESCRIPCION DESC");
+			ResultSet rs = st.executeQuery("SELECT ID,DESCRIPCION,FACTOR_CARGO_ABONO FROM CONCEPTO ORDER BY FACTOR_CARGO_ABONO ASC,DESCRIPCION ASC");
 			list = new ArrayList<Concepto>();
 			while(rs.next()){
 				Concepto entity = new Concepto();
@@ -100,19 +100,30 @@ public class ConceptoDAO {
 		return enttity;
 	}
 
-	public Concepto set(Concepto entity) {
+	public Concepto set(Concepto entity) throws EntityAlreadyExsist{
 		Connection conn= null;
 		PreparedStatement st = null;
 		try {
             conn= getConnection();
-			st = conn.prepareStatement("INSERT INTO CONCEPTO(DESCRIPCION,FACTOR_CARGO_ABONO) VALUES (?,?)");
+			
+            st = conn.prepareStatement("SELECT ID FROM CONCEPTO WHERE DESCRIPCION=?");			
+            st.setString(1, entity.getDescripcion().toUpperCase());
+            ResultSet rs = st.executeQuery();
+            
+            if (rs.next()){
+                throw new EntityAlreadyExsist("Ya existe un concepto con la descripcion");
+            }
+            rs.close();
+            st.close();
+            
+            st = conn.prepareStatement("INSERT INTO CONCEPTO(DESCRIPCION,FACTOR_CARGO_ABONO) VALUES (?,?)",Statement.RETURN_GENERATED_KEYS);
 			
 			st.setString   (1, entity.getDescripcion());
 			st.setDouble   (2, entity.getFactorCargoAbono());
 			
 			int affected = st.executeUpdate();
 			System.out.println("->set: affected="+affected);
-			ResultSet rs = st.getGeneratedKeys();
+			rs = st.getGeneratedKeys();
 			
 			if(rs.next()){	
 				entity.setId(rs.getInt(1));

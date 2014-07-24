@@ -12,14 +12,20 @@
 <html>
 
     <head>
-        <title>A.B.M. - Inicio</title>
+        <title>A.B.M. - AGREGAR REGISTRO</title>
         <meta name="description"  content="website description" />
         <meta name="keywords"     content="website keywords, website keywords" />
         <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/css/style.css" />
         <!-- modernizr enables HTML5 elements and feature detects -->
         <script type="text/javascript" src="<%=request.getContextPath()%>/js/modernizr-1.5.min.js"></script>
     </head>
-
+    <%
+        Usuario usuarioEnSesion = (Usuario) session.getAttribute("usuarioEnSesion");
+        if (usuarioEnSesion == null) {
+            usuarioEnSesion = UsuarioDAOFactory.getUsuarioDAO().get(request.getUserPrincipal().getName());
+            session.setAttribute("usuarioEnSesion", usuarioEnSesion);
+        }
+    %>
     <body>
         <div id="main">
             <header>
@@ -31,7 +37,17 @@
                     </div>
                 </div>
                 <nav>
-                    <ul class="sf-menu" id="nav">                        
+                    <ul class="sf-menu" id="nav">                                                
+                        <%
+                        if (request.isUserInRole("ADMINISTRADOR")) {                                
+                        %>
+                        <li class="selected"><a href="<%=request.getContextPath()%>/pages/home.jsp" >Inicio</a></li>
+                        <li class="unselected"><a href="#" >+Registro</a></li>
+                        <li class="selected"><a href="<%=request.getContextPath()%>/admin/agregarConcepto.jsp" >+Concepto</a></li>
+                        <li class="selected"><a href="<%=request.getContextPath()%>/admin/agregarUsuario.jsp" >+Usuario</a></li>
+                        <%
+                        }
+                        %>
                         <li class="selected"><a href="<%=request.getContextPath()%>/salir.jsp">Salir</a></li>
                     </ul>
                 </nav>
@@ -47,14 +63,16 @@
                             String usuarioRegistro = null;
                             Usuario usuario = null;
                             SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+                            double importeParsed = 0.0;
 
                             String email = request.getParameter("email");
                             if (email != null) {
                                 usuario = UsuarioDAOFactory.getUsuarioDAO().get(email);
                             }
                             String concepto = request.getParameter("concepto");
+                            System.out.println("==>>parameter concepto=" + concepto);
                             if (concepto == null) {
-                                concepto = "";
+                                concepto = "-1";
                             }
                             String importe = request.getParameter("importe");
                             if (importe == null) {
@@ -69,9 +87,9 @@
                             String validationError = null;
                             if (actionType != null && actionType.equals("ACEPTAR")) {
                                 try {
-                                    System.out.println("==>>ACEPTAR: email=" + email);
+                                    System.out.println("==>>ACEPTAR: email=" + email + ", conceptoId=" + concepto);
                                     Registro registroNuevo = new Registro();
-                                    registroNuevo.setConcepto(concepto);
+                                    registroNuevo.setConceptoId(new Integer(concepto));
                                     registroNuevo.setEmail(email);
                                     try {
                                         registroNuevo.setFecha(new Timestamp(sdf.parse(fecha).getTime()));
@@ -79,10 +97,16 @@
                                         throw new Exception("La fecha no es correcta");
                                     }
                                     try {
-                                        registroNuevo.setImporte(Double.parseDouble(importe));
+                                        importeParsed = Double.parseDouble(importe);
+                                        registroNuevo.setImporte(importeParsed);
                                     } catch (NumberFormatException nfe) {
                                         throw new Exception("El importe no es correcto");
                                     }
+                                    if (importeParsed <= 0) {
+                                        importe = "0.0";
+                                        throw new Exception("El importe no puede ser <= 0");
+                                    }
+
                                     try {
                                         System.out.println("==>>ACEPTAR");
                                         RegistroDAOFactory.getRegistroDAO().set(registroNuevo);
@@ -96,7 +120,7 @@
                                 }
                             } else if (actionType != null && actionType.equals("CANCELAR")) {
                                 System.out.println("==>>CANCELAR");
-                                response.sendRedirect("../pages/registros.jsp?verUsuarioRegistro=" + email);
+                                response.sendRedirect("../pages/home.jsp");
                             }
                             if (validationError != null) {
                         %>
@@ -104,20 +128,22 @@
                         <%
                             }
                         %>
-                        <h1>Agregar registro a <%=usuario.getNombre()%></h1>
-                        <input type="hidden" name="email"                            value="<%=email%>"/>
+                        <h1>Agregar registro a <%=usuario.getNombre()%> (<%=usuario.getEmail()%>)</h1>
+                        <input type="hidden" name="email" value="<%=usuario.getEmail()%>"/>
                         <table style="border: 1px solid black;">
                             <tr>
                                 <td>CONCEPTO :</td>
                                 <td>
+                                    <!--
                                     <input type="text"   name="concepto" size="25" maxlength="255" value="<%=concepto%>"/>
-                                    <select id="concepto">
+                                    -->
+                                    <select id="concepto" name="concepto">
                                         <%
-                                        for(Concepto c: conceptoList){
+                                            for (Concepto c : conceptoList) {
                                         %>
-                                        <option id="<%=c.getId()%>"><%=c.getDescripcion()%> [<%=c.getFactorCargoAbono()%>]</option>
+                                        <option value="<%=c.getId()%>"><%=c.getDescripcion()%> [<%=c.getFactorCargoAbono() < 0 ? "ABONO" : "CARGO"%>]</option>
                                         <%
-                                        }
+                                            }
                                         %>
                                     </select>
                                 </td>
@@ -131,10 +157,10 @@
                                 <td><input type="text" name="fecha" size="10" maxlength="12" value="<%=fecha%>"/></td>
                             </tr>
                             <tr>
-                                <td style="text-align: right"><input type="submit" name="actionType" value="ACEPTAR"/></td>
-                                <td style="text-align: left" ><input type="submit" name="actionType" value="CANCELAR"/></td>
-                            </tr>
-
+                                <td style="text-align: center" colspan="2">
+                                    <input type="submit" name="actionType" value="ACEPTAR"/>
+                                    <input type="submit" name="actionType" value="CANCELAR"/>
+                                </td>
                             </tr>
                         </table>
                     </form>
@@ -142,7 +168,9 @@
                 </div>
             </div>
             <footer>
+                <!--
                 <p>Copyright &copy; <a href="http://www.sistemasnonex.com/oferta-productos">Sistemas NONEX</a> | <a href="http://www.sistemasnonex.com/">Tienda Nonex</a> | <a href="http://www.seguridad-nonex.com/">Seguridad y control de acceso</a></p>
+                -->
             </footer>
         </div>
         <p>&nbsp;</p>

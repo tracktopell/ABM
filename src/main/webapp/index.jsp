@@ -35,6 +35,7 @@
                     <li><img src="<%=request.getContextPath()%>/images/5.jpg" width="600" height="300" alt="gallery_buildings_five" /></li>
                     <li><img src="<%=request.getContextPath()%>/images/6.jpg" width="600" height="300" alt="gallery_buildings_six" /></li>
                 </ul>
+                <!--
                 <div id="sidebar_container">
                     <div class="sidebar">
                         <h3>NOTICIAS</h3>
@@ -45,13 +46,16 @@
 
                     </div>
                 </div>
+                -->
                 <div class="content">
                     <h1>¡ Bienvenido !</h1>
                     <p>Este sistema te ayudara a tener un control de las cuentas de registro de conceptos de cargo/abono de los inquilinos de tu edificio.</p>
                 </div>
             </div>
             <footer>
+                <!--                
                 <p>Copyright &copy; <a href="http://www.sistemasnonex.com/oferta-productos">Sistemas NONEX</a> | <a href="http://www.sistemasnonex.com/">Tienda Nonex</a> | <a href="http://www.seguridad-nonex.com/">Seguridad y control de acceso</a></p>
+                -->
             </footer>
         </div>
         <p>&nbsp;</p>

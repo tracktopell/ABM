@@ -12,14 +12,20 @@
 <html>
 
     <head>
-        <title>A.B.M. - Inicio</title>
+        <title>A.B.M. - AGREGAR USUARIO</title>
         <meta name="description"  content="website description" />
         <meta name="keywords"     content="website keywords, website keywords" />
         <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/css/style.css" />
         <!-- modernizr enables HTML5 elements and feature detects -->
         <script type="text/javascript" src="<%=request.getContextPath()%>/js/modernizr-1.5.min.js"></script>
     </head>
-
+    <%
+        Usuario usuarioEnSesion = (Usuario) session.getAttribute("usuarioEnSesion");
+        if (usuarioEnSesion == null) {
+            usuarioEnSesion = UsuarioDAOFactory.getUsuarioDAO().get(request.getUserPrincipal().getName());
+            session.setAttribute("usuarioEnSesion", usuarioEnSesion);
+        }
+    %>
     <body>
         <div id="main">
             <header>
@@ -31,7 +37,16 @@
                     </div>
                 </div>
                 <nav>
-                    <ul class="sf-menu" id="nav">                        
+                    <ul class="sf-menu" id="nav">                                                
+                        <%
+                        if (request.isUserInRole("ADMINISTRADOR")) {                                
+                        %>
+                        <li class="selected"><a href="<%=request.getContextPath()%>/pages/home.jsp" >Inicio</a></li>
+                        <li class="selected"><a href="<%=request.getContextPath()%>/admin/agregarConcepto.jsp" >+Concepto</a></li>
+                        <li class="unselected"><a href="#" >+Usuario</a></li>
+                        <%
+                        }
+                        %>
                         <li class="selected"><a href="<%=request.getContextPath()%>/salir.jsp">Salir</a></li>
                     </ul>
                 </nav>
@@ -114,9 +129,10 @@
                                     }
 
                                     try {
+                                        UsuarioNuevo.setHabilitado(1);
                                         System.out.println("==>>ACEPTAR: contextPath=" + contextPath);
                                         UsuarioDAOFactory.getUsuarioDAO().set(UsuarioNuevo);
-                                        SendGMailSMTPMail.sendVerificationEmail(email, contextPath);
+                                        //SendGMailSMTPMail.sendVerificationEmail(email, contextPath);
                                         response.sendRedirect("../pages/home.jsp");
                                     } catch (Exception ex) {
                                         throw new Exception("No se pudo insertar :" + ex.getMessage());
@@ -127,7 +143,7 @@
                                 }
                             } else if (actionType != null && actionType.equals("CANCELAR")) {
                                 System.out.println("==>>CANCELAR");
-                                response.sendRedirect("../pages/Usuarios.jsp?verUsuarioUsuario=" + email);
+                                response.sendRedirect("../pages/home.jsp");
                             }
                             if (validationError != null) {
                         %>
@@ -159,8 +175,11 @@
                                 <td><input type="text" name="departamento" size="7" maxlength="10" value="<%=departamento%>"/></td>
                             </tr>
                             <tr>
-                                <td style="text-align: right"><input type="submit" name="actionType" value="ACEPTAR"/></td>
-                                <td style="text-align: left" ><input type="submit" name="actionType" value="CANCELAR"/></td>
+                                <td style="text-align: center" colspan="2">
+                                    <input type="submit" name="actionType" value="ACEPTAR"/>
+                                    <input type="submit" name="actionType" value="CANCELAR"/>
+                                </td>
+
                             </tr>
 
                         </table>
@@ -169,7 +188,9 @@
                 </div>
             </div>
             <footer>
+                <!--
                 <p>Copyright &copy; <a href="http://www.sistemasnonex.com/oferta-productos">Sistemas NONEX</a> | <a href="http://www.sistemasnonex.com/">Tienda Nonex</a> | <a href="http://www.seguridad-nonex.com/">Seguridad y control de acceso</a></p>
+                -->
             </footer>
         </div>
         <p>&nbsp;</p>

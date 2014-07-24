@@ -17,7 +17,20 @@
         <!-- modernizr enables HTML5 elements and feature detects -->
         <script type="text/javascript" src="<%=request.getContextPath()%>/js/modernizr-1.5.min.js"></script>
     </head>
+    <%
+        Usuario usuarioEnSesion = (Usuario) session.getAttribute("usuarioEnSesion");
+        String verUsuarioRegistro = null;
+        Usuario usuarioSeleccionado = null;
 
+        verUsuarioRegistro = (String) request.getParameter("verUsuarioRegistro");
+        if (verUsuarioRegistro != null) {
+            usuarioSeleccionado = UsuarioDAOFactory.getUsuarioDAO().get(verUsuarioRegistro);
+        }
+        if (usuarioEnSesion == null) {
+            usuarioEnSesion = UsuarioDAOFactory.getUsuarioDAO().get(request.getUserPrincipal().getName());
+            session.setAttribute("usuarioEnSesion", usuarioEnSesion);
+        }
+    %>
     <body>
         <div id="main">
             <header>
@@ -29,7 +42,17 @@
                     </div>
                 </div>
                 <nav>
-                    <ul class="sf-menu" id="nav">                        
+                    <ul class="sf-menu" id="nav">                                                
+                        <%
+                            if (request.isUserInRole("ADMINISTRADOR")) {
+                        %>
+                        <li class="selected"><a href="<%=request.getContextPath()%>/pages/home.jsp" >Inicio</a></li>
+                        <li class="selected"><a href="<%=request.getContextPath()%>/admin/agregarRegistro.jsp?email=<%=usuarioSeleccionado.getEmail()%>" >+Registro</a></li>
+                        <li class="selected"><a href="<%=request.getContextPath()%>/admin/agregarConcepto.jsp" >+Concepto</a></li>
+                        <li class="selected"><a href="<%=request.getContextPath()%>/admin/agregarUsuario.jsp" >+Usuario</a></li>
+                            <%
+                                }
+                            %>
                         <li class="selected"><a href="<%=request.getContextPath()%>/salir.jsp">Salir</a></li>
                     </ul>
                 </nav>
@@ -38,23 +61,12 @@
                 <img src="<%=request.getContextPath()%>/images/header_layer1.png"/>
 
                 <div class="contentInHome">
- <h1>Registros</h1>
+                    <h1>Registros</h1>
                     <%
-                        if (request.isUserInRole("ADMINISTRADOR")) {
-                    %>
-                    <h1><a href="home.jsp">Todos Inquilinos</a></h1>
-                    <%
-                        }
-                    %>
-
-                    <%
-                        String verUsuarioRegistro = null;
+                        double saldoFinal = 0.0;
                         List<Registro> registroList = null;
-                        Usuario usuarioSeleccionado = null;
                         DecimalFormat df = new DecimalFormat("$ ###,###,##0.00");
                         SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
-
-                        verUsuarioRegistro = (String) request.getParameter("verUsuarioRegistro");
 
                         System.out.println("-> verUsuarioRegistro:" + verUsuarioRegistro);
 
@@ -62,14 +74,13 @@
                             usuarioSeleccionado = UsuarioDAOFactory.getUsuarioDAO().get(verUsuarioRegistro);
                             registroList = RegistroDAOFactory.getRegistroDAO().getAllRegistroBy(verUsuarioRegistro);
                     %>
-                    <h3>REGISTROS DE <%=usuarioSeleccionado.getNombre()%></h3>
+                    <h3>REGISTROS DE <%=usuarioSeleccionado.getNombre()%> (<%=usuarioSeleccionado.getEmail()%>)</h3>
                     <%
                     } else {
                         usuarioSeleccionado = UsuarioDAOFactory.getUsuarioDAO().get(request.getUserPrincipal().getName());
                         registroList = RegistroDAOFactory.getRegistroDAO().getAllRegistroBy(usuarioSeleccionado.getEmail());
                     %>
                     <h2>BIENVENIDO : <%=usuarioSeleccionado.getNombre()%></h2>
-                    <h3>MIS REGISTROS</h3>
                     <%
                         }
                         System.out.println("-> registroList:" + registroList);
@@ -78,46 +89,43 @@
                     <%
                         if (request.isUserInRole("ADMINISTRADOR")) {
                     %>
-                    <a href="<%=request.getContextPath()%>/admin/agregarRegistro.jsp?email=<%=usuarioSeleccionado.getEmail()%>" >+ AGREGAR REGISTRO</a>
+
                     <%
                     %>
 
-                    <table width="800px" border="1" align="center">
+                    <table border="1" align="center">
                         <tr>
-                            <!--
-                            <td >ID</td>
-                            <td >EMAIL</td>
-                            <td >NOMBRE</td>
-                            -->
+                            <td  align="center">FECHA</td>
                             <td  width="250px" align="center">CONCEPTO</td>
                             <td  align="center">CARGO</td>
                             <td  align="center">ABONO</td>
-                            <td  align="center">FECHA</td>
                         </tr>
-                        <%
-                            for (Registro r : registroList) {
+                        <%                            for (Registro r : registroList) {
+                                saldoFinal += r.getImporte();
+
                         %>
                         <tr>
-                            <!--
-                            <td><%=r.getId()%></td>
-                            <td><%=r.getEmail()%></td>
-                            <td><%=r.getNombre()%></td>
-                            -->
-                            <td><%=r.getConcepto()%></td>
+                            <td width="150px" align="right"><%=sdf.format(r.getFecha())%></td>
+                            <td width="300px" ><%=r.getConcepto()%></td>
                             <td width="120px" align="right"><%=r.getImporte() >= 0 ? df.format(r.getImporte()) : "&nbsp;"%></td>
-                            <td width="120px" align="right"><%=r.getImporte() < 0 ? df.format(r.getImporte() * -1) : "&nbsp;"%></td>
-                            <td width="200px" align="right"><%=sdf.format(r.getFecha())%></td>
+                            <td width="120px" align="right"><%=r.getImporte() < 0 ? df.format(r.getImporte() * -1) : "&nbsp;"%></td>                            
                         </tr>
                         <%
                                 }
                             }
                         %>	
+                        <tr>
+                            <td colspan="4" align="right">SALDO TOTAL :</td>
+                            <td align="right"><%=df.format(saldoFinal)%></td>
+                        </tr>
                     </table>
 
                 </div>
             </div>
             <footer>
+                <!--
                 <p>Copyright &copy; <a href="http://www.sistemasnonex.com/oferta-productos">Sistemas NONEX</a> | <a href="http://www.sistemasnonex.com/">Tienda Nonex</a> | <a href="http://www.seguridad-nonex.com/">Seguridad y control de acceso</a></p>
+                -->
             </footer>
         </div>
         <p>&nbsp;</p>
