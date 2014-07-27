@@ -17,12 +17,13 @@
         <!-- modernizr enables HTML5 elements and feature detects -->
         <script type="text/javascript" src="<%=request.getContextPath()%>/js/modernizr-1.5.min.js"></script>
     </head>
-    <%
-        Usuario usuarioEnSesion = (Usuario) session.getAttribute("usuarioEnSesion");
-        if (usuarioEnSesion == null) {
-            usuarioEnSesion = UsuarioDAOFactory.getUsuarioDAO().get(request.getUserPrincipal().getName());
-            session.setAttribute("usuarioEnSesion", usuarioEnSesion);
-        }
+<%
+    DecimalFormat df = new DecimalFormat("$ ###,###,##0.00");
+    Usuario usuarioEnSesion = (Usuario) session.getAttribute("usuarioEnSesion");
+    if (usuarioEnSesion == null) {
+        usuarioEnSesion = UsuarioDAOFactory.getUsuarioDAO().get(request.getUserPrincipal().getName());
+        session.setAttribute("usuarioEnSesion", usuarioEnSesion);
+    }
     %>
     <body>
         <div id="main">
@@ -37,15 +38,15 @@
                 <nav>
                     <ul class="sf-menu" id="nav">                        
                         
-                        <%
-                        if (request.isUserInRole("ADMINISTRADOR")) {                                
-                        %>
+<%
+    if (request.isUserInRole("ADMINISTRADOR")) {                                
+%>
                         <li class="selected"><a href="<%=request.getContextPath()%>/pages/home.jsp" >Inicio</a></li>
                         <li class="selected"><a href="<%=request.getContextPath()%>/admin/agregarConcepto.jsp" >+Concepto</a></li>
                         <li class="selected"><a href="<%=request.getContextPath()%>/admin/agregarUsuario.jsp" >+Usuario</a></li>
-                        <%
-                        }
-                        %>
+<%
+    }
+%>
                         <li class="selected"><a href="<%=request.getContextPath()%>/salir.jsp">Salir</a></li>
                     </ul>
                 </nav>
@@ -57,15 +58,12 @@
                     <form action="<%=request.getContextPath()%>/pages/registros.jsp">
 
                         <h1>BIENVENIDO <%=usuarioEnSesion.getNombre().toUpperCase()%></h1>		
-                        <%
-                            DecimalFormat df = new DecimalFormat("$ ###,###,##0.00");
+<%
+        if (usuarioEnSesion.getHabilitado () != 0) {
 
-                            if (usuarioEnSesion.getHabilitado () 
-                                != 0) {
-
-                                if (request.isUserInRole("ADMINISTRADOR")) {
-                                    List<Usuario> usuarioList = UsuarioDAOFactory.getUsuarioDAO().getAllUsuario();
-                        %>
+            if (request.isUserInRole("ADMINISTRADOR")) {
+                List<Usuario> usuarioList = UsuarioDAOFactory.getUsuarioDAO().getAllUsuario();
+%>
 
                         <h2>INQUILINOS:</h2>
 
@@ -78,9 +76,11 @@
                                 <td width="100px" align="center">SALDO</td>
                             </tr>
 
-                            <%
-                                for (Usuario u : usuarioList) {
-                            %>
+<%
+                double saldoTotal = 0.0;
+                for (Usuario u : usuarioList) {
+                    saldoTotal += u.getSaldo();
+%>
 
                             <tr>
                                 <td><a href="registros.jsp?verUsuarioRegistro=<%=u.getEmail()%>"> <%=u.getNombre()%></a></td>
@@ -89,26 +89,25 @@
                                 <td align="right"><%=u.getDepartamento()%></td>
                                 <td align="right"><%=df.format(u.getSaldo())%></td>
                             </tr>
+<%
+                }
+%>
+                            <tr>    
+                                <td align="right" colspan="5"><h4><%=df.format(saldoTotal)%></h4></td>
+                            </tr>
 
-                            <%
-                                }
-                            %>
                         </table>
-
-                        <%
-                                } else if (request.isUserInRole("INQUILINO")) {
-                                    response.sendRedirect("registros.jsp");
-                                }
-                            }
-
-                            
-                            
-                            else {
-                        %>
+<%
+            } else if (request.isUserInRole("INQUILINO")) {
+                System.out.println("->home redirect: registros.jsp");
+                response.sendRedirect("registros.jsp");
+            }
+        } else {
+%>
                         <h2>USUARIO NO VERIFICADO</h2>
-                        <%
-                            }
-                        %>		
+<%
+    }
+%>		
                     </form>
 
                 </div>

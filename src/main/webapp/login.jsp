@@ -73,14 +73,14 @@
                     <h1>inicie sesi&oacute;n para continuar</h1>       
                     <form action="j_security_check" method="post" id="loginForm" >
                         <div class="centerAlign"> 
-                            <table class="tableLogin">
+                            <table border="0" align="center">
                                 <tr>
-                                    <td class="rightAlign"><h3>email de usuario :</h3></td>
-                                    <td class="leftAlign"><h3><input type="text" name="j_username" id="j_username" value="" size="15"/></h3></td>
+                                    <td width="100px" class="rightAlign"><h3>email de usuario :</h3></td>
+                                    <td width="100px" class="leftAlign"><h3><input type="text" name="j_username" id="j_username" value="" size="19"/></h3></td>
                                 </tr>
                                 <tr>
-                                    <td class="rightAlign"><h3>contrase&ntilde;a :</h3></td>
-                                    <td class="leftAlign"><h3><input type="password" name="j_password" id="j_password" value="" size="10"/></h3></td>
+                                    <td width="100px" class="rightAlign"><h3>contrase&ntilde;a :</h3></td>
+                                    <td width="100px" class="leftAlign"><h3><input type="password" name="j_password" id="j_password" value="" size="10"/></h3></td>
                                 </tr>
                                 <tr>
                                     <td class="centerAlign" colspan="2"><input type="submit" value="ENVIAR"/></td>

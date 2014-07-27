@@ -10,27 +10,29 @@
 <html>
 
     <head>
-        <title>A.B.M. - Inicio</title>
+        <title>A.B.M. - Registros</title>
         <meta name="description"  content="website description" />
         <meta name="keywords"     content="website keywords, website keywords" />
         <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/css/style.css" />
         <!-- modernizr enables HTML5 elements and feature detects -->
         <script type="text/javascript" src="<%=request.getContextPath()%>/js/modernizr-1.5.min.js"></script>
     </head>
-    <%
-        Usuario usuarioEnSesion = (Usuario) session.getAttribute("usuarioEnSesion");
-        String verUsuarioRegistro = null;
-        Usuario usuarioSeleccionado = null;
-
-        verUsuarioRegistro = (String) request.getParameter("verUsuarioRegistro");
-        if (verUsuarioRegistro != null) {
-            usuarioSeleccionado = UsuarioDAOFactory.getUsuarioDAO().get(verUsuarioRegistro);
-        }
-        if (usuarioEnSesion == null) {
-            usuarioEnSesion = UsuarioDAOFactory.getUsuarioDAO().get(request.getUserPrincipal().getName());
-            session.setAttribute("usuarioEnSesion", usuarioEnSesion);
-        }
-    %>
+<%
+    Usuario usuarioEnSesion = (Usuario) session.getAttribute("usuarioEnSesion");
+    String verUsuarioRegistro = null;
+    Usuario usuarioSeleccionado = null;
+    if (usuarioEnSesion == null) {
+        usuarioEnSesion = UsuarioDAOFactory.getUsuarioDAO().get(request.getUserPrincipal().getName());
+        session.setAttribute("usuarioEnSesion", usuarioEnSesion);
+    }
+    verUsuarioRegistro = (String) request.getParameter("verUsuarioRegistro");
+    if (verUsuarioRegistro != null) {
+        usuarioSeleccionado = UsuarioDAOFactory.getUsuarioDAO().get(verUsuarioRegistro);
+    } else {
+        usuarioSeleccionado = usuarioEnSesion;
+    }
+        
+%>
     <body>
         <div id="main">
             <header>
@@ -43,16 +45,16 @@
                 </div>
                 <nav>
                     <ul class="sf-menu" id="nav">                                                
-                        <%
-                            if (request.isUserInRole("ADMINISTRADOR")) {
-                        %>
+<%
+    if (request.isUserInRole("ADMINISTRADOR")) {
+%>
                         <li class="selected"><a href="<%=request.getContextPath()%>/pages/home.jsp" >Inicio</a></li>
                         <li class="selected"><a href="<%=request.getContextPath()%>/admin/agregarRegistro.jsp?email=<%=usuarioSeleccionado.getEmail()%>" >+Registro</a></li>
                         <li class="selected"><a href="<%=request.getContextPath()%>/admin/agregarConcepto.jsp" >+Concepto</a></li>
                         <li class="selected"><a href="<%=request.getContextPath()%>/admin/agregarUsuario.jsp" >+Usuario</a></li>
-                            <%
-                                }
-                            %>
+<%
+    }
+%>
                         <li class="selected"><a href="<%=request.getContextPath()%>/salir.jsp">Salir</a></li>
                     </ul>
                 </nav>
@@ -62,36 +64,33 @@
 
                 <div class="contentInHome">
                     <h1>Registros</h1>
-                    <%
-                        double saldoFinal = 0.0;
-                        List<Registro> registroList = null;
-                        DecimalFormat df = new DecimalFormat("$ ###,###,##0.00");
-                        SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
+<%
+    double saldoFinal = 0.0;
+    List<Registro> registroList = null;
+    DecimalFormat df = new DecimalFormat("$ ###,###,##0.00");
+    SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
 
-                        System.out.println("-> verUsuarioRegistro:" + verUsuarioRegistro);
+    System.out.println("->registro.jsp: verUsuarioRegistro:" + verUsuarioRegistro);
 
-                        if (verUsuarioRegistro != null) {
-                            usuarioSeleccionado = UsuarioDAOFactory.getUsuarioDAO().get(verUsuarioRegistro);
-                            registroList = RegistroDAOFactory.getRegistroDAO().getAllRegistroBy(verUsuarioRegistro);
-                    %>
-                    <h3>REGISTROS DE <%=usuarioSeleccionado.getNombre()%> (<%=usuarioSeleccionado.getEmail()%>)</h3>
-                    <%
-                    } else {
-                        usuarioSeleccionado = UsuarioDAOFactory.getUsuarioDAO().get(request.getUserPrincipal().getName());
-                        registroList = RegistroDAOFactory.getRegistroDAO().getAllRegistroBy(usuarioSeleccionado.getEmail());
-                    %>
-                    <h2>BIENVENIDO : <%=usuarioSeleccionado.getNombre()%></h2>
-                    <%
-                        }
-                        System.out.println("-> registroList:" + registroList);
-                    %>
+    if (verUsuarioRegistro != null) {
+        usuarioSeleccionado = UsuarioDAOFactory.getUsuarioDAO().get(verUsuarioRegistro);
+        registroList = RegistroDAOFactory.getRegistroDAO().getAllRegistroBy(verUsuarioRegistro);
+%>
+                    <h3>Usuario: <%=usuarioSeleccionado.getNombre()%> (<%=usuarioSeleccionado.getEmail()%>)</h3>
+<%
+    } else {
+        usuarioSeleccionado = UsuarioDAOFactory.getUsuarioDAO().get(request.getUserPrincipal().getName());
+        registroList = RegistroDAOFactory.getRegistroDAO().getAllRegistroBy(usuarioSeleccionado.getEmail());
+%>
+                    <h3>Usuario: <%=usuarioSeleccionado.getNombre()%> (<%=usuarioSeleccionado.getEmail()%>)</h3>
+<%
+    }
+    System.out.println("->registro.jsp: registroList=" + registroList);
+%>
 
-                    <%
-                        if (request.isUserInRole("ADMINISTRADOR")) {
-                    %>
-
-                    <%
-                    %>
+<%
+    if (registroList != null) {
+%>
 
                     <table border="1" align="center">
                         <tr>
@@ -100,20 +99,20 @@
                             <td  align="center">CARGO</td>
                             <td  align="center">ABONO</td>
                         </tr>
-                        <%                            for (Registro r : registroList) {
-                                saldoFinal += r.getImporte();
-
-                        %>
+<%                            
+        for (Registro r : registroList) {
+            saldoFinal += r.getImporte();
+%>
                         <tr>
                             <td width="150px" align="right"><%=sdf.format(r.getFecha())%></td>
                             <td width="300px" ><%=r.getConcepto()%></td>
                             <td width="120px" align="right"><%=r.getImporte() >= 0 ? df.format(r.getImporte()) : "&nbsp;"%></td>
                             <td width="120px" align="right"><%=r.getImporte() < 0 ? df.format(r.getImporte() * -1) : "&nbsp;"%></td>                            
                         </tr>
-                        <%
-                                }
-                            }
-                        %>	
+<%
+        }
+    }
+%>	
                         <tr>
                             <td colspan="4" align="right">SALDO TOTAL :</td>
                             <td align="right"><%=df.format(saldoFinal)%></td>
