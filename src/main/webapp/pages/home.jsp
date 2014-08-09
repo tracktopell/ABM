@@ -22,9 +22,11 @@
     Usuario usuarioEnSesion = (Usuario) session.getAttribute("usuarioEnSesion");
     if (usuarioEnSesion == null) {
         usuarioEnSesion = UsuarioDAOFactory.getUsuarioDAO().get(request.getUserPrincipal().getName());
+        System.out.println("->home.jsp: usuarioEnSesion="+usuarioEnSesion+", request.getUserPrincipal().getName()="+request.getUserPrincipal().getName());
         session.setAttribute("usuarioEnSesion", usuarioEnSesion);
     }
-    %>
+    List<RolUsuario> roles=null;
+%>
     <body>
         <div id="main">
             <header>
@@ -55,34 +57,60 @@
                 <img src="<%=request.getContextPath()%>/images/header_layer1.png"/>
 
                 <div class="contentInHome">
-                    <form action="<%=request.getContextPath()%>/pages/registros.jsp">
-
-                        <h1>BIENVENIDO <%=usuarioEnSesion.getNombre().toUpperCase()%></h1>		
 <%
         if (usuarioEnSesion.getHabilitado () != 0) {
 
             if (request.isUserInRole("ADMINISTRADOR")) {
                 List<Usuario> usuarioList = UsuarioDAOFactory.getUsuarioDAO().getAllUsuario();
 %>
+                    <form action="<%=request.getContextPath()%>/pages/registros.jsp">
 
-                        <h2>INQUILINOS:</h2>
-
-                        <table align="center" width="800px" border="1">	
-                            <tr>
-                                <td width="300px" align="center">NOMBRE</td>
-                                <td width="200px" align="center">EMAIL</td>
-                                <td width="100px" align="center">VERIFICADO</td>					
-                                <td width="100px" align="center">DEPTO.</td>
-                                <td width="100px" align="center">SALDO</td>
-                            </tr>
 
 <%
-                double saldoTotal = 0.0;
-                for (Usuario u : usuarioList) {
-                    saldoTotal += u.getSaldo();
+            if(request.isUserInRole("ROOT")){                
+%>
+                        <h1>BIENVENIDO SUPER-ADMINISTRADOR:<%=usuarioEnSesion.getNombre().toUpperCase()%> </h1>		
+<%
+            } else {
+%>
+                        <h1>BIENVENIDO ADMINISTRADOR:<%=usuarioEnSesion.getNombre().toUpperCase()%> </h1>		
+<%                
+            }
+%>
+                        <h2>INQUILINOS:</h2>
+
+                        <table align="center" border="1">	
+                            <tr>
+<%
+            if(request.isUserInRole("ROOT")){
+%>                        
+                                <td width="300px" align="center">ROLES</td>
+<%
+            }
+%>
+                                <td width="200px" align="center">NOMBRE</td>
+                                <td width="200px" align="center">EMAIL</td>
+                                <td width="60px" align="center">VER.</td>					
+                                <td width="60px" align="center">DEPTO.</td>
+                                <td width="60px" align="center">SALDO</td>
+                            </tr>
+<%
+            double saldoTotal = 0.0;
+            for (Usuario u : usuarioList) {
+                
+                saldoTotal += u.getSaldo();
+                roles = u.getRoles();
+                
 %>
 
                             <tr>
+<%
+            if(request.isUserInRole("ROOT")){
+%>                        
+                                <td align="right"><%=roles%></td>
+<%
+            }
+%>
                                 <td><a href="registros.jsp?verUsuarioRegistro=<%=u.getEmail()%>"> <%=u.getNombre()%></a></td>
                                 <td align="right"><%=u.getEmail()%></td>
                                 <td align="right"><%=u.getHabilitado() == 0 ? "NO" : "SI"%></td>
@@ -93,10 +121,11 @@
                 }
 %>
                             <tr>    
-                                <td align="right" colspan="5"><h4><%=df.format(saldoTotal)%></h4></td>
+                                <td align="right" colspan="6"><h4>CONSOLIDADO TOTAL :<%=df.format(saldoTotal)%></h4></td>
                             </tr>
 
                         </table>
+                    </form>
 <%
             } else if (request.isUserInRole("INQUILINO")) {
                 System.out.println("->home redirect: registros.jsp");
@@ -104,11 +133,10 @@
             }
         } else {
 %>
-                        <h2>USUARIO NO VERIFICADO</h2>
+                    <h2>USUARIO NO VERIFICADO</h2>
 <%
     }
 %>		
-                    </form>
 
                 </div>
             </div>

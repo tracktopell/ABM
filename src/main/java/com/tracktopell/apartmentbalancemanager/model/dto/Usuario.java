@@ -6,6 +6,8 @@
 
 package com.tracktopell.apartmentbalancemanager.model.dto;
 
+import java.util.List;
+
 /**
  *
  * @author alfredo
@@ -17,6 +19,8 @@ public class Usuario {
 	private String departamento;
 	private Integer habilitado;
 	private Double saldo;	
+    
+    private List<RolUsuario> roles;
 
 	public Usuario() {
 	}
@@ -113,4 +117,12 @@ public class Usuario {
 	public void setSaldo(Double saldo) {
 		this.saldo = saldo;
 	}
+
+    public void setRoles(List<RolUsuario> roles) {
+        this.roles = roles;
+    }
+
+    public List<RolUsuario> getRoles() {
+        return roles;
+    }    
 }

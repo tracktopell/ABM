@@ -50,4 +50,16 @@ public class RolUsuario {
 		this.email = email;
 	}
 
+    @Override
+    public String toString() {
+        return rol;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        RolUsuario ruo = (RolUsuario)obj;
+        return ruo!=null && email.equals(ruo.getEmail()) && rol.equals(ruo.getRol());
+    }
+    
+    
 }

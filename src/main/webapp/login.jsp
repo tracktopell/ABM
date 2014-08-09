@@ -76,7 +76,7 @@
                             <table border="0" align="center">
                                 <tr>
                                     <td width="100px" class="rightAlign"><h3>email de usuario :</h3></td>
-                                    <td width="100px" class="leftAlign"><h3><input type="text" name="j_username" id="j_username" value="" size="19"/></h3></td>
+                                    <td width="100px" class="leftAlign"><h3><input type="text" name="j_username" id="j_username" value="" size="20"/></h3></td>
                                 </tr>
                                 <tr>
                                     <td width="100px" class="rightAlign"><h3>contrase&ntilde;a :</h3></td>

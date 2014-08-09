@@ -130,7 +130,7 @@
                         %>
                         <h1>Agregar registro a <%=usuario.getNombre()%> (<%=usuario.getEmail()%>)</h1>
                         <input type="hidden" name="email" value="<%=usuario.getEmail()%>"/>
-                        <table style="border: 1px solid black;">
+                        <table border="1">
                             <tr>
                                 <td>CONCEPTO :</td>
                                 <td>

@@ -5,6 +5,7 @@
  */
 package com.tracktopell.apartmentbalancemanager.model.dao;
 
+import com.tracktopell.apartmentbalancemanager.model.dto.RolUsuario;
 import com.tracktopell.apartmentbalancemanager.model.dto.Usuario;
 import java.math.BigInteger;
 import java.security.MessageDigest;
@@ -39,8 +40,8 @@ public class UsuarioDAO {
 					internalConnconn = ds.getConnection();
 				}
 			}
-		} catch (SQLException ex) {
-
+		} catch(SQLException e){
+            e.printStackTrace(System.err);
 		}
 
 		return internalConnconn;
@@ -58,49 +59,79 @@ public class UsuarioDAO {
 		try {
             conn= getConnection();
 			st = conn.createStatement();
-			ResultSet rs = st.executeQuery("SELECT EMAIL,NOMBRE,PASSWORD,DEPARTAMENTO,HABILITADO,SALDO  FROM USUARIO");
+			ResultSet rs = st.executeQuery("SELECT U.EMAIL,U.NOMBRE,U.PASSWORD,U.DEPARTAMENTO,U.HABILITADO,U.SALDO,RU.ROL,RU.EMAIL  FROM USUARIO U,ROL_USUARIO RU WHERE U.EMAIL=RU.EMAIL");
 			list = new ArrayList<Usuario>();
+            Usuario entity=null;
+            List<RolUsuario> roles=null;
+            String rol=null;
+            String email=null;
 			while(rs.next()){
-				Usuario entity = new Usuario();
-				
-				entity.setEmail(rs.getString(1));
-				entity.setNombre(rs.getString(2));
-				entity.setPassword(rs.getString(3));
-				entity.setDepartamento(rs.getString(4));
-				entity.setHabilitado(rs.getInt(5));
-				entity.setSaldo(rs.getDouble(6));
-				
-				list.add(entity);
+                email = rs.getString(1);
+                rol   = rs.getString(7);                
+                if(entity == null || (entity!=null && !email.equals(entity.getEmail())) ){
+                    if(entity != null){
+                        list.add(entity);
+                    }
+                    entity = new Usuario();
+                    roles = new ArrayList<RolUsuario>();
+                    roles.add(new RolUsuario(rol, email));
+                    entity.setRoles(roles);                    
+                    entity.setEmail(email);
+                    entity.setNombre(rs.getString(2));
+                    entity.setPassword(rs.getString(3));
+                    entity.setDepartamento(rs.getString(4));
+                    entity.setHabilitado(rs.getInt(5));
+                    entity.setSaldo(rs.getDouble(6));
+                } else if(entity!=null && email.equals(entity.getEmail())){
+                    entity.getRoles().add(new RolUsuario(rol, email));
+                }
 			}
             conn.close();
 		}catch(SQLException e){
+            e.printStackTrace(System.err);
 		}
 		
 		return list;
 	}
 	
-	public Usuario get(String email) {
+	public Usuario get(String emailBuscar) {
+        System.out.println("=>get:emailBuscar="+emailBuscar);
 		Usuario entity = null;
 		
 		Connection conn= getConnection();
 		PreparedStatement st = null;
 		try {
-			st = conn.prepareStatement("SELECT EMAIL,NOMBRE,PASSWORD,DEPARTAMENTO,HABILITADO,SALDO FROM USUARIO WHERE EMAIL=?");
-			st.setString(1, email);
-			ResultSet rs = st.executeQuery();
+			st = conn.prepareStatement("SELECT U.EMAIL,U.NOMBRE,U.PASSWORD,U.DEPARTAMENTO,U.HABILITADO,U.SALDO,RU.ROL,RU.EMAIL  FROM USUARIO U,ROL_USUARIO RU WHERE U.EMAIL=RU.EMAIL AND U.EMAIL=?");
+			st.setString(1, emailBuscar);
+			
+            List<RolUsuario> roles=null;
+            String rol=null;
+            String email=null;
+            ResultSet rs = st.executeQuery();
 			while(rs.next()){
-				entity = new Usuario();
-				
-				entity.setEmail(rs.getString(1));
-				entity.setNombre(rs.getString(2));
-				entity.setPassword(rs.getString(3));
-				entity.setDepartamento(rs.getString(4));
-				entity.setHabilitado(rs.getInt(5));
-				entity.setSaldo(rs.getDouble(6));
-								
+                email = rs.getString(1);
+                rol   = rs.getString(7);
+                System.out.println("=>get:\temail="+email+", rol="+rol);
+                
+                if(entity == null || (entity!=null && !email.equals(entity.getEmail())) ){
+                    entity = new Usuario();
+                    roles = new ArrayList<RolUsuario>();
+                    roles.add(new RolUsuario(rol, email));
+                    entity.setRoles(roles);                    
+                    entity.setEmail(email);
+                    entity.setNombre(rs.getString(2));
+                    entity.setPassword(rs.getString(3));
+                    entity.setDepartamento(rs.getString(4));
+                    entity.setHabilitado(rs.getInt(5));
+                    entity.setSaldo(rs.getDouble(6));
+                } else if(entity!=null && email.equals(entity.getEmail())){
+                    entity.getRoles().add(new RolUsuario(rol, email));
+                }
+           
 			}
             conn.close();
-		}catch(SQLException e){
+		} catch(SQLException e){
+            e.printStackTrace(System.err);
 		}
 		
 		return entity;
@@ -126,11 +157,13 @@ public class UsuarioDAO {
 			System.out.println("->set: affected="+affected);
 			
 			st = conn.prepareStatement("INSERT INTO ROL_USUARIO (ROL,EMAIL) VALUES (?,?)");
-			st.setString(1, "INQUILINO");
-			st.setString(2, entity.getEmail());
-			
-			affected = st.executeUpdate();
-			
+            List<RolUsuario> roles = entity.getRoles();
+            for(RolUsuario r: roles){
+                st.clearParameters();
+                st.setString(1, r.getRol());            
+                st.setString(2, entity.getEmail());			
+                st.executeUpdate();
+            }
 			st.close();
 			
 			System.out.println("->set: affected="+affected);
@@ -159,9 +192,26 @@ public class UsuarioDAO {
 			st.setString   (6, entity.getEmail());
 			
 			int affected = st.executeUpdate();
-			System.out.println("->set: affected="+affected);
-			
+			System.out.println("->update: affected="+affected);
 			st.close();
+            st = conn.prepareStatement("DELETE FROM ROL_USUARIO WHERE EMAIL=?");
+			st.setString   (1, entity.getEmail());
+            affected = st.executeUpdate();
+			System.out.println("->update: deleted roles="+affected);
+            st.close();
+            
+            st = conn.prepareStatement("INSERT INTO ROL_USUARIO (ROL,EMAIL) VALUES (?,?)");
+            List<RolUsuario> roles = entity.getRoles();
+            affected=0;
+            for(RolUsuario r: roles){
+                st.clearParameters();
+                st.setString(1, r.getRol());            
+                st.setString(2, entity.getEmail());			
+                affected += st.executeUpdate();
+            }
+			st.close();
+            System.out.println("->update: inserted roles="+affected);
+            
 			conn.close();
 		} catch(SQLException e){			
 			e.printStackTrace(System.err);

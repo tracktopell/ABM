@@ -95,44 +95,41 @@
                         %>
 
 
-                        <table style="border: 0px none;">
+                        <table border="1" width="600px">
                             <tr>
-                                <td style="text-align: center">
-
-                                    <table style="border: 1px solid black;">
-                                        <tr>
-                                            <td>Nuevo concepto:</td>
-                                            <td><input type="text" name="concepto" size="35" maxlength="128" value="<%=concepto%>"/></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Afectaci&oacute;n :</td>
-                                            <td>
-                                                <input type="radio" name="afectacion" value="-1" <%=afectacionValue == -1 ? "checked" : ""%>>CARGO</input>
-                                                <input type="radio" name="afectacion" value="1"  <%=afectacionValue == 1 ? "checked" : ""%>>ABONO</input>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td style="text-align: center" colspan="2">
-                                                <input type="submit" name="actionType" value="ACEPTAR"/>
-                                                <input type="submit" name="actionType" value="CANCELAR"/>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </td>
-                                </td><td>
-                                <td style="text-align: center">
-                                    <select size="4">
-                                        <%
-                                            for (Concepto c : conceptoList) {
-                                        %>
-                                        <option value="<%=c.getId()%>"><%=c.getDescripcion()%> [<%=c.getFactorCargoAbono() < 0 ? "ABONO" : "CARGO"%>]</opoption>
-                                            <%
-                                                }
-                                            %>
-                                    </select>
-
+                                <td>Nuevo concepto:</td>
+                                <td><input type="text" name="concepto" size="35" maxlength="128" value="<%=concepto%>"/></td>
+                            </tr>
+                            <tr>
+                                <td>Afectaci&oacute;n :</td>
+                                <td>
+                                    <input type="radio" name="afectacion" value="-1" <%=afectacionValue == -1 ? "checked" : ""%>>CARGO</input>
+                                    <input type="radio" name="afectacion" value="1"  <%=afectacionValue == 1 ? "checked" : ""%>>ABONO</input>
                                 </td>
                             </tr>
+                            <tr>
+                                <td style="text-align: center" colspan="2">
+                                    <input type="submit" name="actionType" value="ACEPTAR"/>
+                                    <input type="submit" name="actionType" value="CANCELAR"/>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <table border="1" width="600px">
+                            <tr>
+                                <td><h3>DESCRIPCION</h3></td>
+                                <td><h3>FACTOR</h3></td>
+                            </tr>                            
+<%
+        for (Concepto c : conceptoList) {
+%>
+                            <tr>
+                                <td><%=c.getDescripcion()%></td>
+                                <td><%=c.getFactorCargoAbono() < 0 ? "ABONO" : "CARGO"%></td>
+                            </tr>                                        
+<%
+        }
+%>
                         </table>
                     </form>
 

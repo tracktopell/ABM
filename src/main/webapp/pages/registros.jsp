@@ -25,13 +25,15 @@
         usuarioEnSesion = UsuarioDAOFactory.getUsuarioDAO().get(request.getUserPrincipal().getName());
         session.setAttribute("usuarioEnSesion", usuarioEnSesion);
     }
+    
     verUsuarioRegistro = (String) request.getParameter("verUsuarioRegistro");
     if (verUsuarioRegistro != null) {
         usuarioSeleccionado = UsuarioDAOFactory.getUsuarioDAO().get(verUsuarioRegistro);
+        session.setAttribute("usuarioEditar", verUsuarioRegistro);
     } else {
         usuarioSeleccionado = usuarioEnSesion;
+        session.setAttribute("usuarioEditar", usuarioEnSesion.getEmail());
     }
-        
 %>
     <body>
         <div id="main">
@@ -49,9 +51,10 @@
     if (request.isUserInRole("ADMINISTRADOR")) {
 %>
                         <li class="selected"><a href="<%=request.getContextPath()%>/pages/home.jsp" >Inicio</a></li>
-                        <li class="selected"><a href="<%=request.getContextPath()%>/admin/agregarRegistro.jsp?email=<%=usuarioSeleccionado.getEmail()%>" >+Registro</a></li>
                         <li class="selected"><a href="<%=request.getContextPath()%>/admin/agregarConcepto.jsp" >+Concepto</a></li>
                         <li class="selected"><a href="<%=request.getContextPath()%>/admin/agregarUsuario.jsp" >+Usuario</a></li>
+                        <li class="selected"><a href="<%=request.getContextPath()%>/admin/editarUsuario.jsp" >Editar Usuario</a></li>
+                        <li class="selected"><a href="<%=request.getContextPath()%>/admin/agregarRegistro.jsp?email=<%=usuarioSeleccionado.getEmail()%>" >+Registro</a></li>                        
 <%
     }
 %>

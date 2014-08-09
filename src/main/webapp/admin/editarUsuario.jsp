@@ -12,7 +12,7 @@
 <html>
 
     <head>
-        <title>A.B.M. - AGREGAR USUARIO</title>
+        <title>A.B.M. - EDITAR USUARIO</title>
         <meta name="description"  content="website description" />
         <meta name="keywords"     content="website keywords, website keywords" />
         <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/css/style.css" />
@@ -21,10 +21,14 @@
     </head>
 <%
     Usuario usuarioEnSesion = (Usuario) session.getAttribute("usuarioEnSesion");
+    Usuario usuarioEditar   = null;
     if (usuarioEnSesion == null) {
         usuarioEnSesion = UsuarioDAOFactory.getUsuarioDAO().get(request.getUserPrincipal().getName());
         session.setAttribute("usuarioEnSesion", usuarioEnSesion);
     }
+    String usuarioEditarAtr = (String)session.getAttribute("usuarioEditar");
+    usuarioEditar = UsuarioDAOFactory.getUsuarioDAO().get(usuarioEditarAtr);
+    System.out.println("->editarUSuario.jsp: usuarioEditar="+usuarioEditar.getEmail()+", roles:"+usuarioEditar.getRoles());
 %>
     <body>
         <div id="main">
@@ -40,8 +44,9 @@
                     <ul class="sf-menu" id="nav">                                                
                         <li class="selected"><a href="<%=request.getContextPath()%>/pages/home.jsp" >Inicio</a></li>
                         <li class="selected"><a href="<%=request.getContextPath()%>/admin/agregarConcepto.jsp" >+Concepto</a></li>
-                        <li class="unselected"><a href="#" >+Usuario</a></li>
-                        <li class="selected"><a href="<%=request.getContextPath()%>/salir.jsp">Salir</a></li>
+                        <li class="selected"><a href="<%=request.getContextPath()%>/admin/agregarUsuario.jsp" >+Usuario</a></li>
+                        <li class="unselected"><a href="#" >Editar Usuario</a></li>
+                        <li class="selected"><a href="<%=request.getContextPath()%>/admin/agregarRegistro.jsp?email=<%=usuarioEditar.getEmail()%>" >+Registro</a></li>
                     </ul>
                 </nav>
             </header>
@@ -49,42 +54,29 @@
                 <img src="<%=request.getContextPath()%>/images/header_layer1.png"/>
 
                 <div class="contentInHome">
-                    <h1>Agregar usuario</h1>
-                    <form action="<%=request.getContextPath()%>/admin/agregarUsuario.jsp" method="POST">
+                    <h1>Editar usuario</h1>
+                    <form action="<%=request.getContextPath()%>/admin/editarUsuario.jsp" method="POST">
 
 <%
-    String password = request.getParameter("password");
-    
     String contextPath = request.getScheme()
         + "://"
         + request.getServerName()
         + ":"
         + request.getServerPort()
         + request.getContextPath();
+    
+    String changePassword = request.getParameter("changePassword");
+    String usuarioUsuario = null;
+    Usuario usuario = null;
+    String password = null;
     String admin    = null;
     String inquilino= null;
     String root     = null;
 
-    if (password == null) {
-        password = "";
-    }
-    String passwordVerif = request.getParameter("passwordVerif");
-    if (passwordVerif == null) {
-        passwordVerif = "";
-    }
-    String email = request.getParameter("email");
-    if (email == null) {
-        email = "";
-    }
-    String nombre = request.getParameter("nombre");
-    System.out.println("->agregarUsuario.jsp: nombre="+nombre);
-    if (nombre == null) {
-        nombre = "";
-    }
-    String departamento = request.getParameter("departamento");
-    if (departamento == null) {
-        departamento = "";
-    }
+    String passwordVerif = null;
+    String email = null;
+    String nombre = null;
+    String departamento = null;
 
     String actionType = request.getParameter("actionType");
     String validationError = null;
@@ -93,13 +85,27 @@
             admin       = request.getParameter("admin");            
             inquilino   = request.getParameter("inquilino");
             root        = request.getParameter("root");
+            email       = request.getParameter("email");
+            
+            System.out.println("==>>ACEPTAR: contextPath=" + contextPath+", admin="+admin+", inquilino="+inquilino+", email="+email);
+            
+            if (email == null) {
+                email = "";
+            }
+            nombre = request.getParameter("nombre");
+            if (nombre == null) {
+                nombre = "";
+            }
+            departamento = request.getParameter("departamento");
+            if (departamento == null) {
+                departamento = "";
+            }
 
-            Usuario usuarioNuevo = new Usuario();
-            usuarioNuevo.setNombre(nombre);
-            usuarioNuevo.setEmail(email);
-            usuarioNuevo.setDepartamento(departamento);
-            usuarioNuevo.setHabilitado(0);
-            usuarioNuevo.setSaldo(0.0);
+            usuarioEditar.setNombre(nombre);
+            usuarioEditar.setEmail(email);
+            usuarioEditar.setDepartamento(departamento);
+            usuarioEditar.setHabilitado(0);
+            usuarioEditar.setSaldo(0.0);
 
             if (nombre.trim().length() <= 5) {
                 throw new Exception("Error en el nombre: debe ser > 5 caracteres");
@@ -113,40 +119,48 @@
             if (!m.find()) {
                 throw new Exception("Error en el email: formato incorrecto");
             }
+            
+            if(changePassword != null) {
+                password = request.getParameter("password");
+                if (password == null) {
+                    password = "";
+                }
+                passwordVerif = request.getParameter("passwordVerif");
+                if (passwordVerif == null) {
+                    passwordVerif = "";
+                }
 
-            if (password.trim().length() <= 5) {
-                throw new Exception("Error en el password: debe ser >= 6 caracteres");
-            }
+                if (password.trim().length() <= 5) {
+                    throw new Exception("Error en el password: debe ser >= 6 caracteres");
+                }
 
-            if (!password.equals(passwordVerif)) {
-                throw new Exception("Error en el password: no coinciden con la verificaci&oacute;n");
-            } else {
-                usuarioNuevo.setPassword(password);
+                if (!password.equals(passwordVerif)) {
+                    throw new Exception("Error en el password: no coinciden con la verificaci&oacute;n");
+                } else {
+                    usuarioEditar.setPassword(password);
+                }
             }
 
             if (departamento.trim().length() == 0 || departamento.trim().length() > 5) {
                 throw new Exception("Error en el departamento: no puede ser vacio, y hasta 5 caracteres");
             }
 
-            try {                
-                usuarioNuevo.setHabilitado(1);
-                usuarioNuevo.setRoles(new ArrayList<RolUsuario>());
+            try {
+                usuarioEditar.setRoles(new ArrayList<RolUsuario>());
                 if(root != null){
-                    usuarioNuevo.getRoles().add(new RolUsuario("ROOT", usuarioNuevo.getEmail()));
+                    usuarioEditar.getRoles().add(new RolUsuario("ROOT", usuarioEditar.getEmail()));
                 }
                 if(admin != null){
-                    usuarioNuevo.getRoles().add(new RolUsuario("ADMINISTRADOR", usuarioNuevo.getEmail()));
+                    usuarioEditar.getRoles().add(new RolUsuario("ADMINISTRADOR", usuarioEditar.getEmail()));
                 }
                 if(inquilino != null){
-                    usuarioNuevo.getRoles().add(new RolUsuario("INQUILINO", usuarioNuevo.getEmail()));
+                    usuarioEditar.getRoles().add(new RolUsuario("INQUILINO", usuarioEditar.getEmail()));
                 }
-                System.out.println("==>>ACEPTAR: contextPath=" + contextPath+", admin="+admin);
                 
-                UsuarioDAOFactory.getUsuarioDAO().set(usuarioNuevo);
-                //SendGMailSMTPMail.sendVerificationEmail(email, contextPath);
+                UsuarioDAOFactory.getUsuarioDAO().update(usuarioEditar);
                 response.sendRedirect("../pages/home.jsp");
             } catch (Exception ex) {
-                throw new Exception("No se pudo insertar :" + ex.getMessage());
+                throw new Exception("No se pudo editar :" + ex.getMessage());
             }
 
         } catch (Exception e) {
@@ -155,15 +169,25 @@
     } else if (actionType != null && actionType.equals("CANCELAR")) {
         System.out.println("==>>CANCELAR");
         response.sendRedirect("../pages/home.jsp");
+    } else if (actionType == null ){
+        email  = usuarioEditar.getEmail();
+        nombre = usuarioEditar.getNombre();
+        password = usuarioEditar.getPassword();
+        passwordVerif = password;
+        departamento = usuarioEditar.getDepartamento();
+        
+        inquilino   = usuarioEditar.getRoles().contains(new RolUsuario("INQUILINO", usuarioEditar.getEmail()))?"1":null;        
+        admin       = usuarioEditar.getRoles().contains(new RolUsuario("ADMINISTRADOR", usuarioEditar.getEmail()))?"1":null;
+        root        = usuarioEditar.getRoles().contains(new RolUsuario("ROOT", usuarioEditar.getEmail()))?"1":null;        
     }
-    
     if (validationError != null) {
 %>
                         <%=validationError%>
 <%
     }
 %>
-                        <table border="1"  width="400">
+                        
+                        <table border="1" width="400">
                             <tr>
                                 <td>email:</td>
                                 <td><input type="text" name="email" size="20" maxlength="32" value="<%=email%>"/></td>
@@ -189,15 +213,15 @@
                             </tr>
                             <tr>
                                 <td>nombre :</td>
-                                <td><input type="text"   name="nombre" id="nombre" size="30" maxlength="255" value="<%=nombre%>"/></td>
+                                <td><input type="text"   name="nombre" size="30" maxlength="255" value="<%=nombre%>"/></td>
                             </tr>
                             <tr>
-                                <td>password :</td>
-                                <td><input type="password"   name="password" id="password" size="10" maxlength="255" value="<%=password%>"/></td>
+                                <td><input type="checkbox"   id="changePassword" value="1" <%=changePassword!=null?"checked":""%>/>password :</td>
+                                <td><input type="password"   id="password" name="password" size="25" maxlength="255" /></td>
                             </tr>
                             <tr>
                                 <td>verificar password :</td>
-                                <td><input type="password"   name="passwordVerif" id="passwordVerif" size="10" maxlength="255" value="<%=passwordVerif%>"/></td>
+                                <td><input type="password"   id="passwordVerif" name="passwordVerif" size="25" maxlength="255" /></td>
                             </tr>
 
                             <tr>
@@ -231,9 +255,29 @@
         <script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery.kwicks-1.5.1.js"></script>
         <script type="text/javascript">
             $(document).ready(function() {
-                $('#nombre').val("");
-                $('#password').val("");
-                $('#passwordVerif').val("");
+<%
+    if(changePassword != null){
+%>
+                $("#password").show();
+                $("#passwordVerif").show();
+<%
+    }else{
+%>
+                $("#password").hide();
+                $("#passwordVerif").hide();
+<%
+    }
+%>                
+                $("#changePassword").click(function() {
+                    
+                    if($(this).is(':checked')){
+                        $("#password").show();
+                        $("#passwordVerif").show();                
+                    } else {
+                        $("#password").hide();
+                        $("#passwordVerif").hide();                        
+                    }
+                });
             });
         </script>
     </body>
